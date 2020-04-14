@@ -1,0 +1,101 @@
+/* --------------------------------------------------------------
+    Import CCS Dependencies
+-------------------------------------------------------------- */
+@import 'default';
+@import 'icons';
+@import 'nav';
+@import 'buttons';
+/* --------------------------------------------------------------
+    Start Project CSS
+-------------------------------------------------------------- */
+html {
+  position: relative;
+  height: 100%;
+  background-color: #fff;
+  overflow-y: scroll;
+}
+body {
+  height: 100%;
+  // margin-bottom: 60px; /* setting for sticky footer */
+  font-family: 'Open Sans', 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+  color: #555555;
+}
+.wrap {
+  padding: 30px 0;
+}
+.container-fluid.but-fixed {
+  // max-width: 1230px;
+  max-width: 1400px;
+}
+.footer {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  color: #999999;
+}
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.navbar-brand {
+  img {
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  .brand-text {
+    vertical-align: middle;
+    font-weight: 300;
+  }
+}
+.input-group {
+  .input-group-text {
+    background-color: #f7f7f7;
+    font-size: .9rem;
+  }
+}
+
+.am-input-group {
+  .input-group-prepend {
+    width: 100%;
+    max-width: 160px;
+  }
+  .input-group-text {
+    width: 100%;
+    background-color: #f7f7f7;
+    font-size: .9rem;
+  }
+}
+#searchResultsTable {
+  font-size: .9rem;
+}
+
+
+/* ----------------------------------------------------------------------------
+    Page Media Queries
+----------------------------------------------------------------------------- */
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .container-fluid.but-fixed {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}

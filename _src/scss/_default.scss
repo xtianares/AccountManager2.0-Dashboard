@@ -1,0 +1,69 @@
+/* ----------------------------------------------------------------------------
+    Typography
+----------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: normal;
+    color: #444444;
+}
+h1, .h1 { font-size: 1.602em; }
+h2, .h2 { font-size: 1.424em; }
+h3, .h3 { font-size: 1.266em; }
+h4, .h4 { font-size: 1.125em; }
+h5, .h5 { font-size: 1em; }
+@media (min-width: 48em) { /* Medium devices (tablets, 768px and up) */
+    h1, .h1 { font-size: 1.8em; }
+    h2, .h2 { font-size: 1.55em; }
+    h3, .h3 { font-size: 1.32em; }
+    h4, .h4 { font-size: 1.125em; }
+    h5, .h5 { font-size: 1em; }
+}
+@media (min-width: 62em) { /* Large devices (desktops, 992px and up) */
+    h1, .h1 { font-size: 2.074em; }
+    h2, .h2 { font-size: 1.728em; }
+    h3, .h3 { font-size: 1.44em; }
+    h4, .h4 { font-size: 1.2em; }
+    h5, .h5 { font-size: 1.1em; }
+}
+@media (min-width: 75em) { /* Extra large devices (large desktops, 1200px and up) */
+    h1, .h1 { font-size: 2.441em; }
+    h2, .h2 { font-size: 1.953em; }
+    h3, .h3 { font-size: 1.563em; }
+    h4, .h4 { font-size: 1.25em; }
+    h5, .h5 { font-size: 1.1em; }
+}
+
+/* ----------------------------------------------------------------------------
+    Forms Elements
+----------------------------------------------------------------------------- */
+.opacity-1 {
+    opacity: 1 !important;
+}
+/* ----------------------------------------------------------------------------
+    Buttons
+----------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------
+    Tables
+----------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------
+    Dropdown List
+----------------------------------------------------------------------------- */
+.dropdown_list { margin: 15px auto; width: auto; position: relative; box-sizing: border-box; }
+.dropdown_list li { margin: 0; padding: 0; list-style: none; }
+.dropdown_list span.dropdown { display: block; margin: 0; padding: 0 10px; width: auto; height: 40px; line-height: 38px; background: #fff; border-radius: 3px; border: 1px solid #a1c4e5; cursor: pointer; overflow: hidden; }
+.dropdown_list span.dropdown.active { border-radius: 3px 3px 0 0; }
+.dropdown_list span.dropdown:hover, .dropdown_list span.dropdown:active { background: #f1f1f1; -webkit-tap-highlight-color: rgba(0,0,0,0); }
+.dropdown_list span.dropdown:after { float: right; margin-top: 1px; margin-left: 10px; width: 15px; height: inherit; content: "\e817"; color: ineherit; font-family: 'icons'; text-align: center; font-size: inherit; vertical-align: top; }
+.dropdown_list span.dropdown.active:after { content: "\e816" }
+.dropdown_list a:hover { text-decoration: none; border-bottom: 0; -webkit-tap-highlight-color: rgba(0,0,0,0); }
+.dropdown_list .drop { display: none; float: left; margin: 0 0 0 0; width: 100%; max-height: 300px; position: absolute; left: -999em; /* Hides the drop down */ background: #fff; top: 39px; border-radius: 0 0 3px 3px; z-index: 10; border: 1px solid #a1c4e5; overflow-y: auto; }
+.dropdown_list .drop li { float: none; display: block; margin: 0; padding: 0; border: 0; height: auto; border-top: 1px dotted #ccc; }
+.dropdown_list .drop li:first-child { border-top: 0 }
+.dropdown_list .drop li a { float: none; display: block; margin: 0; padding: 6px 10px 6px 25px; height: auto; width: auto; text-transform: none; color: inherit; background: #fff; text-align: left; border-radius: 0; border: 0; }
+.dropdown_list .drop li a:hover, .dropdown_list .drop li a:active { background: #f1f1f1; -webkit-tap-highlight-color: rgba(0,0,0,0); }
+.dropdown_list .drop li a:before { display: inline-block; margin-left: -15px; margin-right: 5px; width: 10px; height: inherit; content: "\00BB"; color: inherit; font-family: 'icons'; text-align: center; font-size: inherit; vertical-align: top; }
+
+ul.check, ul.star, ul.carrot { margin-left: 22px; padding-left: 0; list-style: none outside; }
+ul.check li, ul.star li, ul.carrot li { margin-top: .5em; margin-bottom: .5em; }
+ul.check > li:before, ul.star > li:before, ul.carrot > li:before { display: inline-block; margin-top: 2px; margin-left: -22px; width: 22px; content: "\e876"; height: inherit; color: inherit; font-family: 'Material Icons'; font-size: 14px; vertical-align: top; font-weight: normal !important; opacity: .75; word-wrap: normal;}
