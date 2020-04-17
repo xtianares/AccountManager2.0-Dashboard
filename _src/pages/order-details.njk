@@ -1,0 +1,58 @@
+{% set PageTitle = "Account Manager 2.0" %}
+{% set PageDescription = "Live Mockups for Account Manager 2.0" %}
+{% set CanonicalPage = "" %}
+
+{% extends "MainTemplate.njk" %}
+
+{% block MainContent %}
+  <section class="wrap flex-shrink-0">
+    <div class="container-fluid but-fixed">
+      <div class="row">
+        <div class="col-12">
+          <div class="card border-dark bg-light mb-3">
+            <div class="card-body pt-3">
+              <h3 class="card-title">Brittany Test</h3>
+              <p class="card-text">
+                Username: BM20200414a<br>
+                Email: test@email.com<br>
+                Date of Birth: 1/16/2019
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card mb-3">
+            <h5 class="card-header d-flex">
+              <div>Student/Order Information</div>
+              <div class="btn-group ml-auto">
+                <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown">
+                  Action
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Update Information</a>
+                  <a class="dropdown-item" href="#">Reset Password</a>
+                </div>
+              </div>
+            </h5>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card mb-3">
+            <h5 class="card-header">Payment Information</h5>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
