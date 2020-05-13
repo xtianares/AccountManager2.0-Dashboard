@@ -58,7 +58,6 @@ body {
     font-size: .9rem;
   }
 }
-
 .am-input-group {
   .input-group-prepend {
     width: 100%;
@@ -70,7 +69,15 @@ body {
     font-size: .9rem;
   }
 }
-#searchResultsTable {
+.nav-tabs {
+  padding-left: .75rem;
+  padding-right: .75rem;
+  .nav-item {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+}
+.table.font-smaller {
   font-size: .9rem;
 }
 .card {
@@ -81,6 +88,18 @@ body {
     }
     .dropdown-item {
       padding: .5rem .8rem;
+    }
+  }
+  &.order-card {
+    .table {
+      th:first-child,
+      td:first-child {
+        padding-left: 1.25rem;
+      }
+      th:last-child,
+      td:last-child {
+        padding-right: 1.25rem;
+      }
     }
   }
 }

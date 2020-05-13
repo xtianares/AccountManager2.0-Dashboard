@@ -1,0 +1,400 @@
+{% set PageTitle = "Account Manager 2.0" %}
+{% set PageDescription = "Live Mockups for Account Manager 2.0" %}
+{% set CanonicalPage = "" %}
+
+{% extends "MainTemplate.njk" %}
+
+{% block MainContent %}
+  <section class="wrap flex-shrink-0">
+    <div class="container-fluid but-fixed">
+      <div class="row">
+        <div class="col-12">
+          <div class="card border-dark mb-3 mb-lg-4">
+            <div class="card-body pt-3 pb-3">
+              <div class="row">
+                <div class="col-sm-6 col-lg-3 student-data-col">
+                  <div class="label text-muted font-weight-light small">Student Name</div>
+                  <div class="student-data">Christian C. Castanares</div>
+                </div>
+                <div class="col-sm-6 col-lg-3 student-data-col">
+                  <div class="label text-muted font-weight-light small">Username</div>
+                  <div class="student-data">xtiantest_0512</div>
+                </div>
+                <div class="col-sm-6 col-lg-3 student-data-col">
+                  <div class="label text-muted font-weight-light small">Email</div>
+                  <div class="student-data">test@email.com</div>
+                </div>
+                <div class="col-sm-6 col-lg-3 student-data-col">
+                  <div class="label text-muted font-weight-light small">Date of Birth</div>
+                  <div class="student-data">5/20/2020</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card mb-4">
+            <div class="card-header d-flex">
+              <h5 class="card-title mb-0">Account Information</h5>
+              <div class="btn-group ml-auto">
+                <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#">Update Information</a>
+                  <a class="dropdown-item" href="#">Reset Password</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <table class="table table-responsive table-sm table-no-borders mb-0">
+                <tbody>
+                  <tr>
+                    <td class="label">First Name</td>
+                    <td class="student-data">Christian</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Middle Name/Initial</td>
+                    <td class="student-data">C</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Last Name</td>
+                    <td class="student-data">Castanares</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Shipping Address</td>
+                    <td class="student-data">225 E Robinson St Suite 570, Orlando, FL 32801</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Email</td>
+                    <td class="student-data">test@email.com</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Phone</td>
+                    <td class="student-data">111-111-1111</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Username</td>
+                    <td class="student-data">xtiantest_0512</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Social Security #</td>
+                    <td class="student-data">***-**-1111</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Is Active</td>
+                    <td class="student-data">Yes</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Is Migrated</td>
+                    <td class="student-data">Yes</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card mb-4">
+            <div class="card-header d-flex">
+              <h5 class="card-title mb-0">Billing Information</h5>
+              <div class="btn-group ml-auto">
+                <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#">Update Billing Info</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <table class="table table-responsive table-sm table-no-borders mb-3">
+                <tbody>
+                  <tr>
+                    <td class="label">First Name</td>
+                    <td class="student-data">Christian</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Last Name</td>
+                    <td class="student-data">Castanares</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Billing Address</td>
+                    <td class="student-data">225 E Robinson St Suite 570, Orlando, FL 32801</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Billing Email</td>
+                    <td class="student-data">test@email.com</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Billing Phone</td>
+                    <td class="student-data">111-111-1111</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4>Transacations</h4>
+              <table class="table table-bordered table-sm mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col">Date/Time</th>
+                    <th scope="col">Reference #</th>
+                    <th scope="col">Card Last 4</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>05/20/2020 10:15 PM</td>
+                    <td>0012312345123</td>
+                    <td>1111</td>
+                  </tr>
+                  <tr>
+                    <td>04/14/2020 15:24 PM</td>
+                    <td>0012312345123</td>
+                    <td>1111</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-12 mb-4 table-responsive-lg">
+          <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active" id="orders-tab" data-toggle="tab" href="#orders-content" role="tab" aria-controls="home" aria-selected="true"><strong>Orders</strong></a>
+              <a class="nav-item nav-link" id="refunds-tab" data-toggle="tab" href="#refunds-content" role="tab" aria-controls="profile" aria-selected="false"><strong>Refunds</strong></a>
+              <a class="nav-item nav-link" id="audit-tab" data-toggle="tab" href="#audit-content" role="tab" aria-controls="contact" aria-selected="false"><strong>Audit Logs</strong></a>
+            </div>
+          </nav>
+          <div class="tab-content">
+            <div class="tab-pane fade pt-3 show active" id="orders-content" role="tabpanel" aria-labelledby="orders-tab">
+              <div class="card order-card mb-2 border-secondary">
+                <div class="card-header d-flex">
+                  <h5 class="card-title mb-0">Order ID: <a href="/order-details/">30030986</a></h5>
+                  <div class="btn-group ml-auto">
+                    <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="/order-details/">View Order Details</a>
+                      <a class="dropdown-item" href="#">Lock/Unlock Order</a>
+                      <a class="dropdown-item" href="#">Resend Email Confirmation</a>
+                      <a class="dropdown-item" href="#">Request Refund</a>
+                      <a class="dropdown-item" href="#">Process Administrative Fees</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body table-responsive-lg p-0">
+                  <table class="table table-sm mb-0">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>Is Locked</th>
+                        <th>Date</th>
+                        <th>Source</th>
+                        <th>Payment Type</th>
+                        <th>Affiliate</th>
+                        <th>Corp Merch</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>False</td>
+                        <td>04/14/2020 15:24 PM</td>
+                        <td>newyorksafetycouncil_new</td>
+                        <td>Credit</td>
+                        <td>American Safety Council</td>
+                        <td>Yes</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="card order-card mb-2 border-secondary">
+                <div class="card-header d-flex">
+                  <h5 class="card-title mb-0">Order ID: <a href="/order-details/">30030972</a></h5>
+                  <div class="btn-group ml-auto">
+                    <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="/order-details/">View Order Details</a>
+                      <a class="dropdown-item" href="#">Lock/Unlock Order</a>
+                      <a class="dropdown-item" href="#">Resend Email Confirmation</a>
+                      <a class="dropdown-item" href="#">Request Refund</a>
+                      <a class="dropdown-item" href="#">Process Administrative Fees</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body table-responsive-lg p-0">
+                  <table class="table table-sm mb-0">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>Is Locked</th>
+                        <th>Date</th>
+                        <th>Source</th>
+                        <th>Payment Type</th>
+                        <th>Affiliate</th>
+                        <th>Corp Merch</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>False</td>
+                        <td>08/14/2019 10:24 PM</td>
+                        <td>firsttimedriver.com</td>
+                        <td>Credit</td>
+                        <td>American Safety Council</td>
+                        <td>Yes</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {# <div class="card order-card mb-4">
+                <div class="card-header d-flex">
+                  <h5 class="card-title mb-0">Order ID: 30030986</h5>
+                  <div class="btn-group ml-auto">
+                    <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#">Lock/Unlock Order</a>
+                      <a class="dropdown-item" href="#">Resend Email Confirmation</a>
+                      <a class="dropdown-item" href="#">Request Refund</a>
+                      <a class="dropdown-item" href="#">Process Administrative Fees</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body table-responsive-lg p-0">
+                  <table class="table table-sm mb-0">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>Is Locked</th>
+                        <th>Date</th>
+                        <th>Source</th>
+                        <th>Payment Type</th>
+                        <th>Affiliate</th>
+                        <th>Corp Merch</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>False</td>
+                        <td>04/14/2020 15:24 PM</td>
+                        <td>newyorksafetycouncil_new</td>
+                        <td>Credit</td>
+                        <td>American Safety Council</td>
+                        <td>Yes</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table class="table table-sm mb-0">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>Is Locked</th>
+                        <th>Detail Id</th>
+                        <th>Quantity</th>
+                        <th>Product ID and Name</th>
+                        <th>Expiration</th>
+                        <th>Platform</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>False</td>
+                        <td><a href="/order-details/">30030981</a></td>
+                        <td>1</td>
+                        <td>1591 - Florida 4-Hour Drug & Alcohol Traffic Awareness (D.A.T.A.) Streaming</td>
+                        <td>04/14/2020 15:29 PM</td>
+                        <td>UniversityLE</td>
+                      </tr>
+                      <tr>
+                        <td>False</td>
+                        <td><a href="/order-details/">30030982</a></td>
+                        <td>1</td>
+                        <td>1371 - Florida Online Permit Exam</td>
+                        <td>04/14/2020 15:29 PM</td>
+                        <td>UniversityLE</td>
+                      </tr>
+                      <tr>
+                        <td>False</td>
+                        <td><a href="/order-details/">30030983</a></td>
+                        <td>1</td>
+                        <td>1021 - Learner's Permit Prep</td>
+                        <td>04/14/2020 15:29 PM</td>
+                        <td>UniversityLE</td>
+                      </tr>
+                      <tr>
+                        <td>False</td>
+                        <td><a href="/order-details/">30030984</a></td>
+                        <td>1</td>
+                        <td>1324 - Package Discount	</td>
+                        <td>-</td>
+                        <td>UniversityLE</td>
+                      </tr>
+                      <tr>
+                        <td>False</td>
+                        <td><a href="/order-details/">30030985</a></td>
+                        <td>1</td>
+                        <td>1663 - Premier Pass</td>
+                        <td>-</td>
+                        <td>UniversityLE</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div> #}
+
+              <div class="pagination-wrap mt-4">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled" id="previous"><a class="page-link" id="previousLink" disabled="" href="#">&#8592;</a></li>
+                  <li class="page-item active"><a class="page-link page" data-page="1" href="javascript:void(0)">1</a></li>
+                  <li class="page-item"><a class="page-link page" data-page="2" href="javascript:void(0)">2</a></li>
+                  <li class="page-item"><a class="page-link page" data-page="3" href="javascript:void(0)">3</a></li>
+                  <li class="page-item" id="next"><a class="page-link" id="nextLink" href="javascript:void(0)">&#8594;</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="tab-pane fade pt-3" id="refunds-content" role="tabpanel" aria-labelledby="refund-tab">
+              <div class="table-responsive-lg">
+                <table class="table table-hover table-bordered mb-0 font-smaller">
+                  <thead class="thead-light">
+                    <tr>
+                      <th scope="col">Detail ID</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Updated</th>
+                      <th scope="col">Amount</th>
+                      <th scope="col">Reason</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>13411372</td>
+                      <td>Line Item</td>
+                      <td>Request Submitted</td>
+                      <td>5/13/2020 1:49 PM	</td>
+                      <td>$49.95</td>
+                      <td>Content Difficulty/Exam</td>
+                    </tr>
+                    <tr>
+                      <td>13411371</td>
+                      <td>Line Item</td>
+                      <td>Request Submitted</td>
+                      <td>04/14/2020 15:24 PM</td>
+                      <td>$19.95</td>
+                      <td>Expedite Problem</td>
+                    </tr>
+                    <tr>
+                      <td>13411373</td>
+                      <td>Order Total</td>
+                      <td>Request Submitted</td>
+                      <td>04/14/2020 15:24 PM</td>
+                      <td>$149.95</td>
+                      <td>Technical</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tab-pane fade pt-3" id="audit-content" role="tabpanel" aria-labelledby="audit-tab">Audits</div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
