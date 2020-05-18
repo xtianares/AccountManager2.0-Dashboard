@@ -83,12 +83,6 @@ body {
 .card {
   .card-header {
     font-weight: 600;
-    .dropdown-menu {
-      padding: .3rem 0;
-    }
-    .dropdown-item {
-      padding: .5rem .8rem;
-    }
   }
   &.order-card {
     .table {
@@ -131,12 +125,34 @@ body {
       padding: .2rem 0;
     }
     .label {
-      min-width: 175px;
+      max-width: 175px;
       padding-right: 10px;
     }
     .student-data {
       font-weight: 600;
     }
+  }
+  dl {
+    .label {
+      vertical-align: top;
+      width: 100%;
+      padding-right: 10px;
+      font-weight: 300;
+      color: #6c757d !important;
+      font-size: 80%;
+    }
+    .student-data {
+      vertical-align: top;
+      font-weight: 600;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.table {
+  .action-btn {
+    padding: 0 !important;
   }
 }
 
@@ -146,20 +162,36 @@ body {
 ----------------------------------------------------------------------------- */
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-    .container-fluid.but-fixed {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-    .wrap {
-      padding: 30px 0;
-    }
-    .student-data-col {
-      &:nth-child(3) {
-        .student-data {
-          margin-bottom: 0;
-        }
+  .container-fluid.but-fixed {
+      padding-left: 30px;
+      padding-right: 30px;
+  }
+  .wrap {
+    padding: 30px 0;
+  }
+  .student-data-col {
+    &:nth-child(3) {
+      .student-data {
+        margin-bottom: 0;
       }
     }
+  }
+  .card-body {
+    dl {
+      .label {
+        max-width: 175px;
+        display: inline-block;
+        font-weight: 400;
+        color: inherit !important;
+        font-size: 100%;
+      }
+      .student-data {
+        width: 100%;
+        max-width: calc(100% - 180px);
+        display: inline-block;
+      }
+    }
+  }
 
 }
 
