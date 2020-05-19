@@ -31,80 +31,134 @@
               </div>
             </div>
           </div>
+        </div>
 
-          <h2>Order ID: 30030986</h2>
-          <div class="card order-card mb-4">
-            <div class="card-header d-flex">
-              <h5 class="card-title mb-0">Order ID: 30030986</h5>
-              <div class="btn-group ml-auto">
-                <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
-                <div class="dropdown-menu dropdown-menu-right">
-                  <a class="dropdown-item" href="#">Impersonate Student</a>
-                  <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Order</a>
-                  <a class="dropdown-item" href="#resendEmailConfirmation" data-toggle="modal">Resend Email Confirmation</a>
-                  <a class="dropdown-item" href="#">Request Refund</a>
-                  <a class="dropdown-item" href="#">Process Administrative Fees</a>
-                </div>
+        <div class="col-12">
+          <div class="d-flex mb-3">
+            <h2 class="mb-0 mr-3">Order ID: 30030986</h2>
+            <div class="btn-group">
+              <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Actions</button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Sync Course/s</a>
+                <a class="dropdown-item" href="#">Customer Replay</a>
+                <a class="dropdown-item" href="#">Impersonate Student</a>
+                <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Order</a>
+                <a class="dropdown-item" href="#resendEmailConfirmation" data-toggle="modal">Resend Email Confirmation</a>
+                <a class="dropdown-item" href="#">Request Refund</a>
+                <a class="dropdown-item" href="#">Process Administrative Fees</a>
               </div>
             </div>
-            <div class="card-body table-responsive-lg p-0">
-              <table class="table table-sm mb-0">
-                <thead class="thead-light">
-                  <tr>
-                    <th>Is Locked</th>
-                    <th>Detail Id</th>
-                    <th>Quantity</th>
-                    <th>Product ID and Name</th>
-                    <th>Expiration</th>
-                    <th>Platform</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>False</td>
-                    <td><a href="/order-details/">30030981</a></td>
-                    <td>1</td>
-                    <td>1591 - Florida 4-Hour Drug & Alcohol Traffic Awareness (D.A.T.A.) Streaming</td>
-                    <td>04/14/2020 15:29 PM</td>
-                    <td>UniversityLE</td>
-                  </tr>
-                  <tr>
-                    <td>False</td>
-                    <td><a href="/order-details/">30030982</a></td>
-                    <td>1</td>
-                    <td>1371 - Florida Online Permit Exam</td>
-                    <td>04/14/2020 15:29 PM</td>
-                    <td>UniversityLE</td>
-                  </tr>
-                  <tr>
-                    <td>False</td>
-                    <td><a href="/order-details/">30030983</a></td>
-                    <td>1</td>
-                    <td>1021 - Learner's Permit Prep</td>
-                    <td>04/14/2020 15:29 PM</td>
-                    <td>UniversityLE</td>
-                  </tr>
-                  <tr>
-                    <td>False</td>
-                    <td><a href="/order-details/">30030984</a></td>
-                    <td>1</td>
-                    <td>1324 - Package Discount	</td>
-                    <td>-</td>
-                    <td>UniversityLE</td>
-                  </tr>
-                  <tr>
-                    <td>False</td>
-                    <td><a href="/order-details/">30030985</a></td>
-                    <td>1</td>
-                    <td>1663 - Premier Pass</td>
-                    <td>-</td>
-                    <td>UniversityLE</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
           </div>
-
+          <div class="card order-card table-responsive-lgmb-4">
+            <table class="table table-hover mb-0 font-smaller">
+              <thead class="thead-light">
+                <tr>
+                  <th>Is Locked</th>
+                  <th>Detail Id</th>
+                  <th>Quantity</th>
+                  <th>Product ID and Name</th>
+                  <th>Expiration</th>
+                  <th>Platform</th>
+                  <th class="text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>False</td>
+                  <td><a href="/order-details/">30030981</a></td>
+                  <td>1</td>
+                  <td>1591 - Florida 4-Hour Drug & Alcohol Traffic Awareness (D.A.T.A.) Streaming</td>
+                  <td>04/14/2020 15:29 PM</td>
+                  <td>UniversityLE</td>
+                  <td class="text-right">
+                    <div class="btn-group ml-auto">
+                      <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">View Course Status</a>
+                        <a class="dropdown-item" href="#">Impersonate Student</a>
+                        <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a>
+                        <a class="dropdown-item" href="#">Request Refund</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>False</td>
+                  <td><a href="/order-details/">30030982</a></td>
+                  <td>1</td>
+                  <td>1371 - Florida Online Permit Exam</td>
+                  <td>04/14/2020 15:29 PM</td>
+                  <td>UniversityLE</td>
+                  <td class="text-right">
+                    <div class="btn-group ml-auto">
+                      <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">View Course Status</a>
+                        <a class="dropdown-item" href="#">Impersonate Student</a>
+                        <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a>
+                        <a class="dropdown-item" href="#">Request Refund</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>False</td>
+                  <td><a href="/order-details/">30030983</a></td>
+                  <td>1</td>
+                  <td>1021 - Learner's Permit Prep</td>
+                  <td>04/14/2020 15:29 PM</td>
+                  <td>UniversityLE</td>
+                  <td class="text-right">
+                    <div class="btn-group ml-auto">
+                      <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">View Course Status</a>
+                        <a class="dropdown-item" href="#">Impersonate Student</a>
+                        <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a>
+                        <a class="dropdown-item" href="#">Request Refund</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>False</td>
+                  <td><a href="/order-details/">30030984</a></td>
+                  <td>1</td>
+                  <td>1324 - Package Discount	</td>
+                  <td>-</td>
+                  <td>UniversityLE</td>
+                  <td class="text-right">
+                    <div class="btn-group ml-auto">
+                      <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">Impersonate Student</a>
+                        {# <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a>
+                        <a class="dropdown-item" href="#">Request Refund</a> #}
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>False</td>
+                  <td><a href="/order-details/">30030985</a></td>
+                  <td>1</td>
+                  <td>1663 - Premier Pass</td>
+                  <td>-</td>
+                  <td>UniversityLE</td>
+                  <td class="text-right">
+                    <div class="btn-group ml-auto">
+                      <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">Impersonate Student</a>
+                        {# <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a> #}
+                        <a class="dropdown-item" href="#">Request Refund</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
       </div>
