@@ -154,6 +154,19 @@ body {
   .action-btn {
     padding: 0 !important;
   }
+  th.action {
+    min-width: 100px;
+  }
+  th.product-name {
+    min-width: 300px;
+  }
+  tfoot {
+    background-color: #fdfdfd;
+    font-weight: 600;
+  }
+}
+p.course-name {
+  font-weight: 600;
 }
 
 
