@@ -260,7 +260,7 @@ p.course-name {
   .card-body {
     dl {
       .label {
-        max-width: 175px;
+        max-width: 180px;
         display: inline-block;
         font-weight: 400;
         color: inherit !important;
@@ -268,7 +268,7 @@ p.course-name {
       }
       .student-data {
         width: 100%;
-        max-width: calc(100% - 180px);
+        max-width: calc(100% - 185px);
         display: inline-block;
       }
     }
