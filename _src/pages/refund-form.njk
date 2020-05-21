@@ -1,0 +1,107 @@
+{% set PageTitle = "Account Manager 2.0" %}
+{% set PageDescription = "Live Mockups for Account Manager 2.0" %}
+{% set CanonicalPage = "" %}
+
+{% extends "MainTemplate.njk" %}
+
+{% block MainContent %}
+  <section class="wrap flex-shrink-0">
+    <div class="container-fluid but-fixed">
+      <div class="row justify-content-center">
+        <div class="breadcrumb-wrap col-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Search</a></li>
+              <li class="breadcrumb-item"><a href="/account-details/">Account Details: xtiantest_0512</a></li>
+              <li class="breadcrumb-item"><a href="/order-details/">Order Details: 30030986</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Request Refund</li>
+            </ol>
+          </nav>
+        </div>
+        <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+          <h1 class="mb-3">Request Refund</h1>
+          <h4 class="mb-3 text-info">Order ID: 30030986</h4>
+          <form>
+            <div class="form-group">
+              <label for="refundType">Refund Type</label>
+              <select class="custom-select" id="refundType" name="refundType">
+                <option selected="selected" value="Order">Order Total</option>
+              	<option value="LineItem">LineItem</option>
+              	<option value="PartialOrder">PartialOrder</option>
+              	<option value="SalesTaxOnly">SalesTaxOnly</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label><strong>Order Information</strong></label>
+              <div class="custom-control custom-radio mb-1">
+                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio1">Texas Seller-Server Course - $13.95</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio2">Texas Food Handler Program - $9.99</label>
+              </div>
+              <div class="custom-control custom-radio mb-1">
+                <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio3">Mixology: The Art of the Cocktail - $4.95</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio4">Premier Pass - $2.95</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio5" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio5">Package Discount - ($2.94)</label>
+              </div>
+            </div>
+            <p class="mb-2">Order Total: <strong>$28.90</strong></p>
+            <p class="mb-2">Selected Item Tax: <strong>$0</strong></p>
+            <p class="mb-3">Refund Amount: <strong>$28.90</strong></p>
+            <div class="form-group">
+              <label for="refundReason">Refund Reason</label>
+              <select class="custom-select" id="refundReason" name="refundReason">
+                <option selected="selected" value="">Please Select a Reason...</option>
+              	<option value="Chose Classroom/Competitor Course">Chose Classroom/Competitor Course</option>
+              	<option value="Content Difficulty/Exams">Content Difficulty/Exams</option>
+              	<option value="Course Content">Course Content</option>
+              	<option value="Duplicate">Duplicate</option>
+              	<option value="Expedite Problem">Expedite Problem</option>
+              	<option value="Identity Validation">Identity Validation</option>
+              	<option value="Line Item Refund">Line Item Refund</option>
+              	<option value="Manager Use Only">Manager Use Only</option>
+              	<option value="Mistake/Changed Mind">Mistake/Changed Mind</option>
+              	<option value="Pricing/Marketing">Pricing/Marketing</option>
+              	<option value="Received Tax Exempt Certificate">Received Tax Exempt Certificate</option>
+              	<option value="Regulatory">Regulatory</option>
+              	<option value="Shipping/Deliverables">Shipping/Deliverables</option>
+              	<option value="Student Ineligible">Student Ineligible</option>
+              	<option value="Technical">Technical</option>
+              	<option value="Timing">Timing</option>
+              	<option value="Unknown/Other">Unknown/Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="refundAsCheck">
+                <label class="custom-control-label" for="refundAsCheck">Refund as Check</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="refundNotes">Refund Notes</label>
+              <textarea class="form-control" id="textarea" name="refundNotes"></textarea>
+            </div>
+
+            <div class="form-group mt-4">
+              <button type="submit" class="btn btn-primary mr-2">Submit</button>
+              <button type="reset" class="btn btn-outline-primary">Reset</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
+
+{% block FooterIncludes %}
+{% endblock %}

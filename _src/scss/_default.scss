@@ -3,7 +3,7 @@
 ----------------------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: normal;
-    color: #444444;
+    color: #007bff;
 }
 h1, .h1 { font-size: 1.602em; }
 h2, .h2 { font-size: 1.424em; }
@@ -51,6 +51,15 @@ h5, .h5 { font-size: 1em; }
   .dropdown-item {
     padding: .5rem .8rem;
   }
+}
+.nav-tabs {
+    border-bottom: 1px solid #6c757d;
+    .nav-item.show .nav-link, .nav-link.active, .nav-link.active:hover {
+        border-color: #6c757d #6c757d #ffffff #6c757d;
+    }
+    .nav-link:hover {
+      border-color: #e9ecef #e9ecef #6c757d #e9ecef;
+    }
 }
 /* ----------------------------------------------------------------------------
     Modal
