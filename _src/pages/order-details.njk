@@ -5,10 +5,10 @@
 {% extends "MainTemplate.njk" %}
 
 {% block MainContent %}
-  <section class="wrap flex-shrink-0">
+<section class="content-wrap wrap flex-shrink-0">
     <div class="container-fluid but-fixed">
       <div class="row">
-        <div class="breadcrumb-wrap col-12">
+        <div class="breadcrumb-wrap col-12 d-flex">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/">Search</a></li>
@@ -16,17 +16,16 @@
               <li class="breadcrumb-item active" aria-current="page">Order Details: 30030986</li>
             </ol>
           </nav>
+          <div class="btn-group ml-auto">
+            <button class="btn text-danger dropdown-toggle action-btn impersonating-btn" type="button" data-toggle="dropdown">Impersonating: <strong>xtiantest_0521</strong></button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="#">End Impersonation</a>
+            </div>
+          </div>
         </div>
         <div class="alerts-wrap col-12">
-          <div class="alert alert-warning alert-dismissible fade show impersonating d-flex align-items-center" role="alert">
-            <span>Currently Impersonating: <strong>xtiantest_0521</strong></span>
-            <button class="close-btn btn btn-sm ml-auto" type="button" data-dismiss="alert" aria-label="Close">
-                <span class="close-icon">&times;</span>
-                <span class="close-text">End Impersonation</span>
-            </button>
-          </div>
           <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <strong>Other Alerts!</strong> Can have multiple alerts, but it will need to be grouped inside the alert diev class="alerts-wrap".
+            <strong>Other Alerts!</strong> Can have multiple alerts, but it will need to be grouped inside the alert div class="alerts-wrap".
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
           </div>
         </div>
@@ -41,12 +40,13 @@
                 <a class="dropdown-item" href="#">Impersonate Student</a>
                 <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Order</a>
                 <a class="dropdown-item" href="#resendEmailConfirmation" data-toggle="modal">Resend Email Confirmation</a>
+                <a class="dropdown-item" href="/edit-student-form/">Edit Student Information</a>
                 <a class="dropdown-item" href="/refund-form/">Request Refund</a>
                 <a class="dropdown-item" href="#">Process Administrative Fees</a>
               </div>
             </div>
           </div>
-          <div class="card border-dark mb-3 mb-lg-4">
+          <div class="card border-primary shadow mb-3 mb-lg-4">
             <div class="card-body pt-3 pb-3">
               <div class="row">
                 <div class="col-sm-6 col-lg-3 student-data-col">
@@ -197,7 +197,7 @@
                         <div class="btn-group ml-auto">
                           <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
                           <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="/course-details/">View Course Status</a>
+                            <a class="dropdown-item" href="/course-details/">View Course Details</a>
                             <a class="dropdown-item" href="#">Refresh Manifest</a>
                             <a class="dropdown-item" href="#">Impersonate Student</a>
                             <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a>
@@ -221,7 +221,7 @@
                         <div class="btn-group ml-auto">
                           <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
                           <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="/course-details/">View Course Status</a>
+                            <a class="dropdown-item" href="/course-details/">View Course Details</a>
                             <a class="dropdown-item" href="#">Refresh Manifest</a>
                             <a class="dropdown-item" href="#">Impersonate Student</a>
                             <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a>
@@ -245,7 +245,7 @@
                         <div class="btn-group ml-auto">
                           <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
                           <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="/course-details/">View Course Status</a>
+                            <a class="dropdown-item" href="/course-details/">View Course Details</a>
                             <a class="dropdown-item" href="#">Refresh Manifest</a>
                             <a class="dropdown-item" href="#">Impersonate Student</a>
                             <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a>

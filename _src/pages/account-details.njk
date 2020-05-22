@@ -5,10 +5,10 @@
 {% extends "MainTemplate.njk" %}
 
 {% block MainContent %}
-  <section class="wrap flex-shrink-0">
+<section class="content-wrap wrap flex-shrink-0">
     <div class="container-fluid but-fixed">
       <div class="row">
-        <div class="breadcrumb-wrap col-12">
+        <div class="breadcrumb-wrap col-12 d-flex">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/">Search</a></li>
@@ -18,7 +18,7 @@
         </div>
         <div class="col-12">
           <h1 class="h2 mb-3">Account Details: <span class="text-danger">xtiantest_0512</span></h1>
-          <div class="card border-dark mb-3 mb-lg-4">
+          <div class="card border-primary shadow mb-3 mb-lg-4">
             <div class="card-body pt-3 pb-3">
               <div class="row">
                 <div class="col-sm-6 col-lg-3 student-data-col">
@@ -319,14 +319,14 @@
                     <div class="input-group">
                       <input aria-describedby="searchButton" aria-label="Search Field" class="form-control" id="SearchText" name="SearchText" placeholder="Search" type="text" value="">
                       <div class="input-group-append">
-                          <button class="btn btn-secondary btn-sm" type="button" id="searchButton"><i class="material-icons">search</i></button>
+                          <button class="btn btn-primary btn-sm" type="button" id="searchButton"><i class="material-icons">search</i></button>
                       </div>
                     </div>
                   </form>
                 </div>
                 <div class="col-4 ml-auto mb-3 text-right">
                   <div class="btn-group ml-auto">
-                    <button class="btn btn-outline-secondary dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                    <button class="btn btn-outline-primary dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
                     <div class="dropdown-menu dropdown-menu-right">
                       <a class="dropdown-item" href="#addAuditLog" data-toggle="modal">Add Log</a>
                       <a class="dropdown-item" href="#">View Audit Log</a>

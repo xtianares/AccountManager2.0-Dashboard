@@ -1,6 +1,7 @@
 /* --------------------------------------------------------------
     Import CCS Dependencies
 -------------------------------------------------------------- */
+@import 'colors';
 @import 'default';
 @import 'icons';
 @import 'nav';
@@ -11,15 +12,16 @@
 html {
   position: relative;
   height: 100%;
-  background-color: #fff;
+  background-color: #f8f9fc;
   overflow-y: scroll;
 }
 body {
   height: 100%;
   // margin-bottom: 60px; /* setting for sticky footer */
-  font-family: 'Open Sans', 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-rendering: optimizeLegibility;
   color: #555555;
+  background-color: #f8f9fc;
 }
 .wrap {
   padding: 15px 0;
@@ -28,12 +30,15 @@ body {
   // max-width: 1230px;
   max-width: 1400px;
 }
+.content-wrap {
+  // background-color: #f8f9fc;
+}
 .footer {
   padding-top: 15px;
   padding-bottom: 15px;
   bottom: 0;
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   color: #999999;
   border-top: 1px solid #e4e4e4;
 }
@@ -81,7 +86,13 @@ body {
   font-size: .9rem;
 }
 .card {
+  border-color: #e3e6f0;
+  border-top-color: $primary;
+  border-top-width: 1px;
+  box-shadow: 0 .15rem .75rem 0 rgba(58,59,69,.1) !important;
   .card-header {
+    background-color: #f8f9fc;
+    border-bottom: 1px solid #e3e6f0;
     font-weight: 600;
   }
   &.order-card {
@@ -93,6 +104,68 @@ body {
       th:last-child,
       td:last-child {
         padding-right: 1.25rem;
+      }
+    }
+  }
+  > .table thead,  .card-body > .table thead {
+    th {
+      border-top-width: 0;
+      border-bottom-width: 1px;
+      background-color: #f8f9fc;
+      border-bottom: 1px solid #e3e6f0;
+    }
+    th:first-child {
+      border-top-left-radius: 4px;
+    }
+    th:last-child {
+      border-top-right-radius: 4px;
+    }
+  }
+  .card-body > .table thead {
+    th {
+      padding-top: .3rem;
+      padding-bottom: .3rem;
+    }
+  }
+  .card-header {
+    .action-btn {
+      padding: 0 !important;
+    }
+    .card-title {
+      color: $primary;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+  }
+  .card-body {
+    .table.table-no-borders {
+      th, td {
+        border: 0;
+        padding: .2rem 0;
+      }
+      .label {
+        max-width: 175px;
+        padding-right: 10px;
+      }
+      .student-data {
+        font-weight: 600;
+      }
+    }
+    dl {
+      .label {
+        vertical-align: top;
+        width: 100%;
+        padding-right: 10px;
+        font-weight: 300;
+        color: #6c757d !important;
+        font-size: 80%;
+      }
+      .student-data {
+        vertical-align: top;
+        font-weight: 600;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -109,48 +182,8 @@ body {
     }
   }
 }
-.card-header {
-  .action-btn {
-    padding: 0 !important;
-  }
-  .card-title {
-    font-weight: 600;
-    margin-bottom: 0;
-  }
-}
-.card-body {
-  .table.table-no-borders {
-    th, td {
-      border: 0;
-      padding: .2rem 0;
-    }
-    .label {
-      max-width: 175px;
-      padding-right: 10px;
-    }
-    .student-data {
-      font-weight: 600;
-    }
-  }
-  dl {
-    .label {
-      vertical-align: top;
-      width: 100%;
-      padding-right: 10px;
-      font-weight: 300;
-      color: #6c757d !important;
-      font-size: 80%;
-    }
-    .student-data {
-      vertical-align: top;
-      font-weight: 600;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
-}
 .table {
+  color: inherit;
   .action-btn {
     padding: 0 !important;
   }
@@ -163,6 +196,9 @@ body {
   tfoot {
     background-color: #fdfdfd;
     font-weight: 600;
+  }
+  &.table-hover tbody tr:hover {
+    background-color: #f8f9fc;
   }
 }
 p.course-name {
@@ -179,16 +215,18 @@ p.course-name {
 .nav-tabs {
   border-bottom: 1px solid #6c757d;
   .nav-item.show .nav-link, .nav-link.active, .nav-link.active:hover {
-      border-color: #6c757d #6c757d #ffffff #6c757d;
+    background-color: #F8F9FC;
+    border-color: #6c757d #6c757d #F8F9FC #6c757d;
   }
   .nav-link:hover {
-    border-color: #d7d7d7 #d7d7d7 #6c757d #d7d7d7;
+    border-color: #d7d7d7 #d7d7d7 #F8F9FC #d7d7d7;
   }
 }
 .breadcrumb-wrap {
+  margin-bottom: 1.5rem;
   .breadcrumb {
     padding: 0;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
     background-color: transparent;
     border-radius: 0;
     .breadcrumb-item {
@@ -257,19 +295,21 @@ p.course-name {
       }
     }
   }
-  .card-body {
-    dl {
-      .label {
-        max-width: 180px;
-        display: inline-block;
-        font-weight: 400;
-        color: inherit !important;
-        font-size: 100%;
-      }
-      .student-data {
-        width: 100%;
-        max-width: calc(100% - 185px);
-        display: inline-block;
+  .card {
+    .card-body {
+      dl {
+        .label {
+          max-width: 180px;
+          display: inline-block;
+          font-weight: 400;
+          color: inherit !important;
+          font-size: 100%;
+        }
+        .student-data {
+          width: 100%;
+          max-width: calc(100% - 185px);
+          display: inline-block;
+        }
       }
     }
   }

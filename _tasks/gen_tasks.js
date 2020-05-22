@@ -87,7 +87,7 @@ gulp.task('watch', () => {
   gulp.watch(paths.html.templatesFiles, ['html']);
   gulp.watch(paths.images.siteFiles, ['images']);
   gulp.watch(paths.js.siteFiles, ['js']);
-  gulp.watch(paths.css.siteFiles, ['css']);
+  gulp.watch(paths.css.siteFiles, ['css:critical']);
   gulp.watch(paths.root.files, ['rootfiles']);
 });
 

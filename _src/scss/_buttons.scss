@@ -1,22 +1,10 @@
+/* --------------------------------------------------------------
+    Import CCS Dependencies
+-------------------------------------------------------------- */
+@import 'colors';
 /* ----------------------------------------------------------------------------
     Custom Buttons
 ----------------------------------------------------------------------------- */
-$blue:    #4285F4 !default;
-$red:     #FF3547 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #FFBB33 !default;
-$green:   #5BB85D !default;
-$cyan:    #17a2b8 !default;
-$gray-600: #6c757d !default;
-
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
-
-
 .btn {
     font-weight: 600;
     padding-left: 1.4rem !important;
