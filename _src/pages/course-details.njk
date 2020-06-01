@@ -5,41 +5,86 @@
 {% extends "MainTemplate.njk" %}
 
 {% block MainContent %}
-  <section class="content-wrap wrap flex-shrink-0">
-    <div class="container-fluid but-fixed">
-      <div class="row">
-        <div class="breadcrumb-wrap col-12 d-flex">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="/">Search</a></li>
-              <li class="breadcrumb-item"><a href="/account-details/">Account Details: xtiantest_0512</a></li>
-              <li class="breadcrumb-item"><a href="/order-details/">Order Details: 30030986</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Course Details: 13438522</li>
-            </ol>
-          </nav>
-          <div class="btn-group ml-auto">
-            <button class="btn text-danger dropdown-toggle action-btn impersonating-btn" type="button" data-toggle="dropdown">Impersonating: <strong>xtiantest_0521</strong></button>
-            <div class="dropdown-menu dropdown-menu-right">
-              <a class="dropdown-item" href="#">End Impersonation</a>
+<section class="content-wrap wrap flex-shrink-0">
+  <div class="container-fluid but-fixed">
+    <div class="row">
+      <div class="breadcrumb-wrap col-12 d-flex">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Search</a></li>
+            <li class="breadcrumb-item"><a href="/account-details/">Account Details: xtiantest_0512</a></li>
+            <li class="breadcrumb-item"><a href="/order-details/">Order Details: 30030986</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Course Details: 13438522</li>
+          </ol>
+        </nav>
+        <div class="btn-group ml-auto">
+          <button class="btn text-danger dropdown-toggle action-btn impersonating-btn" type="button" data-toggle="dropdown">Impersonating: <strong>xtiantest_0521</strong></button>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" href="#">End Impersonation</a>
+          </div>
+        </div>
+      </div>
+      <div class="alerts-wrap col-12">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>Other Alerts!</strong> Can have multiple alerts, but it will need to be grouped inside the alert div class="alerts-wrap".
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="d-flex mb-3">
+          <h1 class="h2 mb-0 mr-3">Course Details: <span class="text-danger">13438522</span></h1>
+          <div class="btn-group">
+            <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Actions</button>
+            <div class="dropdown-menu dropdown-menu-left">
+              <a class="dropdown-item" href="#">Refresh Manifest</a>
+              <a class="dropdown-item" href="#">Customer Replay</a>
+              <a class="dropdown-item" href="#">Impersonate Student</a>
+              <a class="dropdown-item" href="/edit-student-form/">Edit Student Information</a>
+              <a class="dropdown-item" href="/edit-shipping-form/">Edit Shipping Address</a>
+              <a class="dropdown-item" href="#extendExpiration" data-toggle="modal">Extend Expiration Date</a>
+              <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a>
+              <a class="dropdown-item" href="#completeCourse" data-toggle="modal">Complete Course</a>
+              <a class="dropdown-item" href="/refund-form/">Request Refund</a>
             </div>
           </div>
         </div>
-        <div class="alerts-wrap col-12">
-          <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <strong>Other Alerts!</strong> Can have multiple alerts, but it will need to be grouped inside the alert div class="alerts-wrap".
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <p class="course-name">1591 - Florida 4-Hour Drug & Alcohol Traffic Awareness (D.A.T.A.) Streaming</p>
+        <div class="card border-primary shadow mb-3 mb-lg-4">
+          <div class="card-body pt-3 pb-3">
+            <div class="row">
+              <div class="col-sm-6 col-lg-3 student-data-col">
+                <div class="label text-muted font-weight-light small">Student Name</div>
+                <div class="student-data">Christian C. Castanares</div>
+              </div>
+              <div class="col-sm-6 col-lg-3 student-data-col">
+                <div class="label text-muted font-weight-light small">Username</div>
+                <div class="student-data"><a href="/account-details/">xtiantest_0512</a></div>
+              </div>
+              <div class="col-sm-6 col-lg-3 student-data-col">
+                <div class="label text-muted font-weight-light small">Email</div>
+                <div class="student-data">test@email.com</div>
+              </div>
+              <div class="col-sm-6 col-lg-3 student-data-col">
+                <div class="label text-muted font-weight-light small">Date of Birth</div>
+                <div class="student-data">5/20/2020</div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-12">
-          <div class="d-flex mb-3">
-            <h1 class="h2 mb-0 mr-3">Course Details: <span class="text-danger">13438522</span></h1>
-            <div class="btn-group">
-              <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Actions</button>
-              <div class="dropdown-menu dropdown-menu-left">
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card mb-4">
+          <div class="card-header d-flex">
+            <h5 class="card-title mb-0">Course Information</h5>
+            <div class="btn-group ml-auto">
+              <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+              <div class="dropdown-menu dropdown-menu-right">
                 <a class="dropdown-item" href="#">Refresh Manifest</a>
                 <a class="dropdown-item" href="#">Customer Replay</a>
                 <a class="dropdown-item" href="#">Impersonate Student</a>
                 <a class="dropdown-item" href="/edit-student-form/">Edit Student Information</a>
+                <a class="dropdown-item" href="/edit-shipping-form/">Edit Shipping Address</a>
                 <a class="dropdown-item" href="#extendExpiration" data-toggle="modal">Extend Expiration Date</a>
                 <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a>
                 <a class="dropdown-item" href="#completeCourse" data-toggle="modal">Complete Course</a>
@@ -47,152 +92,320 @@
               </div>
             </div>
           </div>
-          <p class="course-name">Florida 4-Hour Drug & Alcohol Traffic Awareness (D.A.T.A.) Streaming</p>
-          <div class="card border-primary shadow mb-3 mb-lg-4">
-            <div class="card-body pt-3 pb-3">
-              <div class="row">
-                <div class="col-sm-6 col-lg-3 student-data-col">
-                  <div class="label text-muted font-weight-light small">Student Name</div>
-                  <div class="student-data">Christian C. Castanares</div>
-                </div>
-                <div class="col-sm-6 col-lg-3 student-data-col">
-                  <div class="label text-muted font-weight-light small">Username</div>
-                  <div class="student-data"><a href="/account-details/">xtiantest_0512</a></div>
-                </div>
-                <div class="col-sm-6 col-lg-3 student-data-col">
-                  <div class="label text-muted font-weight-light small">Email</div>
-                  <div class="student-data">test@email.com</div>
-                </div>
-                <div class="col-sm-6 col-lg-3 student-data-col">
-                  <div class="label text-muted font-weight-light small">Date of Birth</div>
-                  <div class="student-data">5/20/2020</div>
-                </div>
+          <div class="card-body">
+            <dl class="mb-0">
+              <dt class="label">Course Name</dt>
+              <dd class="student-data">1591 - Florida 4-Hour Drug & Alcohol Traffic Awareness (D.A.T.A.) Streaming</dd>
+              <dt class="label">Order ID</dt>
+              <dd class="student-data">30030986</dd>
+              <dt class="label">Order Detail ID</dt>
+              <dd class="student-data">13438522</dd>
+              <dt class="label">Shipping Address</dt>
+              <dd class="student-data">225 E Robinson St Suite 570, Orlando, FL 32801</dd>
+              <dt class="label">Order Date</dt>
+              <dd class="student-data">04/14/2020 15:24 PM</dd>
+              <dt class="label">Expiration Date</dt>
+              <dd class="student-data">10/14/2020 15:29 PM</dd>
+              <dt class="label">Course Player</dt>
+              <dd class="student-data">Odin</dd>
+              <dt class="label">Time In Course</dt>
+              <dd class="student-data">60 minutes</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card mb-4">
+          <div class="card-header d-flex">
+            <h5 class="card-title mb-0">Course Status</h5>
+            {# <div class="btn-group ml-auto">
+              <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="/sample-form/">Request Refund</a>
+              </div>
+            </div> #}
+          </div>
+          <div class="card-body">
+            <dl class="mb-0">
+              <dt class="label">Course ID</dt>
+              <dd class="student-data">1500 v1</dd>
+              <dt class="label">Course State</dt>
+              <dd class="student-data">Not Started</dd>
+              <dt class="label">Course Progress</dt>
+              <dd class="student-data">0 / 7</dd>
+              <dt class="label">Is Locked</dt>
+              <dd class="student-data">False</dd>
+              <dt class="label">Is Blocked</dt>
+              <dd class="student-data">True</dd>
+              <dt class="label">Alerts</dt>
+              <dd class="student-data">2</dd>
+              <dt class="label">Blocking Alerts</dt>
+              <dd class="student-data">2</dd>
+              <dt class="label">Graduation Date</dt>
+              <dd class="student-data">Not Graduated</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="card order-card table-responsive-lg mb-4">
+          <h5 class="card-header mb-0">Course Alerts</h5>
+          <div class="card-body p-0 table-responsive-lg">
+            <table class="table table-hover mb-0 font-smaller">
+              <thead class="thead-light">
+                <tr>
+                  <th>Alert Name</th>
+                  <th>Priority</th>
+                  <th>Blocking</th>
+                  <th>Archived</th>
+                  <th>Created Date</th>
+                  <th>Cleared Date</th>
+                  <th class="text-right action">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Required User Information</td>
+                  <td>1</td>
+                  <td>True</td>
+                  <td><span class="text-danger">False</span></td>
+                  <td>5/12/20, 11:01 AM</td>
+                  <td>5/20/20, 6:04 PM</span></td>
+                  <td class="text-right">
+                    <div class="btn-group ml-auto">
+                      <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#clearAlert" data-toggle="modal">Clear</a>
+                        <a class="dropdown-item" href="clearAlert" data-toggle="modal">Accept</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>User Verification Setup Required</td>
+                  <td>1</td>
+                  <td>True</td>
+                  <td><span class="text-success">True</span></td>
+                  <td>5/12/20, 11:01 AM</td>
+                  <td>5/20/20, 6:01 PM</td>
+                  <td class="text-right">
+                    <div class="btn-group ml-auto">
+                      <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#clearAlert" data-toggle="modal">Clear</a>
+                        <a class="dropdown-item" href="clearAlert" data-toggle="modal">Accept</a>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card order-card mb-4">
+          <h5 class="card-header mb-0">Exam Results</h5>
+          <div class="card-body p-0 table-responsive-lg">
+            <table class="table table-hover mb-0 font-smaller">
+              <thead class="thead-light">
+                <tr>
+                  <th>Score</th>
+                  <th>Passing Percentage</th>
+                  <th>Is Passing</th>
+                  <th>Graded Date</th>
+                  <th>Required Correct</th>
+                  <th>Total Questions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>96</td>
+                  <td>70</td>
+                  <td><span class="text-success">True</span></td>
+                  <td>5/21/20, 9:59 AM</td>
+                  <td>18</td>
+                  <td>25</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card order-card table-responsive-lg mb-4">
+          <div class="card-header d-flex">
+            <h5 class="card-title mb-0">Completion Information</h5>
+            <div class="btn-group ml-auto">
+              <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#completeCourse" data-toggle="modal">Complete/Re-Complete Course</a>
+                <a class="dropdown-item" href="#">Download Certificate</a>
+                <a class="dropdown-item" href="#">Send Returned Mail Email</a>
               </div>
             </div>
           </div>
+          <div class="card-body p-0 table-responsive-lg">
+            <table class="table table-hover mb-0 font-smaller">
+              <thead class="thead-light">
+                <tr>
+                  <th>Is Successful</th>
+                  <th>Certificate #</th>
+                  <th>Available Date</th>
+                  <th>Shipped Date</th>
+                  <th>Reported Date</th>
+                  <th>Requested By</th>
+                  <th>Requested Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="text-success">True</span></td>
+                  <td>30341211</td>
+                  <td>5/21/20, 10:00 AM</td>
+                  <td>Not Shipped</td>
+                  <td>Not Reported</td>
+                  <td></td>
+                  <td>5/21/20, 10:00 AM</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
-        <div class="col-lg-6">
-          <div class="card mb-4">
-            <div class="card-header d-flex">
-              <h5 class="card-title mb-0">Course Information</h5>
-              <div class="btn-group ml-auto">
-                <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
-                <div class="dropdown-menu dropdown-menu-right">
-                  <a class="dropdown-item" href="#">Refresh Manifest</a>
-                  <a class="dropdown-item" href="#">Customer Replay</a>
-                  <a class="dropdown-item" href="#">Impersonate Student</a>
-                  <a class="dropdown-item" href="/edit-student-form/">Edit Student Information</a>
-                  <a class="dropdown-item" href="#extendExpiration" data-toggle="modal">Extend Expiration Date</a>
-                  <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a>
-                  <a class="dropdown-item" href="#completeCourse" data-toggle="modal">Complete Course</a>
-                  <a class="dropdown-item" href="/refund-form/">Request Refund</a>
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="modifier-tab" data-toggle="tab" href="#course-modifier" role="tab"><strong>Course Modifier</strong></a>
+            <a class="nav-item nav-link" id="identity-tab" data-toggle="tab" href="#identity-content" role="tab"><strong>Identity Validation</strong></a>
+            <a class="nav-item nav-link" id="records-tab" data-toggle="tab" href="#records-content" role="tab"><strong>Learning Records</strong></a>
+            <a class="nav-item nav-link" id="error-tab" data-toggle="tab" href="#error-content" role="tab"><strong>Error Alerts</strong></a>
+            <a class="nav-item nav-link" id="audit-tab" data-toggle="tab" href="#audit-content" role="tab"><strong>Audit Logs</strong></a>
+          </div>
+        </nav>
+        <div class="tab-content">
+          <div class="tab-pane fade pt-3 show active" id="course-modifier" role="tabpanel">
+            <div class="row">
+              <div class="col-12 col-lg-6 mb-3">
+                <form method="post" action="#">
+                  <div class="input-group">
+                    <select class="custom-select" id="ModifierToAdd" name="ModifierToAdd">
+                      <option value=""></option>
+                      <option value="Blocked">Blocked</option>
+                      <option value="Payment Failed">Payment Failed</option>
+                      <option value="Security">Security</option>
+                      <option value="Refund">Refund</option>
+                      <option value="Expired">Expired</option>
+                      <option value="UserVerificationSetupRequired">UserVerificationSetupRequired</option>
+                      <option value="UserInformationSetupRequired">UserInformationSetupRequired</option>
+                      <option value="AcknowledgementRequired">AcknowledgementRequired</option>
+                      <option value="CourseLock">CourseLock</option>
+                      <option value="TrainingVerificationDocumentation">TrainingVerificationDocumentation</option>
+                      <option value="PhotoCapture">PhotoCapture</option>
+                      <option value="IdentityVerificationDocumentation">IdentityVerificationDocumentation</option>
+                      <option value="ComplianceDocumentationReview">ComplianceDocumentationReview</option>
+                      <option value="Blocked">Blocked</option>
+                      <option value="Payment Failed">Payment Failed</option>
+                      <option value="Failed">Failed</option>
+                      <option value="Refund">Refund</option>
+                      <option value="Expired">Expired</option>
+                      <option value="FailedQuiz">FailedQuiz</option>
+                      <option value="FailedExam">FailedExam</option>
+                      <option value="FailedSecurity">FailedSecurity</option>
+                      <option value="CourseStarted">CourseStarted</option>
+                      <option value="CourseLock">CourseLock</option>
+                      <option value="TrainingVerificationDocumentation">TrainingVerificationDocumentation</option>
+                      <option value="PhotoCapture">PhotoCapture</option>
+                      <option value="IdentityVerificationDocumentation">IdentityVerificationDocumentation</option>
+                      <option value="ComplianceDocumentationReview">ComplianceDocumentationReview</option>
+                      <option value="Blocked">Blocked</option>
+                      <option value="Payment Failed">Payment Failed</option>
+                      <option value="Processing">Processing</option>
+                      <option value="Processed">Processed</option>
+                      <option value="Reported">Reported</option>
+                      <option value="Refund">Refund</option>
+                      <option value="CourseCompleted">CourseCompleted</option>
+                      <option value="CourseLock">CourseLock</option>
+                      <option value="FailedProcessing">FailedProcessing</option>
+                      <option value="FailedReporting">FailedReporting</option>
+                      <option value="CredentialRevoked">CredentialRevoked</option>
+                      <option value="CredentialApproved">CredentialApproved</option>
+                      <option value="Expired">Expired</option>
+                      <option value="UserInformationSetupRequired">UserInformationSetupRequired</option>
+                      <option value="CourseLock">CourseLock</option>
+                      <option value="TrainingVerificationDocumentation">TrainingVerificationDocumentation</option>
+                      <option value="PhotoCapture">PhotoCapture</option>
+                      <option value="IdentityVerificationDocumentation">IdentityVerificationDocumentation</option>
+                      <option value="Expired">Expired</option>
+                      <option value="CourseLock">CourseLock</option>
+                      <option value="ComplianceDocumentationReview">ComplianceDocumentationReview</option>
+                    </select>
+                    <div class="input-group-append">
+                        <button class="btn btn-primary btn-sm" type="button" id="searchButton">Add Modifier</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-4 ml-auto mb-3 text-right">
+                <div class="btn-group ml-auto">
+                  <button class="btn btn-outline-primary dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#">Refresh Manifest</a>
+                    <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="card-body">
-              <dl class="mb-0">
-                <dt class="label">Course Name</dt>
-                <dd class="student-data">Florida 4-Hour Drug & Alcohol Traffic Awareness (D.A.T.A.) Streaming</dd>
-                <dt class="label">Order ID</dt>
-                <dd class="student-data">30030986</dd>
-                <dt class="label">Order Detail ID</dt>
-                <dd class="student-data">13438522</dd>
-                <dt class="label">Shipping Address</dt>
-                <dd class="student-data">225 E Robinson St Suite 570, Orlando, FL 32801</dd>
-                <dt class="label">Order Date</dt>
-                <dd class="student-data">04/14/2020 15:24 PM</dd>
-                <dt class="label">Expiration Date</dt>
-                <dd class="student-data">10/14/2020 15:29 PM</dd>
-                <dt class="label">Course Player</dt>
-                <dd class="student-data">Odin</dd>
-                <dt class="label">Time In Course</dt>
-                <dd class="student-data">60 minutes</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="card mb-4">
-            <div class="card-header d-flex">
-              <h5 class="card-title mb-0">Course Status</h5>
-              {# <div class="btn-group ml-auto">
-                <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
-                <div class="dropdown-menu dropdown-menu-right">
-                  <a class="dropdown-item" href="/sample-form/">Request Refund</a>
-                </div>
-              </div> #}
-            </div>
-            <div class="card-body">
-              <dl class="mb-0">
-                <dt class="label">Course ID</dt>
-                <dd class="student-data">1500 v1</dd>
-                <dt class="label">Course State</dt>
-                <dd class="student-data">Not Started</dd>
-                <dt class="label">Course Progress</dt>
-                <dd class="student-data">0 / 7</dd>
-                <dt class="label">Is Locked</dt>
-                <dd class="student-data">False</dd>
-                <dt class="label">Is Blocked</dt>
-                <dd class="student-data">True</dd>
-                <dt class="label">Alerts</dt>
-                <dd class="student-data">2</dd>
-                <dt class="label">Blocking Alerts</dt>
-                <dd class="student-data">2</dd>
-                <dt class="label">Graduation Date</dt>
-                <dd class="student-data">Not Graduated</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12">
-          <div class="card order-card table-responsive-lg mb-4">
-            <h5 class="card-header mb-0">Course Alerts</h5>
-            <div class="card-body p-0 table-responsive-lg">
+            <div class="card order-card table-responsive-xl mb-4">
               <table class="table table-hover mb-0 font-smaller">
                 <thead class="thead-light">
                   <tr>
-                    <th>Alert Name</th>
-                    <th>Priority</th>
-                    <th>Blocking</th>
-                    <th>Status</th>
+                    <th>Modifier Name</th>
                     <th>Created Date</th>
-                    <th>Cleared Date</th>
+                    <th>Unblocked Date</th>
+                    <th>Blocking</th>
+                    <th>Archived</th>
                     <th class="text-right action">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Required User Information</td>
-                    <td>1</td>
-                    <td>True</td>
-                    <td>Active</td>
-                    <td>5/12/20, 11:01 AM</td>
-                    <td>5/20/20, 6:04 PM</span></td>
+                    <td>Course Started</td>
+                    <td>5/20/20, 6:05 PM</td>
+                    <td></td>
+                    <td>False</td>
+                    <td><span class="text-success">True</span></td>
                     <td class="text-right">
                       <div class="btn-group ml-auto">
                         <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
                         <div class="dropdown-menu dropdown-menu-right">
-                          <a class="dropdown-item" href="#clearAlert" data-toggle="modal">Clear</a>
-                          <a class="dropdown-item" href="clearAlert" data-toggle="modal">Accept</a>
+                          <a class="dropdown-item" href="#">Archive</a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Required User Information</td>
+                    <td>5/12/20, 11:01 AM</td>
+                    <td>5/20/20, 6:04 PM</span></td>
+                    <td>True</td>
+                    <td><span class="text-danger">False</span></td>
+                    <td class="text-right">
+                      <div class="btn-group ml-auto">
+                        <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="#">Archive</a>
                         </div>
                       </div>
                     </td>
                   </tr>
                   <tr>
                     <td>User Verification Setup Required</td>
-                    <td>1</td>
-                    <td>True</td>
-                    <td>Archived</td>
                     <td>5/12/20, 11:01 AM</td>
                     <td>5/20/20, 6:01 PM</td>
+                    <td>True</td>
+                    <td><span class="text-danger">False</span></td>
                     <td class="text-right">
                       <div class="btn-group ml-auto">
                         <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
                         <div class="dropdown-menu dropdown-menu-right">
-                          <a class="dropdown-item" href="#clearAlert" data-toggle="modal">Clear</a>
-                          <a class="dropdown-item" href="clearAlert" data-toggle="modal">Accept</a>
+                          <a class="dropdown-item" href="#">Archive</a>
                         </div>
                       </div>
                     </td>
@@ -201,586 +414,376 @@
               </table>
             </div>
           </div>
-          <div class="card order-card mb-4">
-            <h5 class="card-header mb-0">Exam Results</h5>
-            <div class="card-body p-0 table-responsive-lg">
-              <table class="table table-hover mb-0 font-smaller">
+          <div class="tab-pane fade pt-3" id="records-content" role="tabpanel">
+            <div class="btn-group mb-3">
+              <button class="btn btn-outline-primary dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+              <div class="dropdown-menu dropdown-menu-left">
+                <a class="dropdown-item" href="#">View Learning Records</a>
+                <a class="dropdown-item" href="#">Sync Learning Records</a>
+              </div>
+            </div>
+            <div class="card order-card table-responsive-lg">
+              <table class="table table-sm table-hover mb-0 font-smaller">
                 <thead class="thead-light">
                   <tr>
-                    <th>Score</th>
-                    <th>Passing Percentage</th>
-                    <th>Is Passing</th>
-                    <th>Graded Date</th>
-                    <th>Required Correct</th>
-                    <th>Total Questions</th>
+                    <th>BlockId</th>
+                    <th>ObjectId</th>
+                    <th>DurationInSeconds</th>
+                    <th>CreatedDate</th>
+                    <th>StartDate</th>
+                    <th>ModifiedDate</th>
+                    <th>LastTimestamp</th>
+                    <th>IsCompleted</th>
+                    <th>Actions</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>96</td>
-                    <td>70</td>
-                    <td>True</td>
-                    <td>5/21/20, 9:59 AM</td>
-                    <td>18</td>
-                    <td>25</td>
+                      <td>22</td>
+                      <td>CourseId=1500, BlockId=22, BlockType=Assessment, BlockSubtype=Exam, ContentId=5</td>
+                      <td>300.00</td>
+                      <td>5/21/20, 9:54 AM</td>
+                      <td>5/21/20, 9:54 AM</td>
+                      <td>5/21/20, 9:59 AM</td>
+                      <td>5/21/20, 9:59 AM</td>
+                      <td>True</td>
+                      <td><a href="#">Exam Responses</a></td>
                   </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="card order-card table-responsive-lg mb-4">
-            <div class="card-header d-flex">
-              <h5 class="card-title mb-0">Completion Information</h5>
-              <div class="btn-group ml-auto">
-                <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
-                <div class="dropdown-menu dropdown-menu-right">
-                  <a class="dropdown-item" href="#completeCourse" data-toggle="modal">Complete/Re-Complete Course</a>
-                  <a class="dropdown-item" href="#">Download Certificate</a>
-                  <a class="dropdown-item" href="#">Send Returned Mail Email</a>
-                </div>
-              </div>
-            </div>
-            <div class="card-body p-0 table-responsive-lg">
-              <table class="table table-hover mb-0 font-smaller">
-                <thead class="thead-light">
                   <tr>
-                    <th>Is Successful</th>
-                    <th>Certificate #</th>
-                    <th>Available Date</th>
-                    <th>Shipped Date</th>
-                    <th>Reported Date</th>
-                    <th>Requested By</th>
-                    <th>Requested Date</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>True</td>
-                    <td>30341211</td>
-                    <td>5/21/20, 10:00 AM</td>
-                    <td>Not Shipped</td>
-                    <td>Not Reported</td>
-                    <td></td>
-                    <td>5/21/20, 10:00 AM</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-              <a class="nav-item nav-link active" id="modifier-tab" data-toggle="tab" href="#course-modifier" role="tab"><strong>Course Modifier</strong></a>
-              <a class="nav-item nav-link" id="identity-tab" data-toggle="tab" href="#identity-content" role="tab"><strong>Identity Validation</strong></a>
-              <a class="nav-item nav-link" id="records-tab" data-toggle="tab" href="#records-content" role="tab"><strong>Learning Records</strong></a>
-              <a class="nav-item nav-link" id="error-tab" data-toggle="tab" href="#error-content" role="tab"><strong>Error Alerts</strong></a>
-              <a class="nav-item nav-link" id="audit-tab" data-toggle="tab" href="#audit-content" role="tab"><strong>Audit Logs</strong></a>
-            </div>
-          </nav>
-          <div class="tab-content">
-            <div class="tab-pane fade pt-3 show active" id="course-modifier" role="tabpanel">
-              <div class="row">
-                <div class="col-12 col-lg-6 mb-3">
-                  <form method="post" action="#">
-                    <div class="input-group">
-                      <select class="custom-select" id="ModifierToAdd" name="ModifierToAdd">
-                        <option value=""></option>
-                        <option value="Blocked">Blocked</option>
-                        <option value="Payment Failed">Payment Failed</option>
-                        <option value="Security">Security</option>
-                        <option value="Refund">Refund</option>
-                        <option value="Expired">Expired</option>
-                        <option value="UserVerificationSetupRequired">UserVerificationSetupRequired</option>
-                        <option value="UserInformationSetupRequired">UserInformationSetupRequired</option>
-                        <option value="AcknowledgementRequired">AcknowledgementRequired</option>
-                        <option value="CourseLock">CourseLock</option>
-                        <option value="TrainingVerificationDocumentation">TrainingVerificationDocumentation</option>
-                        <option value="PhotoCapture">PhotoCapture</option>
-                        <option value="IdentityVerificationDocumentation">IdentityVerificationDocumentation</option>
-                        <option value="ComplianceDocumentationReview">ComplianceDocumentationReview</option>
-                        <option value="Blocked">Blocked</option>
-                        <option value="Payment Failed">Payment Failed</option>
-                        <option value="Failed">Failed</option>
-                        <option value="Refund">Refund</option>
-                        <option value="Expired">Expired</option>
-                        <option value="FailedQuiz">FailedQuiz</option>
-                        <option value="FailedExam">FailedExam</option>
-                        <option value="FailedSecurity">FailedSecurity</option>
-                        <option value="CourseStarted">CourseStarted</option>
-                        <option value="CourseLock">CourseLock</option>
-                        <option value="TrainingVerificationDocumentation">TrainingVerificationDocumentation</option>
-                        <option value="PhotoCapture">PhotoCapture</option>
-                        <option value="IdentityVerificationDocumentation">IdentityVerificationDocumentation</option>
-                        <option value="ComplianceDocumentationReview">ComplianceDocumentationReview</option>
-                        <option value="Blocked">Blocked</option>
-                        <option value="Payment Failed">Payment Failed</option>
-                        <option value="Processing">Processing</option>
-                        <option value="Processed">Processed</option>
-                        <option value="Reported">Reported</option>
-                        <option value="Refund">Refund</option>
-                        <option value="CourseCompleted">CourseCompleted</option>
-                        <option value="CourseLock">CourseLock</option>
-                        <option value="FailedProcessing">FailedProcessing</option>
-                        <option value="FailedReporting">FailedReporting</option>
-                        <option value="CredentialRevoked">CredentialRevoked</option>
-                        <option value="CredentialApproved">CredentialApproved</option>
-                        <option value="Expired">Expired</option>
-                        <option value="UserInformationSetupRequired">UserInformationSetupRequired</option>
-                        <option value="CourseLock">CourseLock</option>
-                        <option value="TrainingVerificationDocumentation">TrainingVerificationDocumentation</option>
-                        <option value="PhotoCapture">PhotoCapture</option>
-                        <option value="IdentityVerificationDocumentation">IdentityVerificationDocumentation</option>
-                        <option value="Expired">Expired</option>
-                        <option value="CourseLock">CourseLock</option>
-                        <option value="ComplianceDocumentationReview">ComplianceDocumentationReview</option>
-                      </select>
-                      <div class="input-group-append">
-                          <button class="btn btn-primary btn-sm" type="button" id="searchButton">Add Modifier</button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="col-4 ml-auto mb-3 text-right">
-                  <div class="btn-group ml-auto">
-                    <button class="btn btn-outline-primary dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                      <a class="dropdown-item" href="#">Refresh Manifest</a>
-                      <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card order-card table-responsive-xl mb-4">
-                <table class="table table-hover mb-0 font-smaller">
-                  <thead class="thead-light">
-                    <tr>
-                      <th>Modifier Name</th>
-                      <th>Created Date</th>
-                      <th>Unblocked Date</th>
-                      <th>IsBlocking</th>
-                      <th>Archived</th>
-                      <th class="text-right action">Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Course Started</td>
-                      <td>5/20/20, 6:05 PM</td>
+                      <td>21</td>
+                      <td>CourseId=1500, BlockId=21, BlockType=IdentityVerification, BlockSubtype=SecurityQuestion</td>
+                      <td>0.00</td>
+                      <td>5/21/20, 9:54 AM</td>
+                      <td>5/21/20, 9:53 AM</td>
+                      <td>5/21/20, 9:54 AM</td>
+                      <td>5/21/20, 9:54 AM</td>
+                      <td>True</td>
                       <td></td>
-                      <td>False</td>
-                      <td>False</td>
-                      <td class="text-right">
-                        <div class="btn-group ml-auto">
-                          <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="#">Archive</a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Required User Information</td>
-                      <td>5/12/20, 11:01 AM</td>
-                      <td>5/20/20, 6:04 PM</span></td>
+                  </tr>
+                  <tr>
+                      <td>20</td>
+                      <td>CourseId=1500, BlockId=20, BlockType=Content, BlockSubtype=Rise</td>
+                      <td>15.00</td>
+                      <td>5/21/20, 9:53 AM</td>
+                      <td>5/21/20, 9:53 AM</td>
+                      <td>5/21/20, 9:53 AM</td>
+                      <td>5/21/20, 9:53 AM</td>
                       <td>True</td>
-                      <td>False</td>
-                      <td class="text-right">
-                        <div class="btn-group ml-auto">
-                          <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="#">Archive</a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>User Verification Setup Required</td>
-                      <td>5/12/20, 11:01 AM</td>
-                      <td>5/20/20, 6:01 PM</td>
+                      <td></td>
+                  </tr>
+                  <tr>
+                      <td>19</td>
+                      <td>CourseId=1500, BlockId=19, BlockType=IdentityVerification, BlockSubtype=SecurityQuestion</td>
+                      <td>0.00</td>
+                      <td>5/21/20, 9:53 AM</td>
+                      <td>5/21/20, 9:53 AM</td>
+                      <td>5/21/20, 9:53 AM</td>
+                      <td>5/21/20, 9:53 AM</td>
                       <td>True</td>
-                      <td>False</td>
-                      <td class="text-right">
-                        <div class="btn-group ml-auto">
-                          <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="#">Archive</a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                      <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tab-pane fade pt-3" id="identity-content" role="tabpanel">
+            <p class="text-danger">This tab should contain any identity validation requirement needed for the course, like biometricts for NYSC and the likes.</p>
+            <div class="btn-group mb-3">
+              <button class="btn btn-outline-primary dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+              <div class="dropdown-menu dropdown-menu-left">
+                <a class="dropdown-item" href="#">Edit Security Questions</a>
               </div>
             </div>
-            <div class="tab-pane fade pt-3" id="records-content" role="tabpanel">
-              <div class="btn-group mb-3">
-                <button class="btn btn-outline-primary dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
-                <div class="dropdown-menu dropdown-menu-left">
-                  <a class="dropdown-item" href="#">View Learning Records</a>
-                  <a class="dropdown-item" href="#">Sync Learning Records</a>
+            <div class="security-questions-list">
+              <div class="form-group">
+                <h5>The month of birth you entered when registering for the course was August?</h5>
+                <div class="choices">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" disabled="" required="" value="10" id="10" name="QuestionAnswers[0].AnswerId" class="custom-control-input" checked="">
+                    <label class="custom-control-label" for="10">Yes</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" disabled="" required="" value="11" id="11" name="QuestionAnswers[0].AnswerId" class="custom-control-input">
+                    <label class="custom-control-label" for="11">No</label>
+                  </div>
                 </div>
               </div>
-              <div class="card order-card table-responsive-lg">
-                <table class="table table-sm table-hover mb-0 font-smaller">
-                  <thead class="thead-light">
-                    <tr>
-                      <th>BlockId</th>
-                      <th>ObjectId</th>
-                      <th>DurationInSeconds</th>
-                      <th>CreatedDate</th>
-                      <th>StartDate</th>
-                      <th>ModifiedDate</th>
-                      <th>LastTimestamp</th>
-                      <th>IsCompleted</th>
-                      <th>Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                        <td>22</td>
-                        <td>CourseId=1500, BlockId=22, BlockType=Assessment, BlockSubtype=Exam, ContentId=5</td>
-                        <td>300.00</td>
-                        <td>5/21/20, 9:54 AM</td>
-                        <td>5/21/20, 9:54 AM</td>
-                        <td>5/21/20, 9:59 AM</td>
-                        <td>5/21/20, 9:59 AM</td>
-                        <td>True</td>
-                        <td><a href="#">Exam Responses</a></td>
-                    </tr>
-                    <tr>
-                        <td>21</td>
-                        <td>CourseId=1500, BlockId=21, BlockType=IdentityVerification, BlockSubtype=SecurityQuestion</td>
-                        <td>0.00</td>
-                        <td>5/21/20, 9:54 AM</td>
-                        <td>5/21/20, 9:53 AM</td>
-                        <td>5/21/20, 9:54 AM</td>
-                        <td>5/21/20, 9:54 AM</td>
-                        <td>True</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>20</td>
-                        <td>CourseId=1500, BlockId=20, BlockType=Content, BlockSubtype=Rise</td>
-                        <td>15.00</td>
-                        <td>5/21/20, 9:53 AM</td>
-                        <td>5/21/20, 9:53 AM</td>
-                        <td>5/21/20, 9:53 AM</td>
-                        <td>5/21/20, 9:53 AM</td>
-                        <td>True</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>19</td>
-                        <td>CourseId=1500, BlockId=19, BlockType=IdentityVerification, BlockSubtype=SecurityQuestion</td>
-                        <td>0.00</td>
-                        <td>5/21/20, 9:53 AM</td>
-                        <td>5/21/20, 9:53 AM</td>
-                        <td>5/21/20, 9:53 AM</td>
-                        <td>5/21/20, 9:53 AM</td>
-                        <td>True</td>
-                        <td></td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="form-group">
+                <h5>The email account you entered while registering for the course was Gmail?</h5>
+                <div class="choices">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" disabled="" required="" value="12" id="12" name="QuestionAnswers[1].AnswerId" class="custom-control-input" checked="">
+                    <label class="custom-control-label" for="12">Yes</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" disabled="" required="" value="13" id="13" name="QuestionAnswers[1].AnswerId" class="custom-control-input">
+                    <label class="custom-control-label" for="13">No</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <h5>Was the High School you attended in Texas?</h5>
+                <div class="choices">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" disabled="" required="" value="14" id="14" name="QuestionAnswers[2].AnswerId" class="custom-control-input" checked="">
+                    <label class="custom-control-label" for="14">Yes</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" disabled="" required="" value="15" id="15" name="QuestionAnswers[2].AnswerId" class="custom-control-input">
+                    <label class="custom-control-label" for="15">No</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <h5>The password you created to access the course includes numbers?</h5>
+                <div class="choices">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" disabled="" required="" value="16" id="16" name="QuestionAnswers[3].AnswerId" class="custom-control-input" checked="">
+                    <label class="custom-control-label" for="16">Yes</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" disabled="" required="" value="17" id="17" name="QuestionAnswers[3].AnswerId" class="custom-control-input">
+                    <label class="custom-control-label" for="17">No</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <h5>Do you currently hold employment where a certification card is required?</h5>
+                <div class="choices">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" disabled="" required="" value="18" id="18" name="QuestionAnswers[4].AnswerId" class="custom-control-input" checked="">
+                    <label class="custom-control-label" for="18">Yes</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" disabled="" required="" value="19" id="19" name="QuestionAnswers[4].AnswerId" class="custom-control-input">
+                    <label class="custom-control-label" for="19">No</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <h5>During registration, the phone number you entered started with area code 214?</h5>
+                <div class="choices">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" disabled="" required="" value="20" id="20" name="QuestionAnswers[5].AnswerId" class="custom-control-input" checked="">
+                    <label class="custom-control-label" for="20">Yes</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" disabled="" required="" value="21" id="21" name="QuestionAnswers[5].AnswerId" class="custom-control-input">
+                    <label class="custom-control-label" for="21">No</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <h5>The brand of car you have registered with Texas is a Ford?</h5>
+                <div class="choices">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" disabled="" required="" value="22" id="22" name="QuestionAnswers[6].AnswerId" class="custom-control-input" checked="">
+                    <label class="custom-control-label" for="22">Yes</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" disabled="" required="" value="23" id="23" name="QuestionAnswers[6].AnswerId" class="custom-control-input">
+                    <label class="custom-control-label" for="23">No</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <h5>Your height is below 6 feet?</h5>
+                <div class="choices">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" disabled="" required="" value="24" id="24" name="QuestionAnswers[7].AnswerId" class="custom-control-input" checked="">
+                    <label class="custom-control-label" for="24">Yes</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" disabled="" required="" value="25" id="25" name="QuestionAnswers[7].AnswerId" class="custom-control-input">
+                    <label class="custom-control-label" for="25">No</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <h5>During registration, were the first three numbers of you zip code 775?</h5>
+                <div class="choices">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" disabled="" required="" value="26" id="26" name="QuestionAnswers[8].AnswerId" class="custom-control-input" checked="">
+                    <label class="custom-control-label" for="26">Yes</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" disabled="" required="" value="27" id="27" name="QuestionAnswers[8].AnswerId" class="custom-control-input">
+                    <label class="custom-control-label" for="27">No</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <h5>You used a Visa card to pay for the course?</h5>
+                <div class="choices">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" disabled="" required="" value="28" id="28" name="QuestionAnswers[9].AnswerId" class="custom-control-input" checked="">
+                    <label class="custom-control-label" for="28">Yes</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" disabled="" required="" value="29" id="29" name="QuestionAnswers[9].AnswerId" class="custom-control-input">
+                    <label class="custom-control-label" for="29">No</label>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="tab-pane fade pt-3" id="identity-content" role="tabpanel">
-              <div class="btn-group mb-3">
-                <button class="btn btn-outline-primary dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
-                <div class="dropdown-menu dropdown-menu-left">
-                  <a class="dropdown-item" href="#">Edit Security Questions</a>
-                </div>
-              </div>
-              <div class="security-questions-list">
-                <div class="form-group">
-                  <h5>The month of birth you entered when registering for the course was August?</h5>
-                  <div class="choices">
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" disabled="" required="" value="10" id="10" name="QuestionAnswers[0].AnswerId" class="custom-control-input" checked="">
-                      <label class="custom-control-label" for="10">Yes</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" disabled="" required="" value="11" id="11" name="QuestionAnswers[0].AnswerId" class="custom-control-input">
-                      <label class="custom-control-label" for="11">No</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <h5>The email account you entered while registering for the course was Gmail?</h5>
-                  <div class="choices">
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" disabled="" required="" value="12" id="12" name="QuestionAnswers[1].AnswerId" class="custom-control-input" checked="">
-                      <label class="custom-control-label" for="12">Yes</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" disabled="" required="" value="13" id="13" name="QuestionAnswers[1].AnswerId" class="custom-control-input">
-                      <label class="custom-control-label" for="13">No</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <h5>Was the High School you attended in Texas?</h5>
-                  <div class="choices">
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" disabled="" required="" value="14" id="14" name="QuestionAnswers[2].AnswerId" class="custom-control-input" checked="">
-                      <label class="custom-control-label" for="14">Yes</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" disabled="" required="" value="15" id="15" name="QuestionAnswers[2].AnswerId" class="custom-control-input">
-                      <label class="custom-control-label" for="15">No</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <h5>The password you created to access the course includes numbers?</h5>
-                  <div class="choices">
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" disabled="" required="" value="16" id="16" name="QuestionAnswers[3].AnswerId" class="custom-control-input" checked="">
-                      <label class="custom-control-label" for="16">Yes</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" disabled="" required="" value="17" id="17" name="QuestionAnswers[3].AnswerId" class="custom-control-input">
-                      <label class="custom-control-label" for="17">No</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <h5>Do you currently hold employment where a certification card is required?</h5>
-                  <div class="choices">
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" disabled="" required="" value="18" id="18" name="QuestionAnswers[4].AnswerId" class="custom-control-input" checked="">
-                      <label class="custom-control-label" for="18">Yes</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" disabled="" required="" value="19" id="19" name="QuestionAnswers[4].AnswerId" class="custom-control-input">
-                      <label class="custom-control-label" for="19">No</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <h5>During registration, the phone number you entered started with area code 214?</h5>
-                  <div class="choices">
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" disabled="" required="" value="20" id="20" name="QuestionAnswers[5].AnswerId" class="custom-control-input" checked="">
-                      <label class="custom-control-label" for="20">Yes</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" disabled="" required="" value="21" id="21" name="QuestionAnswers[5].AnswerId" class="custom-control-input">
-                      <label class="custom-control-label" for="21">No</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <h5>The brand of car you have registered with Texas is a Ford?</h5>
-                  <div class="choices">
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" disabled="" required="" value="22" id="22" name="QuestionAnswers[6].AnswerId" class="custom-control-input" checked="">
-                      <label class="custom-control-label" for="22">Yes</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" disabled="" required="" value="23" id="23" name="QuestionAnswers[6].AnswerId" class="custom-control-input">
-                      <label class="custom-control-label" for="23">No</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <h5>Your height is below 6 feet?</h5>
-                  <div class="choices">
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" disabled="" required="" value="24" id="24" name="QuestionAnswers[7].AnswerId" class="custom-control-input" checked="">
-                      <label class="custom-control-label" for="24">Yes</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" disabled="" required="" value="25" id="25" name="QuestionAnswers[7].AnswerId" class="custom-control-input">
-                      <label class="custom-control-label" for="25">No</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <h5>During registration, were the first three numbers of you zip code 775?</h5>
-                  <div class="choices">
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" disabled="" required="" value="26" id="26" name="QuestionAnswers[8].AnswerId" class="custom-control-input" checked="">
-                      <label class="custom-control-label" for="26">Yes</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" disabled="" required="" value="27" id="27" name="QuestionAnswers[8].AnswerId" class="custom-control-input">
-                      <label class="custom-control-label" for="27">No</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <h5>You used a Visa card to pay for the course?</h5>
-                  <div class="choices">
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" disabled="" required="" value="28" id="28" name="QuestionAnswers[9].AnswerId" class="custom-control-input" checked="">
-                      <label class="custom-control-label" for="28">Yes</label>
-                    </div>
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input type="radio" disabled="" required="" value="29" id="29" name="QuestionAnswers[9].AnswerId" class="custom-control-input">
-                      <label class="custom-control-label" for="29">No</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
 
+          </div>
+          <div class="tab-pane fade pt-3" id="error-content" role="tabpanel">
+            <div class="card order-card table-responsive-lg">
+              <table class="table table-hover mb-0 font-smaller">
+                <thead class="thead-light">
+                  <tr>
+                    <th>Operation Id</th>
+                    <th>Created</th>
+                    <th>Message</th>
+                    <th>Severity</th>
+                    <th>Service</th>
+                    <th>Student Ignored</th>
+                    <th>CSR Acknowledged</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                      <td></td>
+                      <td>5/21/20, 9:08 AM</td>
+                      <td>User Verification Setup</td>
+                      <td>Error</td>
+                      <td>CourseProgressionsMS</td>
+                      <td>False</td>
+                      <td>True</td>
+                      <td><button class="btn btn-sm btn-outline-primary" id="" value="3196" disabled>Acknowledge</button></td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      <td>5/21/20, 9:08 AM</td>
+                      <td>Setup User Information</td>
+                      <td>Error</td>
+                      <td>CourseProgressionsMS</td>
+                      <td>False</td>
+                      <td>True</td>
+                      <td><button class="btn btn-sm btn-outline-primary" id="" value="3197" disabled>Acknowledge</button></td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      <td>5/21/20, 9:59 AM</td>
+                      <td>Updating Course Progress Record Failed with message: Can not transition from NotStarted state to Completed). Please contact support using one of the options listed in technical help.</td>
+                      <td>Error</td>
+                      <td>CourseProgressionsMS</td>
+                      <td>False</td>
+                      <td>False</td>
+                      <td><button class="btn btn-sm btn-primary" id="" value="3200">Acknowledge</button></td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      <td>5/21/20, 10:00 AM</td>
+                      <td>Course Completion has been successfully processed. </td>
+                      <td>Info</td>
+                      <td>Completions</td>
+                      <td>False</td>
+                      <td>False</td>
+                      <td><button class="btn btn-sm btn-primary" id="" value="3201">Acknowledge</button></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="tab-pane fade pt-3" id="error-content" role="tabpanel">
-              <div class="card order-card table-responsive-lg">
-                <table class="table table-hover mb-0 font-smaller">
-                  <thead class="thead-light">
-                    <tr>
-                      <th>Operation Id</th>
-                      <th>Created</th>
-                      <th>Message</th>
-                      <th>Severity</th>
-                      <th>Service</th>
-                      <th>Student Ignored</th>
-                      <th>CSR Acknowledged</th>
-                      <th>Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                        <td></td>
-                        <td>5/21/20, 9:08 AM</td>
-                        <td>User Verification Setup</td>
-                        <td>Error</td>
-                        <td>CourseProgressionsMS</td>
-                        <td>False</td>
-                        <td>True</td>
-                        <td><button class="btn btn-sm btn-outline-primary" id="" value="3196" disabled>Acknowledge</button></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>5/21/20, 9:08 AM</td>
-                        <td>Setup User Information</td>
-                        <td>Error</td>
-                        <td>CourseProgressionsMS</td>
-                        <td>False</td>
-                        <td>True</td>
-                        <td><button class="btn btn-sm btn-outline-primary" id="" value="3197" disabled>Acknowledge</button></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>5/21/20, 9:59 AM</td>
-                        <td>Updating Course Progress Record Failed with message: Can not transition from NotStarted state to Completed). Please contact support using one of the options listed in technical help.</td>
-                        <td>Error</td>
-                        <td>CourseProgressionsMS</td>
-                        <td>False</td>
-                        <td>False</td>
-                        <td><button class="btn btn-sm btn-primary" id="" value="3200">Acknowledge</button></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>5/21/20, 10:00 AM</td>
-                        <td>Course Completion has been successfully processed. </td>
-                        <td>Info</td>
-                        <td>Completions</td>
-                        <td>False</td>
-                        <td>False</td>
-                        <td><button class="btn btn-sm btn-primary" id="" value="3201">Acknowledge</button></td>
-                    </tr>
-                  </tbody>
-                </table>
+          </div>
+          <div class="tab-pane fade pt-3" id="audit-content" role="tabpanel">
+            <div class="row">
+              <div class="col-8 col-lg-6 mb-3">
+                <form id="searchForm" method="post" action="/AuditLogs/search">
+                  <div class="input-group">
+                    <input aria-describedby="searchButton" aria-label="Search Field" class="form-control" id="SearchText" name="SearchText" placeholder="Search" type="text" value="">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary btn-sm" type="button" id="searchButton"><i class="material-icons">search</i></button>
+                    </div>
+                  </div>
+                </form>
               </div>
-            </div>
-            <div class="tab-pane fade pt-3" id="audit-content" role="tabpanel">
-              <div class="row">
-                <div class="col-8 col-lg-6 mb-3">
-                  <form id="searchForm" method="post" action="/AuditLogs/search">
-                    <div class="input-group">
-                      <input aria-describedby="searchButton" aria-label="Search Field" class="form-control" id="SearchText" name="SearchText" placeholder="Search" type="text" value="">
-                      <div class="input-group-append">
-                          <button class="btn btn-primary btn-sm" type="button" id="searchButton"><i class="material-icons">search</i></button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="col-4 ml-auto mb-3 text-right">
-                  <div class="btn-group ml-auto">
-                    <button class="btn btn-outline-primary dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                      <a class="dropdown-item" href="#addAuditLog" data-toggle="modal">Add Log</a>
-                      <a class="dropdown-item" href="#">View Audit Log</a>
-                    </div>
+              <div class="col-4 ml-auto mb-3 text-right">
+                <div class="btn-group ml-auto">
+                  <button class="btn btn-outline-primary dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#addAuditLog" data-toggle="modal">Add Log</a>
+                    <a class="dropdown-item" href="#">View Audit Log</a>
                   </div>
                 </div>
               </div>
-              <div class="card order-card table-responsive-lg">
-                <table class="table table-sm table-hover font-smaller mb-0">
-                  <thead class="thead-light">
-                    <tr>
-                      <th>Event Name</th>
-                      <th>Message</th>
-                      <th>Timestamp</th>
-                      <th>Type</th>
-                      <th>Id</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>OrderAccessed</td>
-                      <td>User christian.castanares@amersc.com accessed order: 30031098</td>
-                      <td><span class="">05/18/2020 13:53 PM</span></td>
-                      <td>Order</td>
-                      <td>30031098</td>
-                    </tr>
-                    <tr>
-                      <td>AccessingOrder</td>
-                      <td>User christian.castanares@amersc.com is attempting to access order: 30031098</td>
-                      <td><span class="">05/18/2020 13:53 PM</span></td>
-                      <td>Order</td>
-                      <td>30031098</td>
-                    </tr>
-                    <tr>
-                      <td>OrderAccessed</td>
-                      <td>User christian.castanares@amersc.com accessed order: 30031098</td>
-                      <td><span class="">05/12/2020 15:09 PM</span></td>
-                      <td>Order</td>
-                      <td>30031098</td>
-                    </tr>
-                    <tr>
-                      <td>AccessingOrder</td>
-                      <td>User christian.castanares@amersc.com is attempting to access order: 30031098</td>
-                      <td><span class="">05/12/2020 15:09 PM</span></td>
-                      <td>Order</td>
-                      <td>30031098</td>
-                    </tr>
-                    <tr>
-                      <td>OrderAccessed</td>
-                      <td>User christian.castanares@amersc.com accessed order: 30031098</td>
-                      <td><span class="">05/12/2020 15:09 PM</span></td>
-                      <td>Order</td>
-                      <td>30031098</td>
-                    </tr>
-                    <tr>
-                      <td>AccessingOrder</td>
-                      <td>User christian.castanares@amersc.com is attempting to access order: 30031098</td>
-                      <td><span class="">05/12/2020 15:09 PM</span></td>
-                      <td>Order</td>
-                      <td>30031098</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="pagination-wrap mt-4">
-                <ul class="pagination justify-content-center">
-                  <li class="page-item disabled" id="previous"><a class="page-link" id="previousLink" disabled="" href="#">&#8592;</a></li>
-                  <li class="page-item active"><a class="page-link page" data-page="1" href="javascript:void(0)">1</a></li>
-                  <li class="page-item"><a class="page-link page" data-page="2" href="javascript:void(0)">2</a></li>
-                  <li class="page-item"><a class="page-link page" data-page="3" href="javascript:void(0)">3</a></li>
-                  <li class="page-item" id="next"><a class="page-link" id="nextLink" href="javascript:void(0)">&#8594;</a></li>
-                </ul>
-              </div>
+            </div>
+            <div class="card order-card table-responsive-lg">
+              <table class="table table-sm table-hover font-smaller mb-0">
+                <thead class="thead-light">
+                  <tr>
+                    <th>Event Name</th>
+                    <th>Message</th>
+                    <th>Timestamp</th>
+                    <th>Type</th>
+                    <th>Id</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>OrderAccessed</td>
+                    <td>User christian.castanares@amersc.com accessed order: 30031098</td>
+                    <td><span class="">05/18/2020 13:53 PM</span></td>
+                    <td>Order</td>
+                    <td>30031098</td>
+                  </tr>
+                  <tr>
+                    <td>AccessingOrder</td>
+                    <td>User christian.castanares@amersc.com is attempting to access order: 30031098</td>
+                    <td><span class="">05/18/2020 13:53 PM</span></td>
+                    <td>Order</td>
+                    <td>30031098</td>
+                  </tr>
+                  <tr>
+                    <td>OrderAccessed</td>
+                    <td>User christian.castanares@amersc.com accessed order: 30031098</td>
+                    <td><span class="">05/12/2020 15:09 PM</span></td>
+                    <td>Order</td>
+                    <td>30031098</td>
+                  </tr>
+                  <tr>
+                    <td>AccessingOrder</td>
+                    <td>User christian.castanares@amersc.com is attempting to access order: 30031098</td>
+                    <td><span class="">05/12/2020 15:09 PM</span></td>
+                    <td>Order</td>
+                    <td>30031098</td>
+                  </tr>
+                  <tr>
+                    <td>OrderAccessed</td>
+                    <td>User christian.castanares@amersc.com accessed order: 30031098</td>
+                    <td><span class="">05/12/2020 15:09 PM</span></td>
+                    <td>Order</td>
+                    <td>30031098</td>
+                  </tr>
+                  <tr>
+                    <td>AccessingOrder</td>
+                    <td>User christian.castanares@amersc.com is attempting to access order: 30031098</td>
+                    <td><span class="">05/12/2020 15:09 PM</span></td>
+                    <td>Order</td>
+                    <td>30031098</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="pagination-wrap mt-4">
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled" id="previous"><a class="page-link" id="previousLink" disabled="" href="#">&#8592;</a></li>
+                <li class="page-item active"><a class="page-link page" data-page="1" href="javascript:void(0)">1</a></li>
+                <li class="page-item"><a class="page-link page" data-page="2" href="javascript:void(0)">2</a></li>
+                <li class="page-item"><a class="page-link page" data-page="3" href="javascript:void(0)">3</a></li>
+                <li class="page-item" id="next"><a class="page-link" id="nextLink" href="javascript:void(0)">&#8594;</a></li>
+              </ul>
             </div>
           </div>
         </div>
-
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
 {% endblock %}
 

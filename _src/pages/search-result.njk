@@ -6,287 +6,287 @@
 
 {% block MainContent %}
 <section class="content-wrap wrap flex-shrink-0">
-    <div class="container-fluid but-fixed">
-      <div class="row">
-        <div class="breadcrumb-wrap col-12 d-flex">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="/">Search</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Search Results</li>
-            </ol>
-          </nav>
-        </div>
-        <div class="col-12">
-          <div class="d-flex mb-3">
-            <h1>Search Result</h1>
-            <div class="ml-auto">
-              <button class="btn btn-primary ml-auto" type="button" data-toggle="collapse" data-target="#search-form" aria-expanded="false" aria-controls="search-form">
+  <div class="container-fluid but-fixed">
+    <div class="row">
+      <div class="breadcrumb-wrap col-12 d-flex">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Search</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Search Results</li>
+          </ol>
+        </nav>
+      </div>
+      <div class="col-12">
+        <div class="d-flex mb-3">
+          <h1>Search Result</h1>
+          <div class="ml-auto">
+            <button class="btn btn-primary ml-auto" type="button" data-toggle="collapse" data-target="#search-form" aria-expanded="false" aria-controls="search-form">
 Show/Hide Search Form</button>
-            </div>
           </div>
-          <div class="collapse" id="search-form">
-            <form class="row" action="/search-result/">
-              <div class="col-md-6">
-                <h3 class="mb-4">Order Lookup</h3>
-                <div class="form-group input-group am-input-group">
-                  <div class="input-group-prepend">
-                    <label for="OrderInfoId" class="input-group-text">Order ID</label>
-                  </div>
-                  <input class="form-control" id="OrderInfoId" name="OrderInfoId" type="text" />
-                </div>
-                <div class="form-group input-group am-input-group">
-                  <div class="input-group-prepend">
-                    <label for="Username" class="input-group-text">Username</label>
-                  </div>
-                  <input class="form-control" id="Username" name="Username" type="text" />
-                </div>
-                <div class="form-group input-group am-input-group">
-                  <div class="input-group-prepend">
-                    <label for="FirstName" class="input-group-text">First Name</label>
-                  </div>
-                  <input class="form-control" id="FirstName" name="FirstName" type="text" />
-                </div>
-                <div class="form-group input-group am-input-group">
-                  <div class="input-group-prepend">
-                    <label for="LastName" class="input-group-text">Last Name</label>
-                  </div>
-                  <input class="form-control" id="LastName" name="LastName" type="text" />
-                </div>
-                <div class="form-group input-group am-input-group">
-                  <div class="input-group-prepend">
-                    <label for="Email" class="input-group-text">Email</label>
-                  </div>
-                  <input class="form-control" id="Email" name="Email" type="text" />
-                </div>
-                <div class="form-group input-group am-input-group">
-                  <div class="input-group-prepend">
-                    <label for="Phone" class="input-group-text">Phone</label>
-                  </div>
-                  <input class="form-control" id="Phone" name="Phone" type="text" />
-                </div>
-              </div>
-              <div class="col-md-6">
-                <h3 class="h5 mt-3 mb-3">Advanced Fields</h3>
-                <div class="form-group input-group am-input-group">
-                  <div class="input-group-prepend">
-                    <label for="dateOfBirth" class="input-group-text">Date of Birth</label>
-                  </div>
-                  <input class="form-control" id="dateOfBirth" name="dateOfBirth" type="text" />
-                </div>
-                <div class="form-group input-group am-input-group">
-                  <div class="input-group-prepend">
-                    <label for="last4CreditCardNumber" class="input-group-text">Last 4 Credit Card #</label>
-                  </div>
-                  <input class="form-control" id="last4CreditCardNumber" name="last4CreditCardNumber" type="text" />
-                </div>
-                <div class="form-group input-group am-input-group">
-                  <div class="input-group-prepend">
-                    <label for="fullCredtiCardNumber" class="input-group-text">Credit Card #</label>
-                  </div>
-                  <input class="form-control" id="fullCredtiCardNumber" name="fullCredtiCardNumber" type="text" />
-                </div>
-                <div class="form-group input-group am-input-group">
-                  <div class="input-group-prepend">
-                    <label for="paypalTransactionID" class="input-group-text">Paypal Trans ID</label>
-                  </div>
-                  <input class="form-control" id="paypalTransactionID" name="paypalTransactionID" type="text" />
-                </div>
-                <div class="form-group input-group am-input-group">
-                  <div class="input-group-prepend">
-                    <label for="ZipCode" class="input-group-text">Zip Code</label>
-                  </div>
-                  <input class="form-control" id="ZipCode" name="ZipCode" type="text" />
-                </div>
-              </div>
-              <div class="col-md-6">
-                <h3 class="h5 mt-3">Advance Filter</h3>
-                <div class="form-group form-row">
-                  <div class="col-sm-12">
-                    <label>Order Created:</label>
-                  </div>
-                  <div class="col-6">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <label class="input-group-text" for="OrderFromDate">From</label>
-                      </div>
-                      <input type="date" id="OrderFromDate" class="form-control" name="OrderFromDate" value="">
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <label class="input-group-text" for="OrderToDate">To</label>
-                      </div>
-                      <input type="date" id="OrderToDate" class="form-control" name="OrderToDate" value="">
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group input-group am-input-group">
-                  <div class="input-group-prepend">
-                    <label for="studentStatus" class="input-group-text">Student Status</label>
-                  </div>
-                  <select class="custom-select" id="studentStatus">
-                    <option selected value="">Select Status</option>
-                    <option value="Registered">Registered</option>
-                    <option value="In-Progress">In-Progress</option>
-                    <option value="Graduated">Graduated</option>
-                  </select>
-                </div>
-                <div class="form-group input-group am-input-group">
-                  <div class="input-group-prepend">
-                    <label for="pipeline" class="input-group-text">Pipeline</label>
-                  </div>
-                  <input class="form-control" id="pipeline" name="pipeline" type="text" />
-                </div>
-                <div class="form-group input-group am-input-group">
-                  <div class="input-group-prepend">
-                    <label for="productIDName" class="input-group-text">Product ID/Name</label>
-                  </div>
-                  <input class="form-control" id="productIDName" name="productIDName" type="text" />
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-group d-flex mt-3">
-                  <button type="submit" class="btn btn-primary mr-2">Search</button>
-                  <button type="reset" class="btn btn-outline-primary mr-2">Reset</button>
-                  <button class="btn btn-primary ml-auto" type="button" data-toggle="collapse" data-target="#search-form" aria-expanded="false" aria-controls="search-form">Show/Hide Search Form</button>
-                </div>
-              </div>
-            </form>
-          </div>
-
-          <div class="card mt-3 mb-3 table-responsive-lg" id="searchResultsTable">
-            <table class="table table-hover mb-0 font-smaller">
-              <thead class="thead-light">
-                <tr>
-                  <th>Order Id</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Username</th>
-                  <th>Product Name</th>
-                  <th>Last Order</th>
-                  <th>Graduation Date</th>
-                  <th>Platform</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td scope="row"><a href="/order-details/">30030986</a></td>
-                  <td>Brittany</td>
-                  <td>Test</td>
-                  <td><a href="/account-details/">BM20200414a</a></td>
-                  <td>AESir Testing - Critical Path w/o Odin</td>
-                  <td><span class="">04/14/2020 15:24 PM</span></td>
-                  <td><span class="">04/14/2020 15:29 PM</span></td>
-                  <td>AEsir</td>
-                </tr>
-                <tr>
-                  <td scope="row"><a href="/order-details/">30030983</a></td>
-                  <td>Bob</td>
-                  <td>test</td>
-                  <td><a href="/account-details/">bs04142001NOODIN</a></td>
-                  <td>OSHA 30-Hr Outreach Training for the Construction Industry</td>
-                  <td><span class="">04/14/2020 14:12 PM</span></td>
-                  <td></td>
-                  <td>UniversityLE</td>
-                </tr>
-                <tr>
-                  <td scope="row"><a href="/order-details/">30030983</a></td>
-                  <td>Bob</td>
-                  <td>test</td>
-                  <td><a href="/account-details/">bs04142001NOODIN</a></td>
-                  <td>SST Card</td>
-                  <td><span class="">04/14/2020 14:12 PM</span></td>
-                  <td><span class="">04/14/2020 14:25 PM</span></td>
-                  <td>AEsir</td>
-                </tr>
-                <tr>
-                  <td scope="row"><a href="/order-details/">30030983</a></td>
-                  <td>Bob</td>
-                  <td>test</td>
-                  <td><a href="/account-details/">bs04142001NOODIN</a></td>
-                  <td>2-Hour Drug and Alcohol Awareness </td>
-                  <td><span class="">04/14/2020 14:12 PM</span></td>
-                  <td></td>
-                  <td>AEsir</td>
-                </tr>
-                <tr>
-                  <td scope="row"><a href="/order-details/">30030983</a></td>
-                  <td>Bob</td>
-                  <td>test</td>
-                  <td><a href="/account-details/">bs04142001NOODIN</a></td>
-                  <td>Invalid - Do not use</td>
-                  <td><span class="">04/14/2020 14:12 PM</span></td>
-                  <td></td>
-                  <td>AEsir</td>
-                </tr>
-                <tr>
-                  <td scope="row"><a href="/order-details/">30030983</a></td>
-                  <td>Bob</td>
-                  <td>test</td>
-                  <td><a href="/account-details/">bs04142001NOODIN</a></td>
-                  <td>AESir Testing - Critical Path w/o Odin</td>
-                  <td><span class="">04/14/2020 14:12 PM</span></td>
-                  <td><span class="">04/14/2020 14:37 PM</span></td>
-                  <td>AEsir</td>
-                </tr>
-                <tr>
-                  <td scope="row"><a href="/order-details/">30030982</a></td>
-                  <td>trenton</td>
-                  <td>test</td>
-                  <td><a href="/account-details/">tu0414202011</a></td>
-                  <td>Washington Alcohol Seller/Server Training</td>
-                  <td><span class="">04/14/2020 13:59 PM</span></td>
-                  <td></td>
-                  <td>UniversityLE</td>
-                </tr>
-                <tr>
-                  <td scope="row"><a href="/order-details/">30030982</a></td>
-                  <td>trenton</td>
-                  <td>test</td>
-                  <td><a href="/account-details/">tu0414202011</a></td>
-                  <td>Mixology</td>
-                  <td><span class="">04/14/2020 13:59 PM</span></td>
-                  <td><span class="">04/14/2020 14:15 PM</span></td>
-                  <td>AEsir</td>
-                </tr>
-                <tr>
-                  <td scope="row"><a href="/order-details/">30030981</a></td>
-                  <td>trenton</td>
-                  <td>test</td>
-                  <td><a href="/account-details/">tu0414202010</a></td>
-                  <td>Washington Alcohol Seller/Server Training</td>
-                  <td><span class="">04/14/2020 13:57 PM</span></td>
-                  <td></td>
-                  <td>UniversityLE</td>
-                </tr>
-                <tr>
-                  <td scope="row"><a href="/order-details/">30030980</a></td>
-                  <td>trenton</td>
-                  <td>test</td>
-                  <td><a href="/account-details/">tu0413202009</a></td>
-                  <td>Mixology</td>
-                  <td><span class="">04/14/2020 13:31 PM</span></td>
-                  <td></td>
-                  <td>AEsir</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="pagination-wrap">
-            <ul class="pagination justify-content-center">
-              <li class="page-item disabled" id="previous"><a class="page-link" id="previousLink" disabled="" href="#">&#8592;</a></li>
-              <li class="page-item active"><a class="page-link page" data-page="1" href="javascript:void(0)">1</a></li>
-              <li class="page-item"><a class="page-link page" data-page="2" href="javascript:void(0)">2</a></li>
-              <li class="page-item"><a class="page-link page" data-page="3" href="javascript:void(0)">3</a></li>
-              <li class="page-item" id="next"><a class="page-link" id="nextLink" href="javascript:void(0)">&#8594;</a></li>
-            </ul>
-          </div>
-
         </div>
+        <div class="collapse" id="search-form">
+          <form class="row" action="/search-result/">
+            <div class="col-md-6">
+              <h3 class="mb-4">Order Lookup</h3>
+              <div class="form-group input-group am-input-group">
+                <div class="input-group-prepend">
+                  <label for="OrderInfoId" class="input-group-text">Order ID</label>
+                </div>
+                <input class="form-control" id="OrderInfoId" name="OrderInfoId" type="number" />
+              </div>
+              <div class="form-group input-group am-input-group">
+                <div class="input-group-prepend">
+                  <label for="Username" class="input-group-text">Username</label>
+                </div>
+                <input class="form-control" id="Username" name="Username" type="text" />
+              </div>
+              <div class="form-group input-group am-input-group">
+                <div class="input-group-prepend">
+                  <label for="FirstName" class="input-group-text">First Name</label>
+                </div>
+                <input class="form-control" id="FirstName" name="FirstName" type="text" />
+              </div>
+              <div class="form-group input-group am-input-group">
+                <div class="input-group-prepend">
+                  <label for="LastName" class="input-group-text">Last Name</label>
+                </div>
+                <input class="form-control" id="LastName" name="LastName" type="text" />
+              </div>
+              <div class="form-group input-group am-input-group">
+                <div class="input-group-prepend">
+                  <label for="Email" class="input-group-text">Email</label>
+                </div>
+                <input class="form-control" id="Email" name="Email" type="email" />
+              </div>
+              <div class="form-group input-group am-input-group">
+                <div class="input-group-prepend">
+                  <label for="Phone" class="input-group-text">Phone</label>
+                </div>
+                <input class="form-control" id="Phone" name="Phone" type="tel" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h3 class="h5 mt-3 mb-3">Advanced Fields</h3>
+              <div class="form-group input-group am-input-group">
+                <div class="input-group-prepend">
+                  <label for="dateOfBirth" class="input-group-text">Date of Birth</label>
+                </div>
+                <input class="form-control" id="dateOfBirth" name="dateOfBirth" type="date" />
+              </div>
+              <div class="form-group input-group am-input-group">
+                <div class="input-group-prepend">
+                  <label for="last4CreditCardNumber" class="input-group-text">Last 4 Credit Card #</label>
+                </div>
+                <input class="form-control" id="last4CreditCardNumber" name="last4CreditCardNumber" type="number" maxlength="4" />
+              </div>
+              <div class="form-group input-group am-input-group">
+                <div class="input-group-prepend">
+                  <label for="fullCredtiCardNumber" class="input-group-text">Credit Card #</label>
+                </div>
+                <input class="form-control" id="fullCredtiCardNumber" name="fullCredtiCardNumber" type="number" maxlength="16" />
+              </div>
+              <div class="form-group input-group am-input-group">
+                <div class="input-group-prepend">
+                  <label for="paypalTransactionID" class="input-group-text">Paypal Trans ID</label>
+                </div>
+                <input class="form-control" id="paypalTransactionID" name="paypalTransactionID" type="number" />
+              </div>
+              <div class="form-group input-group am-input-group">
+                <div class="input-group-prepend">
+                  <label for="ZipCode" class="input-group-text">Zip Code</label>
+                </div>
+                <input class="form-control" id="ZipCode" name="ZipCode" type="text" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h3 class="h5 mt-3">Advance Filter</h3>
+              <div class="form-group form-row">
+                <div class="col-sm-12">
+                  <label>Order Created:</label>
+                </div>
+                <div class="col-6">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="OrderFromDate">From</label>
+                    </div>
+                    <input type="date" id="OrderFromDate" class="form-control" name="OrderFromDate" value="">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="OrderToDate">To</label>
+                    </div>
+                    <input type="date" id="OrderToDate" class="form-control" name="OrderToDate" value="">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group input-group am-input-group">
+                <div class="input-group-prepend">
+                  <label for="studentStatus" class="input-group-text">Student Status</label>
+                </div>
+                <select class="custom-select" id="studentStatus">
+                  <option selected value="">Select Status</option>
+                  <option value="Registered">Registered</option>
+                  <option value="In-Progress">In-Progress</option>
+                  <option value="Graduated">Graduated</option>
+                </select>
+              </div>
+              <div class="form-group input-group am-input-group">
+                <div class="input-group-prepend">
+                  <label for="pipeline" class="input-group-text">Pipeline</label>
+                </div>
+                <input class="form-control" id="pipeline" name="pipeline" type="number" />
+              </div>
+              <div class="form-group input-group am-input-group">
+                <div class="input-group-prepend">
+                  <label for="productIDName" class="input-group-text">Product ID/Name</label>
+                </div>
+                <input class="form-control" id="productIDName" name="productIDName" type="text" />
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group d-flex mt-3">
+                <button type="submit" class="btn btn-primary mr-2">Search</button>
+                <button type="reset" class="btn btn-outline-primary mr-2">Reset</button>
+                <button class="btn btn-primary ml-auto" type="button" data-toggle="collapse" data-target="#search-form" aria-expanded="false" aria-controls="search-form">Show/Hide Search Form</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="card mt-3 mb-3 table-responsive-lg" id="searchResultsTable">
+          <table class="table table-hover mb-0 font-smaller">
+            <thead class="thead-light">
+              <tr>
+                <th>Order Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+                <th>Product Name</th>
+                <th>Last Order</th>
+                <th>Graduation Date</th>
+                <th>Platform</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row"><a href="/order-details/">30030986</a></td>
+                <td>Brittany</td>
+                <td>Test</td>
+                <td><a href="/account-details/">BM20200414a</a></td>
+                <td>AESir Testing - Critical Path w/o Odin</td>
+                <td><span class="">04/14/2020 15:24 PM</span></td>
+                <td><span class="">04/14/2020 15:29 PM</span></td>
+                <td>AEsir</td>
+              </tr>
+              <tr>
+                <td scope="row"><a href="/order-details/">30030983</a></td>
+                <td>Bob</td>
+                <td>test</td>
+                <td><a href="/account-details/">bs04142001NOODIN</a></td>
+                <td>OSHA 30-Hr Outreach Training for the Construction Industry</td>
+                <td><span class="">04/14/2020 14:12 PM</span></td>
+                <td></td>
+                <td>UniversityLE</td>
+              </tr>
+              <tr>
+                <td scope="row"><a href="/order-details/">30030983</a></td>
+                <td>Bob</td>
+                <td>test</td>
+                <td><a href="/account-details/">bs04142001NOODIN</a></td>
+                <td>SST Card</td>
+                <td><span class="">04/14/2020 14:12 PM</span></td>
+                <td><span class="">04/14/2020 14:25 PM</span></td>
+                <td>AEsir</td>
+              </tr>
+              <tr>
+                <td scope="row"><a href="/order-details/">30030983</a></td>
+                <td>Bob</td>
+                <td>test</td>
+                <td><a href="/account-details/">bs04142001NOODIN</a></td>
+                <td>2-Hour Drug and Alcohol Awareness </td>
+                <td><span class="">04/14/2020 14:12 PM</span></td>
+                <td></td>
+                <td>AEsir</td>
+              </tr>
+              <tr>
+                <td scope="row"><a href="/order-details/">30030983</a></td>
+                <td>Bob</td>
+                <td>test</td>
+                <td><a href="/account-details/">bs04142001NOODIN</a></td>
+                <td>Invalid - Do not use</td>
+                <td><span class="">04/14/2020 14:12 PM</span></td>
+                <td></td>
+                <td>AEsir</td>
+              </tr>
+              <tr>
+                <td scope="row"><a href="/order-details/">30030983</a></td>
+                <td>Bob</td>
+                <td>test</td>
+                <td><a href="/account-details/">bs04142001NOODIN</a></td>
+                <td>AESir Testing - Critical Path w/o Odin</td>
+                <td><span class="">04/14/2020 14:12 PM</span></td>
+                <td><span class="">04/14/2020 14:37 PM</span></td>
+                <td>AEsir</td>
+              </tr>
+              <tr>
+                <td scope="row"><a href="/order-details/">30030982</a></td>
+                <td>trenton</td>
+                <td>test</td>
+                <td><a href="/account-details/">tu0414202011</a></td>
+                <td>Washington Alcohol Seller/Server Training</td>
+                <td><span class="">04/14/2020 13:59 PM</span></td>
+                <td></td>
+                <td>UniversityLE</td>
+              </tr>
+              <tr>
+                <td scope="row"><a href="/order-details/">30030982</a></td>
+                <td>trenton</td>
+                <td>test</td>
+                <td><a href="/account-details/">tu0414202011</a></td>
+                <td>Mixology</td>
+                <td><span class="">04/14/2020 13:59 PM</span></td>
+                <td><span class="">04/14/2020 14:15 PM</span></td>
+                <td>AEsir</td>
+              </tr>
+              <tr>
+                <td scope="row"><a href="/order-details/">30030981</a></td>
+                <td>trenton</td>
+                <td>test</td>
+                <td><a href="/account-details/">tu0414202010</a></td>
+                <td>Washington Alcohol Seller/Server Training</td>
+                <td><span class="">04/14/2020 13:57 PM</span></td>
+                <td></td>
+                <td>UniversityLE</td>
+              </tr>
+              <tr>
+                <td scope="row"><a href="/order-details/">30030980</a></td>
+                <td>trenton</td>
+                <td>test</td>
+                <td><a href="/account-details/">tu0413202009</a></td>
+                <td>Mixology</td>
+                <td><span class="">04/14/2020 13:31 PM</span></td>
+                <td></td>
+                <td>AEsir</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination-wrap">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled" id="previous"><a class="page-link" id="previousLink" disabled="" href="#">&#8592;</a></li>
+            <li class="page-item active"><a class="page-link page" data-page="1" href="javascript:void(0)">1</a></li>
+            <li class="page-item"><a class="page-link page" data-page="2" href="javascript:void(0)">2</a></li>
+            <li class="page-item"><a class="page-link page" data-page="3" href="javascript:void(0)">3</a></li>
+            <li class="page-item" id="next"><a class="page-link" id="nextLink" href="javascript:void(0)">&#8594;</a></li>
+          </ul>
+        </div>
+
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 {% endblock %}
 

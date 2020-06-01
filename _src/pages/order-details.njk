@@ -6,35 +6,77 @@
 
 {% block MainContent %}
 <section class="content-wrap wrap flex-shrink-0">
-    <div class="container-fluid but-fixed">
-      <div class="row">
-        <div class="breadcrumb-wrap col-12 d-flex">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="/">Search</a></li>
-              <li class="breadcrumb-item"><a href="/account-details/">Account Details: xtiantest_0512</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Order Details: 30030986</li>
-            </ol>
-          </nav>
-          <div class="btn-group ml-auto">
-            <button class="btn text-danger dropdown-toggle action-btn impersonating-btn" type="button" data-toggle="dropdown">Impersonating: <strong>xtiantest_0521</strong></button>
-            <div class="dropdown-menu dropdown-menu-right">
-              <a class="dropdown-item" href="#">End Impersonation</a>
+  <div class="container-fluid but-fixed">
+    <div class="row">
+      <div class="breadcrumb-wrap col-12 d-flex">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Search</a></li>
+            <li class="breadcrumb-item"><a href="/account-details/">Account Details: xtiantest_0512</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Order Details: 30030986</li>
+          </ol>
+        </nav>
+        <div class="btn-group ml-auto">
+          <button class="btn text-danger dropdown-toggle action-btn impersonating-btn" type="button" data-toggle="dropdown">Impersonating: <strong>xtiantest_0521</strong></button>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" href="#">End Impersonation</a>
+          </div>
+        </div>
+      </div>
+      <div class="alerts-wrap col-12">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>Other Alerts!</strong> Can have multiple alerts, but it will need to be grouped inside the alert div class="alerts-wrap".
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="d-flex mb-3">
+          <h1 class="h2 mb-0 mr-3">Order Details: <span class="text-danger">30030986</span></h1>
+          <div class="btn-group">
+            <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Actions</button>
+            <div class="dropdown-menu dropdown-menu-left">
+              <a class="dropdown-item" href="#">Sync Course/s</a>
+              <a class="dropdown-item" href="#">Customer Replay</a>
+              <a class="dropdown-item" href="#">Impersonate Student</a>
+              <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Order</a>
+              <a class="dropdown-item" href="#resendEmailConfirmation" data-toggle="modal">Resend Email Confirmation</a>
+              <a class="dropdown-item" href="/edit-student-form/">Edit Student Information</a>
+              <a class="dropdown-item" href="/refund-form/">Request Refund</a>
+              <a class="dropdown-item" href="#">Process Administrative Fees</a>
             </div>
           </div>
         </div>
-        <div class="alerts-wrap col-12">
-          <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <strong>Other Alerts!</strong> Can have multiple alerts, but it will need to be grouped inside the alert div class="alerts-wrap".
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <div class="card border-primary shadow mb-3 mb-lg-4">
+          <div class="card-body pt-3 pb-3">
+            <div class="row">
+              <div class="col-sm-6 col-lg-3 student-data-col">
+                <div class="label text-muted font-weight-light small">Student Name</div>
+                <div class="student-data">Christian C. Castanares</div>
+              </div>
+              <div class="col-sm-6 col-lg-3 student-data-col">
+                <div class="label text-muted font-weight-light small">Username</div>
+                <div class="student-data"><a href="/account-details/">xtiantest_0512</a></div>
+              </div>
+              <div class="col-sm-6 col-lg-3 student-data-col">
+                <div class="label text-muted font-weight-light small">Email</div>
+                <div class="student-data">test@email.com</div>
+              </div>
+              <div class="col-sm-6 col-lg-3 student-data-col">
+                <div class="label text-muted font-weight-light small">Date of Birth</div>
+                <div class="student-data">5/20/2020</div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-12">
-          <div class="d-flex mb-3">
-            <h1 class="h2 mb-0 mr-3">Order Details: <span class="text-danger">30030986</span></h1>
-            <div class="btn-group">
-              <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Actions</button>
-              <div class="dropdown-menu dropdown-menu-left">
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card mb-4">
+          <div class="card-header d-flex">
+            <h5 class="card-title mb-0">Order Information</h5>
+            <div class="btn-group ml-auto">
+              <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+              <div class="dropdown-menu dropdown-menu-right">
                 <a class="dropdown-item" href="#">Sync Course/s</a>
                 <a class="dropdown-item" href="#">Customer Replay</a>
                 <a class="dropdown-item" href="#">Impersonate Student</a>
@@ -46,427 +88,431 @@
               </div>
             </div>
           </div>
-          <div class="card border-primary shadow mb-3 mb-lg-4">
-            <div class="card-body pt-3 pb-3">
-              <div class="row">
-                <div class="col-sm-6 col-lg-3 student-data-col">
-                  <div class="label text-muted font-weight-light small">Student Name</div>
-                  <div class="student-data">Christian C. Castanares</div>
-                </div>
-                <div class="col-sm-6 col-lg-3 student-data-col">
-                  <div class="label text-muted font-weight-light small">Username</div>
-                  <div class="student-data"><a href="/account-details/">xtiantest_0512</a></div>
-                </div>
-                <div class="col-sm-6 col-lg-3 student-data-col">
-                  <div class="label text-muted font-weight-light small">Email</div>
-                  <div class="student-data">test@email.com</div>
-                </div>
-                <div class="col-sm-6 col-lg-3 student-data-col">
-                  <div class="label text-muted font-weight-light small">Date of Birth</div>
-                  <div class="student-data">5/20/2020</div>
-                </div>
+          <div class="card-body">
+            <dl class="mb-0">
+              <dt class="label">Order Id</dt>
+              <dd class="student-data">30030986</dd>
+              <dt class="label">Order Date</dt>
+              <dd class="student-data">04/14/2020 15:24 PM</dd>
+              <dt class="label">Source</dt>
+              <dd class="student-data">firsttimedriver.com</dd>
+              <dt class="label">Affiliate Name</dt>
+              <dd class="student-data">American Safety Council</dd>
+              <dt class="label">Affiliate Id</dt>
+              <dd class="student-data">1</dd>
+              <dt class="label">Corp Merchant</dt>
+              <dd class="student-data">Yes</dd>
+              <dt class="label">Is Locked</dt>
+              <dd class="student-data">False</dd>
+              <dt class="label">Paid</dt>
+              <dd class="student-data">Yes</dd>
+              <dt class="label">Refunded</dt>
+              <dd class="student-data">No</dd>
+              <dt class="label">Account Is Active</dt>
+              <dd class="student-data">Yes</dd>
+              <dt class="label">Account Is Migrated</dt>
+              <dd class="student-data">Yes</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card mb-4">
+          <div class="card-header d-flex">
+            <h5 class="card-title mb-0">Payment Information</h5>
+            <div class="btn-group ml-auto">
+              <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="/refund-form/">Request Refund</a>
               </div>
             </div>
           </div>
+          <div class="card-body">
+            <dl class="mb-0">
+              <dt class="label">First Name</dt>
+              <dd class="student-data">Christian</dd>
+              <dt class="label">Last Name</dt>
+              <dd class="student-data">Castanares</dd>
+              <dt class="label">Billing Address</dt>
+              <dd class="student-data">225 E Robinson St Suite 570, Orlando, FL 32801</dd>
+              <dt class="label">Billing Email</dt>
+              <dd class="student-data">test@email.com</dd>
+              <dt class="label">Billing Phone</dt>
+              <dd class="student-data">111-111-1111</dd>
+              <dt class="label">Credit Card #</dt>
+              <dd class="student-data">****-****-****-1111</dd>
+              <dt class="label">Payment Type</dt>
+              <dd class="student-data">Credit</dd>
+              <dt class="label">Reference Number</dt>
+              <dd class="student-data">5892956912526120503012</dd>
+              <dt class="label">Tax</dt>
+              <dd class="student-data">$0.00</dd>
+              <dt class="label">State Fees</dt>
+              <dd class="student-data">$0.00</dd>
+              <dt class="label">Total Paid</dt>
+              <dd class="student-data">$28.90</dd>
+            </dl>
+          </div>
         </div>
+      </div>
 
-        <div class="col-lg-6">
-          <div class="card mb-4">
-            <div class="card-header d-flex">
-              <h5 class="card-title mb-0">Order Information</h5>
-              <div class="btn-group ml-auto">
-                <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
-                <div class="dropdown-menu dropdown-menu-right">
-                  <a class="dropdown-item" href="#">Sync Course/s</a>
-                  <a class="dropdown-item" href="#">Customer Replay</a>
-                  <a class="dropdown-item" href="#">Impersonate Student</a>
-                  <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Order</a>
-                  <a class="dropdown-item" href="#resendEmailConfirmation" data-toggle="modal">Resend Email Confirmation</a>
-                  <a class="dropdown-item" href="/edit-student-form/">Edit Student Information</a>
-                  <a class="dropdown-item" href="/refund-form/">Request Refund</a>
-                  <a class="dropdown-item" href="#">Process Administrative Fees</a>
-                </div>
-              </div>
-            </div>
-            <div class="card-body">
-              <dl class="mb-0">
-                <dt class="label">Order Id</dt>
-                <dd class="student-data">30030986</dd>
-                <dt class="label">Order Date</dt>
-                <dd class="student-data">04/14/2020 15:24 PM</dd>
-                <dt class="label">Source</dt>
-                <dd class="student-data">firsttimedriver.com</dd>
-                <dt class="label">Affiliate Name</dt>
-                <dd class="student-data">American Safety Council</dd>
-                <dt class="label">Affiliate Id</dt>
-                <dd class="student-data">1</dd>
-                <dt class="label">Corp Merchant</dt>
-                <dd class="student-data">Yes</dd>
-                <dt class="label">Is Locked</dt>
-                <dd class="student-data">False</dd>
-                <dt class="label">Paid</dt>
-                <dd class="student-data">Yes</dd>
-                <dt class="label">Refunded</dt>
-                <dd class="student-data">No</dd>
-                <dt class="label">Account Is Active</dt>
-                <dd class="student-data">Yes</dd>
-                <dt class="label">Account Is Migrated</dt>
-                <dd class="student-data">Yes</dd>
-              </dl>
-            </div>
+      <div class="col-12">
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="orders-tab" data-toggle="tab" href="#orders-content" role="tab"><strong>Order Details</strong></a>
+            <a class="nav-item nav-link" id="related-tab" data-toggle="tab" href="#related-content" role="tab"><strong>Related Orders</strong></a>
+            <a class="nav-item nav-link" id="refunds-tab" data-toggle="tab" href="#refunds-content" role="tab"><strong>Order Refunds</strong></a>
+            <a class="nav-item nav-link" id="audit-tab" data-toggle="tab" href="#audit-content" role="tab"><strong>Audit Logs</strong></a>
           </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="card mb-4">
-            <div class="card-header d-flex">
-              <h5 class="card-title mb-0">Payment Information</h5>
-              <div class="btn-group ml-auto">
-                <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
-                <div class="dropdown-menu dropdown-menu-right">
-                  <a class="dropdown-item" href="/refund-form/">Request Refund</a>
-                </div>
-              </div>
-            </div>
-            <div class="card-body">
-              <dl class="mb-0">
-                <dt class="label">First Name</dt>
-                <dd class="student-data">Christian</dd>
-                <dt class="label">Last Name</dt>
-                <dd class="student-data">Castanares</dd>
-                <dt class="label">Billing Address</dt>
-                <dd class="student-data">225 E Robinson St Suite 570, Orlando, FL 32801</dd>
-                <dt class="label">Billing Email</dt>
-                <dd class="student-data">test@email.com</dd>
-                <dt class="label">Billing Phone</dt>
-                <dd class="student-data">111-111-1111</dd>
-                <dt class="label">Credit Card #</dt>
-                <dd class="student-data">****-****-****-1111</dd>
-                <dt class="label">Payment Type</dt>
-                <dd class="student-data">Credit</dd>
-                <dt class="label">Reference Number</dt>
-                <dd class="student-data">5892956912526120503012</dd>
-                <dt class="label">Tax</dt>
-                <dd class="student-data">$0.00</dd>
-                <dt class="label">State Fees</dt>
-                <dd class="student-data">$0.00</dd>
-                <dt class="label">Total Paid</dt>
-                <dd class="student-data">$28.90</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12">
-          <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-              <a class="nav-item nav-link active" id="orders-tab" data-toggle="tab" href="#orders-content" role="tab" aria-controls="home" aria-selected="true"><strong>Order Details</strong></a>
-              <a class="nav-item nav-link" id="refunds-tab" data-toggle="tab" href="#refunds-content" role="tab" aria-controls="profile" aria-selected="false"><strong>Order Refunds</strong></a>
-              <a class="nav-item nav-link" id="audit-tab" data-toggle="tab" href="#audit-content" role="tab" aria-controls="contact" aria-selected="false"><strong>Audit Logs</strong></a>
-            </div>
-          </nav>
-          <div class="tab-content">
-            <div class="tab-pane fade pt-3 show active" id="orders-content" role="tabpanel" aria-labelledby="orders-tab">
-              <div class="card order-card table-responsive-xl mb-4">
-                <table class="table table-hover mb-0 font-smaller">
-                  <thead class="thead-light">
-                    <tr>
-                      <th>Detail Id</th>
-                      <th>Locked</th>
-                      <th class="product-name">Product ID and Name</th>
-                      <th>Expiration</th>
-                      <th>Graduation</th>
-                      <th>Platform</th>
-                      <th>Qty</th>
-                      <th>Price</th>
-                      <th>Total</th>
-                      <th class="text-right action">Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><a href="/course-details/">30030981</a></td>
-                      <td>False</td>
-                      <td>1591 - Florida 4-Hour Drug & Alcohol Traffic Awareness (D.A.T.A.) Streaming</td>
-                      <td>04/14/2020 15:29 PM</td>
-                      <td>10/14/2020 15:29 PM</td>
-                      <td>UniversityLE</td>
-                      <td>1</td>
-                      <td>$28.95</td>
-                      <td>$28.95</td>
-                      <td class="text-right">
-                        <div class="btn-group ml-auto">
-                          <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="/course-details/">View Course Details</a>
-                            <a class="dropdown-item" href="#">Refresh Manifest</a>
-                            <a class="dropdown-item" href="#">Impersonate Student</a>
-                            <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a>
-                            <a class="dropdown-item" href="#extendExpiration" data-toggle="modal">Extend Expiration Date</a>
-                            <a class="dropdown-item" href="/refund-form/">Request Refund</a>
-                          </div>
+        </nav>
+        <div class="tab-content">
+          <div class="tab-pane fade pt-3 show active" id="orders-content" role="tabpanel" aria-labelledby="orders-tab">
+            <div class="card order-card table-responsive-xl mb-4">
+              <table class="table table-hover mb-0 font-smaller">
+                <thead class="thead-light">
+                  <tr>
+                    <th>Detail Id</th>
+                    <th>Locked</th>
+                    <th class="product-name">Product ID and Name</th>
+                    <th>Expiration</th>
+                    <th>Graduation</th>
+                    <th>Platform</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th class="text-right action">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="/course-details/">30030981</a></td>
+                    <td><span class="text-success"><span class="material-icons">lock_open</span></span></td>
+                    <td>1591 - Florida 4-Hour Drug & Alcohol Traffic Awareness (D.A.T.A.) Streaming</td>
+                    <td>04/14/2020 15:29 PM</td>
+                    <td>10/14/2020 15:29 PM</td>
+                    <td>UniversityLE</td>
+                    <td>1</td>
+                    <td>$28.95</td>
+                    <td>$28.95</td>
+                    <td class="text-right">
+                      <div class="btn-group ml-auto">
+                        <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="/course-details/">View Course Details</a>
+                          <a class="dropdown-item" href="#">Refresh Manifest</a>
+                          <a class="dropdown-item" href="#">Impersonate Student</a>
+                          <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a>
+                          <a class="dropdown-item" href="#extendExpiration" data-toggle="modal">Extend Expiration Date</a>
+                          <a class="dropdown-item" href="/refund-form/">Request Refund</a>
                         </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><a href="/course-details/">30030982</a></td>
-                      <td>False</td>
-                      <td>1371 - Florida Online Permit Exam</td>
-                      <td>04/14/2020 15:29 PM</td>
-                      <td>10/14/2020 15:29 PM</td>
-                      <td>UniversityLE</td>
-                      <td>1</td>
-                      <td>$24.95</td>
-                      <td>$24.95</td>
-                      <td class="text-right">
-                        <div class="btn-group ml-auto">
-                          <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="/course-details/">View Course Details</a>
-                            <a class="dropdown-item" href="#">Refresh Manifest</a>
-                            <a class="dropdown-item" href="#">Impersonate Student</a>
-                            <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a>
-                            <a class="dropdown-item" href="#extendExpiration" data-toggle="modal">Extend Expiration Date</a>
-                            <a class="dropdown-item" href="/refund-form/">Request Refund</a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><a href="/course-details/">30030983</a></td>
-                      <td>False</td>
-                      <td>1021 - Learner's Permit Prep</td>
-                      <td>04/14/2020 15:29 PM</td>
-                      <td>-</td>
-                      <td>UniversityLE</td>
-                      <td>1</td>
-                      <td>$14.95</td>
-                      <td>$14.95</td>
-                      <td class="text-right">
-                        <div class="btn-group ml-auto">
-                          <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="/course-details/">View Course Details</a>
-                            <a class="dropdown-item" href="#">Refresh Manifest</a>
-                            <a class="dropdown-item" href="#">Impersonate Student</a>
-                            <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a>
-                            <a class="dropdown-item" href="#extendExpiration" data-toggle="modal">Extend Expiration Date</a>
-                            <a class="dropdown-item" href="/refund-form/">Request Refund</a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>30030984</td>
-                      <td>False</td>
-                      <td>1324 - Package Discount	</td>
-                      <td>-</td>
-                      <td>-</td>
-                      <td>UniversityLE</td>
-                      <td>1</td>
-                      <td>($10.95)</td>
-                      <td>($10.95)</td>
-                      <td class="text-right">
-                        <div class="btn-group ml-auto">
-                          <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="#">Impersonate Student</a>
-                            {# <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a>
-                            <a class="dropdown-item" href="#">Request Refund</a> #}
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>30030985</td>
-                      <td>False</td>
-                      <td>1663 - Premier Pass</td>
-                      <td>-</td>
-                      <td>-</td>
-                      <td>UniversityLE</td>
-                      <td>1</td>
-                      <td>$2.95</td>
-                      <td>$2.95</td>
-                      <td class="text-right">
-                        <div class="btn-group ml-auto">
-                          <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="#">Impersonate Student</a>
-                            {# <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a> #}
-                            <a class="dropdown-item" href="/refund-form/">Request Refund</a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td>Total</td>
-                      <td>$60.85</td>
-                      <td class="text-right">
-                        <div class="btn-group ml-auto">
-                          <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="/refund-form/">Request Refund</a>
-                          </div>
-                        </div>
-                    </tr>
-                  </tfoot>
-                </table>
-              </div>
-            </div>
-            <div class="tab-pane fade pt-3" id="refunds-content" role="tabpanel" aria-labelledby="refund-tab">
-              <div class="card order-card table-responsive-lg">
-                <table class="table table-sm table-hover mb-0 font-smaller">
-                  <thead class="thead-light">
-                    <tr>
-                      <th>Detail ID</th>
-                      <th>Type</th>
-                      <th>Status</th>
-                      <th>Updated</th>
-                      <th>Amount</th>
-                      <th>Reason</th>
-                      <th class="text-right actions">Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><a href="/course-details/">30030984</a></td>
-                      <td>Line Item</td>
-                      <td>Request Submitted</td>
-                      <td>5/13/2020 1:49 PM	</td>
-                      <td>$49.95</td>
-                      <td>Content Difficulty/Exam</td>
-                      <td class="text-right">
-                        <div class="btn-group ml-auto">
-                          <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="#">Reject Refund</a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><a href="/course-details/">30030985</a></td>
-                      <td>Line Item</td>
-                      <td>Request Submitted</td>
-                      <td>04/14/2020 15:24 PM</td>
-                      <td>$19.95</td>
-                      <td>Expedite Problem</td>
-                      <td class="text-right">
-                        <div class="btn-group ml-auto">
-                          <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
-                          <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="#">Reject Refund</a>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div class="tab-pane fade pt-3" id="audit-content" role="tabpanel" aria-labelledby="audit-tab">
-              <div class="row">
-                <div class="col-8 col-lg-6 mb-3">
-                  <form id="searchForm" method="post" action="/AuditLogs/search">
-                    <div class="input-group">
-                      <input aria-describedby="searchButton" aria-label="Search Field" class="form-control" id="SearchText" name="SearchText" placeholder="Search" type="text" value="">
-                      <div class="input-group-append">
-                          <button class="btn btn-secondary btn-sm" type="button" id="searchButton"><i class="material-icons">search</i></button>
                       </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="/course-details/">30030982</a></td>
+                    <td><span class="text-success"><span class="material-icons">lock_open</span></span></td>
+                    <td>1371 - Florida Online Permit Exam</td>
+                    <td>04/14/2020 15:29 PM</td>
+                    <td>10/14/2020 15:29 PM</td>
+                    <td>UniversityLE</td>
+                    <td>1</td>
+                    <td>$24.95</td>
+                    <td>$24.95</td>
+                    <td class="text-right">
+                      <div class="btn-group ml-auto">
+                        <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="/course-details/">View Course Details</a>
+                          <a class="dropdown-item" href="#">Refresh Manifest</a>
+                          <a class="dropdown-item" href="#">Impersonate Student</a>
+                          <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a>
+                          <a class="dropdown-item" href="#extendExpiration" data-toggle="modal">Extend Expiration Date</a>
+                          <a class="dropdown-item" href="/refund-form/">Request Refund</a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="/course-details/">30030983</a></td>
+                    <td><span class="text-danger"><span class="material-icons">lock</span></span></td>
+                    <td>1021 - Learner's Permit Prep</td>
+                    <td>04/14/2020 15:29 PM</td>
+                    <td>-</td>
+                    <td>UniversityLE</td>
+                    <td>1</td>
+                    <td>$14.95</td>
+                    <td>$14.95</td>
+                    <td class="text-right">
+                      <div class="btn-group ml-auto">
+                        <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="/course-details/">View Course Details</a>
+                          <a class="dropdown-item" href="#">Refresh Manifest</a>
+                          <a class="dropdown-item" href="#">Impersonate Student</a>
+                          <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a>
+                          <a class="dropdown-item" href="#extendExpiration" data-toggle="modal">Extend Expiration Date</a>
+                          <a class="dropdown-item" href="/refund-form/">Request Refund</a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>30030984</td>
+                    <td><span class="text-success"><span class="material-icons">lock_open</span></span></td>
+                    <td>1324 - Package Discount	</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>UniversityLE</td>
+                    <td>1</td>
+                    <td>($10.95)</td>
+                    <td>($10.95)</td>
+                    <td class="text-right">
+                      <div class="btn-group ml-auto">
+                        <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="#">Impersonate Student</a>
+                          {# <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a>
+                          <a class="dropdown-item" href="#">Request Refund</a> #}
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>30030985</td>
+                    <td><span class="text-success"><span class="material-icons">lock_open</span></span></td>
+                    <td>1663 - Premier Pass</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>UniversityLE</td>
+                    <td>1</td>
+                    <td>$2.95</td>
+                    <td>$2.95</td>
+                    <td class="text-right">
+                      <div class="btn-group ml-auto">
+                        <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="#">Impersonate Student</a>
+                          {# <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Course</a> #}
+                          <a class="dropdown-item" href="/refund-form/">Request Refund</a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Total</td>
+                    <td>$60.85</td>
+                    <td class="text-right">
+                      <div class="btn-group ml-auto">
+                        <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="/refund-form/">Request Refund</a>
+                        </div>
+                      </div>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+          <div class="tab-pane fade pt-3" id="related-content" role="tabpanel" aria-labelledby="related-tab">
+            <p class="text-danger">From what I understand related orders are either upsell purchased in-course and products added by CSRs for a course?</p>
+            <div class="card order-card table-responsive-xl mb-4">
+              <table class="table table-hover mb-0 font-smaller">
+                <thead class="thead-light">
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Locked</th>
+                    <th>Date</th>
+                    <th>Source</th>
+                    <th>Payment Type</th>
+                    <th>Affiliate</th>
+                    <th>Corp Merch</th>
+                    <th class="text-right action">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="/order-details/">30030972</a></td>
+                    <td><span class="text-success"><span class="material-icons">lock_open</span></span></td>
+                    <td>04/14/2020 15:24 PM</td>
+                    <td>newyorksafetycouncil_new</td>
+                    <td>Credit</td>
+                    <td>American Safety Council</td>
+                    <td>Yes</td>
+                    <td class="text-right">
+                      <div class="btn-group ml-auto">
+                        <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="/order-details/">View Order Details</a>
+                          <a class="dropdown-item" href="#">Impersonate Student</a>
+                          <a class="dropdown-item" href="#lockOrder" data-toggle="modal">Lock/Unlock Order</a>
+                          <a class="dropdown-item" href="#resendEmailConfirmation" data-toggle="modal">Resend Email Confirmation</a>
+                          <a class="dropdown-item" href="/refund-form">Request Refund</a>
+                          <a class="dropdown-item" href="#">Process Administrative Fees</a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tab-pane fade pt-3" id="refunds-content" role="tabpanel" aria-labelledby="refund-tab">
+            <div class="card order-card table-responsive-lg">
+              <table class="table table-sm table-hover mb-0 font-smaller">
+                <thead class="thead-light">
+                  <tr>
+                    <th>Detail ID</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>Updated</th>
+                    <th>Amount</th>
+                    <th>Reason</th>
+                    <th class="text-right actions">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="/course-details/">30030984</a></td>
+                    <td>Line Item</td>
+                    <td>Request Submitted</td>
+                    <td>5/13/2020 1:49 PM	</td>
+                    <td>$49.95</td>
+                    <td>Content Difficulty/Exam</td>
+                    <td class="text-right">
+                      <div class="btn-group ml-auto">
+                        <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="#">Reject Refund</a>
+                          <a class="dropdown-item" href="#">Approve Refund</a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="/course-details/">30030985</a></td>
+                    <td>Line Item</td>
+                    <td>Request Submitted</td>
+                    <td>04/14/2020 15:24 PM</td>
+                    <td>$19.95</td>
+                    <td>Expedite Problem</td>
+                    <td class="text-right">
+                      <div class="btn-group ml-auto">
+                        <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="#">Reject Refund</a>
+                          <a class="dropdown-item" href="#">Approve Refund</a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tab-pane fade pt-3" id="audit-content" role="tabpanel" aria-labelledby="audit-tab">
+            <div class="row">
+              <div class="col-8 col-lg-6 mb-3">
+                <form id="searchForm" method="post" action="/AuditLogs/search">
+                  <div class="input-group">
+                    <input aria-describedby="searchButton" aria-label="Search Field" class="form-control" id="SearchText" name="SearchText" placeholder="Search" type="text" value="">
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary btn-sm" type="button" id="searchButton"><i class="material-icons">search</i></button>
                     </div>
-                  </form>
-                </div>
-                <div class="col-4 ml-auto mb-3 text-right">
-                  <div class="btn-group ml-auto">
-                    <button class="btn btn-outline-secondary dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                      <a class="dropdown-item" href="#addAuditLog" data-toggle="modal">Add Log</a>
-                      <a class="dropdown-item" href="#">View Audit Log</a>
-                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-4 ml-auto mb-3 text-right">
+                <div class="btn-group ml-auto">
+                  <button class="btn btn-outline-secondary dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#addAuditLog" data-toggle="modal">Add Log</a>
+                    <a class="dropdown-item" href="#">View Audit Log</a>
                   </div>
                 </div>
               </div>
-              <div class="card order-card table-responsive-lg">
-                <table class="table table-sm table-hover font-smaller mb-0">
-                  <thead class="thead-light">
-                    <tr>
-                      <th>Event Name</th>
-                      <th>Message</th>
-                      <th>Timestamp</th>
-                      <th>Type</th>
-                      <th>Id</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>OrderAccessed</td>
-                      <td>User christian.castanares@amersc.com accessed order: 30031098</td>
-                      <td><span class="">05/18/2020 13:53 PM</span></td>
-                      <td>Order</td>
-                      <td>30031098</td>
-                    </tr>
-                    <tr>
-                      <td>AccessingOrder</td>
-                      <td>User christian.castanares@amersc.com is attempting to access order: 30031098</td>
-                      <td><span class="">05/18/2020 13:53 PM</span></td>
-                      <td>Order</td>
-                      <td>30031098</td>
-                    </tr>
-                    <tr>
-                      <td>OrderAccessed</td>
-                      <td>User christian.castanares@amersc.com accessed order: 30031098</td>
-                      <td><span class="">05/12/2020 15:09 PM</span></td>
-                      <td>Order</td>
-                      <td>30031098</td>
-                    </tr>
-                    <tr>
-                      <td>AccessingOrder</td>
-                      <td>User christian.castanares@amersc.com is attempting to access order: 30031098</td>
-                      <td><span class="">05/12/2020 15:09 PM</span></td>
-                      <td>Order</td>
-                      <td>30031098</td>
-                    </tr>
-                    <tr>
-                      <td>OrderAccessed</td>
-                      <td>User christian.castanares@amersc.com accessed order: 30031098</td>
-                      <td><span class="">05/12/2020 15:09 PM</span></td>
-                      <td>Order</td>
-                      <td>30031098</td>
-                    </tr>
-                    <tr>
-                      <td>AccessingOrder</td>
-                      <td>User christian.castanares@amersc.com is attempting to access order: 30031098</td>
-                      <td><span class="">05/12/2020 15:09 PM</span></td>
-                      <td>Order</td>
-                      <td>30031098</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="pagination-wrap mt-4">
-                <ul class="pagination justify-content-center">
-                  <li class="page-item disabled" id="previous"><a class="page-link" id="previousLink" disabled="" href="#">&#8592;</a></li>
-                  <li class="page-item active"><a class="page-link page" data-page="1" href="javascript:void(0)">1</a></li>
-                  <li class="page-item"><a class="page-link page" data-page="2" href="javascript:void(0)">2</a></li>
-                  <li class="page-item"><a class="page-link page" data-page="3" href="javascript:void(0)">3</a></li>
-                  <li class="page-item" id="next"><a class="page-link" id="nextLink" href="javascript:void(0)">&#8594;</a></li>
-                </ul>
-              </div>
+            </div>
+            <div class="card order-card table-responsive-lg">
+              <table class="table table-sm table-hover font-smaller mb-0">
+                <thead class="thead-light">
+                  <tr>
+                    <th>Event Name</th>
+                    <th>Message</th>
+                    <th>Timestamp</th>
+                    <th>Type</th>
+                    <th>Id</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>OrderAccessed</td>
+                    <td>User christian.castanares@amersc.com accessed order: 30031098</td>
+                    <td><span class="">05/18/2020 13:53 PM</span></td>
+                    <td>Order</td>
+                    <td>30031098</td>
+                  </tr>
+                  <tr>
+                    <td>AccessingOrder</td>
+                    <td>User christian.castanares@amersc.com is attempting to access order: 30031098</td>
+                    <td><span class="">05/18/2020 13:53 PM</span></td>
+                    <td>Order</td>
+                    <td>30031098</td>
+                  </tr>
+                  <tr>
+                    <td>OrderAccessed</td>
+                    <td>User christian.castanares@amersc.com accessed order: 30031098</td>
+                    <td><span class="">05/12/2020 15:09 PM</span></td>
+                    <td>Order</td>
+                    <td>30031098</td>
+                  </tr>
+                  <tr>
+                    <td>AccessingOrder</td>
+                    <td>User christian.castanares@amersc.com is attempting to access order: 30031098</td>
+                    <td><span class="">05/12/2020 15:09 PM</span></td>
+                    <td>Order</td>
+                    <td>30031098</td>
+                  </tr>
+                  <tr>
+                    <td>OrderAccessed</td>
+                    <td>User christian.castanares@amersc.com accessed order: 30031098</td>
+                    <td><span class="">05/12/2020 15:09 PM</span></td>
+                    <td>Order</td>
+                    <td>30031098</td>
+                  </tr>
+                  <tr>
+                    <td>AccessingOrder</td>
+                    <td>User christian.castanares@amersc.com is attempting to access order: 30031098</td>
+                    <td><span class="">05/12/2020 15:09 PM</span></td>
+                    <td>Order</td>
+                    <td>30031098</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="pagination-wrap mt-4">
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled" id="previous"><a class="page-link" id="previousLink" disabled="" href="#">&#8592;</a></li>
+                <li class="page-item active"><a class="page-link page" data-page="1" href="javascript:void(0)">1</a></li>
+                <li class="page-item"><a class="page-link page" data-page="2" href="javascript:void(0)">2</a></li>
+                <li class="page-item"><a class="page-link page" data-page="3" href="javascript:void(0)">3</a></li>
+                <li class="page-item" id="next"><a class="page-link" id="nextLink" href="javascript:void(0)">&#8594;</a></li>
+              </ul>
             </div>
           </div>
         </div>
-
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
 {% endblock %}
 

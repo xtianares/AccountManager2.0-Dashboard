@@ -6,139 +6,139 @@
 
 {% block MainContent %}
 <section class="content-wrap wrap flex-shrink-0">
-    <div class="container-fluid but-fixed">
-      <div class="row">
-        <div class="col-12">
-          <form class="row" action="/search-result/">
-            <div class="col-md-6">
-              <h3 class="mb-4">Order Lookup</h3>
-              <div class="form-group input-group am-input-group">
-                <div class="input-group-prepend">
-                  <label for="OrderInfoId" class="input-group-text">Order ID</label>
-                </div>
-                <input class="form-control" id="OrderInfoId" name="OrderInfoId" type="text" />
+  <div class="container-fluid but-fixed">
+    <div class="row">
+      <div class="col-12">
+        <form class="row" action="/search-result/">
+          <div class="col-md-6">
+            <h3 class="mb-4">Order Lookup</h3>
+            <div class="form-group input-group am-input-group">
+              <div class="input-group-prepend">
+                <label for="OrderInfoId" class="input-group-text">Order ID</label>
               </div>
-              <div class="form-group input-group am-input-group">
-                <div class="input-group-prepend">
-                  <label for="Username" class="input-group-text">Username</label>
-                </div>
-                <input class="form-control" id="Username" name="Username" type="text" />
-              </div>
-              <div class="form-group input-group am-input-group">
-                <div class="input-group-prepend">
-                  <label for="FirstName" class="input-group-text">First Name</label>
-                </div>
-                <input class="form-control" id="FirstName" name="FirstName" type="text" />
-              </div>
-              <div class="form-group input-group am-input-group">
-                <div class="input-group-prepend">
-                  <label for="LastName" class="input-group-text">Last Name</label>
-                </div>
-                <input class="form-control" id="LastName" name="LastName" type="text" />
-              </div>
-              <div class="form-group input-group am-input-group">
-                <div class="input-group-prepend">
-                  <label for="Email" class="input-group-text">Email</label>
-                </div>
-                <input class="form-control" id="Email" name="Email" type="text" />
-              </div>
-              <div class="form-group input-group am-input-group">
-                <div class="input-group-prepend">
-                  <label for="Phone" class="input-group-text">Phone</label>
-                </div>
-                <input class="form-control" id="Phone" name="Phone" type="text" />
-              </div>
+              <input class="form-control" id="OrderInfoId" name="OrderInfoId" type="number" />
             </div>
-            <div class="col-md-6">
-              <h3 class="h5 mt-3 mb-3">Advanced Fields</h3>
-              <div class="form-group input-group am-input-group">
-                <div class="input-group-prepend">
-                  <label for="dateOfBirth" class="input-group-text">Date of Birth</label>
-                </div>
-                <input class="form-control" id="dateOfBirth" name="dateOfBirth" type="text" />
+            <div class="form-group input-group am-input-group">
+              <div class="input-group-prepend">
+                <label for="Username" class="input-group-text">Username</label>
               </div>
-              <div class="form-group input-group am-input-group">
-                <div class="input-group-prepend">
-                  <label for="last4CreditCardNumber" class="input-group-text">Last 4 Credit Card #</label>
-                </div>
-                <input class="form-control" id="last4CreditCardNumber" name="last4CreditCardNumber" type="text" />
-              </div>
-              <div class="form-group input-group am-input-group">
-                <div class="input-group-prepend">
-                  <label for="fullCredtiCardNumber" class="input-group-text">Credit Card #</label>
-                </div>
-                <input class="form-control" id="fullCredtiCardNumber" name="fullCredtiCardNumber" type="text" />
-              </div>
-              <div class="form-group input-group am-input-group">
-                <div class="input-group-prepend">
-                  <label for="paypalTransactionID" class="input-group-text">Paypal Trans ID</label>
-                </div>
-                <input class="form-control" id="paypalTransactionID" name="paypalTransactionID" type="text" />
-              </div>
-              <div class="form-group input-group am-input-group">
-                <div class="input-group-prepend">
-                  <label for="ZipCode" class="input-group-text">Zip Code</label>
-                </div>
-                <input class="form-control" id="ZipCode" name="ZipCode" type="text" />
-              </div>
+              <input class="form-control" id="Username" name="Username" type="text" />
             </div>
-            <div class="col-md-6">
-              <h3 class="h5 mt-3">Advance Filter</h3>
-              <div class="form-group form-row">
-                <div class="col-sm-12">
-                  <label>Order Created:</label>
-                </div>
-                <div class="col-6">
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <label class="input-group-text" for="OrderFromDate">From</label>
-                    </div>
-                    <input type="date" id="OrderFromDate" class="form-control" name="OrderFromDate" value="">
+            <div class="form-group input-group am-input-group">
+              <div class="input-group-prepend">
+                <label for="FirstName" class="input-group-text">First Name</label>
+              </div>
+              <input class="form-control" id="FirstName" name="FirstName" type="text" />
+            </div>
+            <div class="form-group input-group am-input-group">
+              <div class="input-group-prepend">
+                <label for="LastName" class="input-group-text">Last Name</label>
+              </div>
+              <input class="form-control" id="LastName" name="LastName" type="text" />
+            </div>
+            <div class="form-group input-group am-input-group">
+              <div class="input-group-prepend">
+                <label for="Email" class="input-group-text">Email</label>
+              </div>
+              <input class="form-control" id="Email" name="Email" type="email" />
+            </div>
+            <div class="form-group input-group am-input-group">
+              <div class="input-group-prepend">
+                <label for="Phone" class="input-group-text">Phone</label>
+              </div>
+              <input class="form-control" id="Phone" name="Phone" type="tel" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3 class="h5 mt-3 mb-3">Advanced Fields</h3>
+            <div class="form-group input-group am-input-group">
+              <div class="input-group-prepend">
+                <label for="dateOfBirth" class="input-group-text">Date of Birth</label>
+              </div>
+              <input class="form-control" id="dateOfBirth" name="dateOfBirth" type="date" />
+            </div>
+            <div class="form-group input-group am-input-group">
+              <div class="input-group-prepend">
+                <label for="last4CreditCardNumber" class="input-group-text">Last 4 Credit Card #</label>
+              </div>
+              <input class="form-control" id="last4CreditCardNumber" name="last4CreditCardNumber" type="number" maxlength="4" />
+            </div>
+            <div class="form-group input-group am-input-group">
+              <div class="input-group-prepend">
+                <label for="fullCredtiCardNumber" class="input-group-text">Credit Card #</label>
+              </div>
+              <input class="form-control" id="fullCredtiCardNumber" name="fullCredtiCardNumber" type="number" maxlength="16" />
+            </div>
+            <div class="form-group input-group am-input-group">
+              <div class="input-group-prepend">
+                <label for="paypalTransactionID" class="input-group-text">Paypal Trans ID</label>
+              </div>
+              <input class="form-control" id="paypalTransactionID" name="paypalTransactionID" type="number" />
+            </div>
+            <div class="form-group input-group am-input-group">
+              <div class="input-group-prepend">
+                <label for="ZipCode" class="input-group-text">Zip Code</label>
+              </div>
+              <input class="form-control" id="ZipCode" name="ZipCode" type="text" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3 class="h5 mt-3">Advance Filter</h3>
+            <div class="form-group form-row">
+              <div class="col-sm-12">
+                <label>Order Created:</label>
+              </div>
+              <div class="col-6">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="OrderFromDate">From</label>
                   </div>
+                  <input type="date" id="OrderFromDate" class="form-control" name="OrderFromDate" value="">
                 </div>
-                <div class="col-6">
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <label class="input-group-text" for="OrderToDate">To</label>
-                    </div>
-                    <input type="date" id="OrderToDate" class="form-control" name="OrderToDate" value="">
+              </div>
+              <div class="col-6">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="OrderToDate">To</label>
                   </div>
+                  <input type="date" id="OrderToDate" class="form-control" name="OrderToDate" value="">
                 </div>
-              </div>
-              <div class="form-group input-group am-input-group">
-                <div class="input-group-prepend">
-                  <label for="studentStatus" class="input-group-text">Student Status</label>
-                </div>
-                <select class="custom-select" id="studentStatus">
-                  <option selected value="">Select Status</option>
-                  <option value="Registered">Registered</option>
-                  <option value="In-Progress">In-Progress</option>
-                  <option value="Graduated">Graduated</option>
-                </select>
-              </div>
-              <div class="form-group input-group am-input-group">
-                <div class="input-group-prepend">
-                  <label for="pipeline" class="input-group-text">Pipeline</label>
-                </div>
-                <input class="form-control" id="pipeline" name="pipeline" type="text" />
-              </div>
-              <div class="form-group input-group am-input-group">
-                <div class="input-group-prepend">
-                  <label for="productIDName" class="input-group-text">Product ID/Name</label>
-                </div>
-                <input class="form-control" id="productIDName" name="productIDName" type="text" />
               </div>
             </div>
-            <div class="col-12">
-              <div class="form-group mt-3">
-                <button type="submit" class="btn btn-primary mr-2">Search</button>
-                <button type="reset" class="btn btn-outline-primary">Reset</button>
+            <div class="form-group input-group am-input-group">
+              <div class="input-group-prepend">
+                <label for="studentStatus" class="input-group-text">Student Status</label>
               </div>
+              <select class="custom-select" id="studentStatus">
+                <option selected value="">Select Status</option>
+                <option value="Registered">Registered</option>
+                <option value="In-Progress">In-Progress</option>
+                <option value="Graduated">Graduated</option>
+              </select>
             </div>
-          </form>
-        </div>
+            <div class="form-group input-group am-input-group">
+              <div class="input-group-prepend">
+                <label for="pipeline" class="input-group-text">Pipeline</label>
+              </div>
+              <input class="form-control" id="pipeline" name="pipeline" type="number" />
+            </div>
+            <div class="form-group input-group am-input-group">
+              <div class="input-group-prepend">
+                <label for="productIDName" class="input-group-text">Product ID/Name</label>
+              </div>
+              <input class="form-control" id="productIDName" name="productIDName" type="text" />
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-group mt-3">
+              <button type="submit" class="btn btn-primary mr-2">Search</button>
+              <button type="reset" class="btn btn-outline-primary">Reset</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 {% endblock %}

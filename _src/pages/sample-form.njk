@@ -6,66 +6,66 @@
 
 {% block MainContent %}
 <section class="content-wrap wrap flex-shrink-0">
-    <div class="container-fluid but-fixed">
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-10 col-lg-8 col-xl-6">
-          <h1 class="mb-3">Example Form</h1>
-          <p class="text-danger">This is an example form with the default form width and buttons.</p>
-          <form>
-            <div class="form-group">
-              <label for="formGroupExampleInput">Example label</label>
-              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+  <div class="container-fluid but-fixed">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+        <h1 class="mb-3">Example Form</h1>
+        <p class="text-danger">This is an example form with the default form width and buttons.</p>
+        <form>
+          <div class="form-group">
+            <label for="formGroupExampleInput">Example label</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2">Another label</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+          </div>
+          <div class="form-group">
+            <label for="select">Another label</label>
+            <select class="custom-select" id="select">
+              <option selected>Select One...</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="textarea">Label for textarea</label>
+            <textarea class="form-control" id="textarea" name="textarea"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Please check the checkboxes below</label>
+            <div class="custom-control custom-checkbox mb-1">
+              <input type="checkbox" class="custom-control-input" id="customCheck1">
+              <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
             </div>
-            <div class="form-group">
-              <label for="formGroupExampleInput2">Another label</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customCheck2">
+              <label class="custom-control-label" for="customCheck2">Check this custom checkbox</label>
             </div>
-            <div class="form-group">
-              <label for="select">Another label</label>
-              <select class="custom-select" id="select">
-                <option selected>Select One...</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
+          </div>
+          <div class="form-group">
+            <label>Please select one below</label>
+            <div class="custom-control custom-radio mb-1">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
             </div>
-            <div class="form-group">
-              <label for="textarea">Label for textarea</label>
-              <textarea class="form-control" id="textarea" name="textarea"></textarea>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
             </div>
-            <div class="form-group">
-              <label>Please check the checkboxes below</label>
-              <div class="custom-control custom-checkbox mb-1">
-                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
-              </div>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheck2">
-                <label class="custom-control-label" for="customCheck2">Check this custom checkbox</label>
-              </div>
-            </div>
-            <div class="form-group">
-              <label>Please select one below</label>
-              <div class="custom-control custom-radio mb-1">
-                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
-              </div>
-              <div class="custom-control custom-radio">
-                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
-              </div>
-            </div>
+          </div>
 
 
-            <div class="form-group mt-4">
-              <button type="submit" class="btn btn-primary mr-2">Submit</button>
-              <button type="reset" class="btn btn-outline-primary">Reset</button>
-            </div>
-          </form>
-        </div>
+          <div class="form-group mt-4">
+            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+            <button type="reset" class="btn btn-outline-primary">Reset</button>
+          </div>
+        </form>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 {% endblock %}
 
