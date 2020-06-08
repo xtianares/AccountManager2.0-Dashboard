@@ -38,6 +38,9 @@ h5, .h5 { font-size: 1em; }
 a {
   color: $primary;
 }
+.font-weight-bolder {
+    font-weight: 600 !important;
+}
 /* ----------------------------------------------------------------------------
     Forms Elements
 ----------------------------------------------------------------------------- */
@@ -69,6 +72,14 @@ a {
 ----------------------------------------------------------------------------- */
 body.modal-open {
     overflow: visible;
+}
+.modal-header {
+  padding: .75rem 1rem;
+  background-color: #f8f9fc;
+  .close {
+    padding: 1rem 1rem;
+    margin: -.8rem -1rem -1rem auto;
+  }
 }
 /* ----------------------------------------------------------------------------
     Tables

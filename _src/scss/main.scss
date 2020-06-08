@@ -172,6 +172,12 @@ body {
     }
   }
 }
+.modal-body {
+  .card {
+    box-shadow: none !important;
+    border-top-color: #e3e6f0;
+  }
+}
 .student-data-col {
   .student-data {
     font-weight: 600;
@@ -279,6 +285,36 @@ p.course-name {
   position: absolute;
   top: 90px;
   right: 30px;
+}
+.quick-filter {
+  .quick-filter-input {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 1rem;
+    height: 1.25rem;
+    opacity: 0;
+    + .quick-filter-btn {
+      font-size: 1rem;
+      border: 1px solid transparent;
+      box-sizing: border-box;
+      color: $primary;
+      padding: .2rem .6rem !important;
+      &:hover {
+        border: 1px solid $primary;
+        // padding: 3px 10px !important;
+      }
+    }
+    &:checked + .quick-filter-btn {
+      background-color: $primary;
+      color: #ffffff;
+    }
+  }
+}
+.dropdown-checkboxes {
+  label {
+    width: 100%;
+  }
 }
 
 /* ----------------------------------------------------------------------------

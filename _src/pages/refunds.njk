@@ -12,20 +12,103 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Search</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Refund Requests</li>
+            <li class="breadcrumb-item active" aria-current="page">Refunds Processing</li>
           </ol>
         </nav>
       </div>
       <div class="col-12">
-        <p class="text-danger">Only supervisors and other users with higher permission level will be able to access this page and will have the ability to approved/reject refund requests.</p>
-        <h1 class="mb-3">Refund Requests</h1>
+        <p class="text-danger">Only users with high enough permission level will be able to access this page and will have the ability to approved/process a refund requests.</p>
+        <h1 class="mb-3">Refunds Processing</h1>
         <div class="row">
           <div class="col-8 col-lg-6 mb-3">
-            <form id="searchForm" method="post" action="/refund/search">
+            <form id="searchForm" method="post" action="/refund/filter">
               <div class="input-group">
-                <input aria-describedby="searchButton" aria-label="Search Field" class="form-control" id="SearchText" name="SearchText" placeholder="Search" type="text" value="">
-                <div class="input-group-append">
-                    <button class="btn btn-secondary btn-sm" type="button" id="searchButton"><i class="material-icons">search</i></button>
+                <div class="dropdown dropdown-checkboxes mr-2">
+                  <a class="btn btn-outline-secondary dropdown-checkboxes dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter By Pipeline</a>
+                  <ul class="dropdown-menu allow-focus" aria-labelledby="dropdownMenuLink">
+                    <li class="dropdown-item">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="-1" checked>
+                        <label class="custom-control-label" for="customCheck1">All</label>
+                      </div>
+                    </li>
+                    <li class="dropdown-item">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck2" value="72">
+                        <label class="custom-control-label" for="customCheck2">American Safety Council - Texas Safe Motorist Course</label>
+                      </div>
+                    </li>
+                    <li class="dropdown-item">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck3" value="1">
+                        <label class="custom-control-label" for="customCheck3">BDI - 4 Hour Internet</label>
+                      </div>
+                    </li>
+                    <li class="dropdown-item">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck4" value="3">
+                        <label class="custom-control-label" for="customCheck4">First Time Driver Internet</label>
+                      </div>
+                    </li>
+                    <li class="dropdown-item">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck5" value="26">
+                        <label class="custom-control-label" for="customCheck5">Florida 40 Hour Pre-licensing</label>
+                      </div>
+                    </li>
+                    <li class="dropdown-item">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck6" value="106">
+                        <label class="custom-control-label" for="customCheck6">Learners Permit Exam</label>
+                      </div>
+                    </li>
+                    <li class="dropdown-item">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck7" value="69">
+                        <label class="custom-control-label" for="customCheck7">New York IPIRP</label>
+                      </div>
+                    </li>
+                    <li class="dropdown-item">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck8" value="58">
+                        <label class="custom-control-label" for="customCheck8">Occupational Safety and Health Standards Courses</label>
+                      </div>
+                    </li>
+                    <li class="dropdown-item">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck9" value="128">
+                        <label class="custom-control-label" for="customCheck9">Texas Driver Education</label>
+                      </div>
+                    </li>
+                    <li class="dropdown-item">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck10" value="125">
+                        <label class="custom-control-label" for="customCheck10">Texas Seller-Server Course</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <button class="btn btn-primary btn-sm" type="submit">Apply Filter</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8 col-lg-6 mb-3">
+            <form id="searchForm" method="post" action="/quick-filter">
+              <div class="form-group form-inline mb-0">
+                <label class="mr-2">Quick Filter:</label>
+                <div class="quick-filter mr-2">
+                  <input type="checkbox" class="quick-filter-input" id="approvedRefunds">
+                  <label class="quick-filter-btn btn btn-sm" for="approvedRefunds">Approved</label>
+                </div>
+                <div class="quick-filter mr-2">
+                  <input type="checkbox" class="quick-filter-input" id="checkRefunds">
+                  <label class="quick-filter-btn btn btn-sm" for="checkRefunds">Check</label>
+                </div>
+                <div class="quick-filter mr-2">
+                  <input type="checkbox" class="quick-filter-input" id="creditRefunds">
+                  <label class="quick-filter-btn btn btn-sm" for="creditRefunds">Credit</label>
                 </div>
               </div>
             </form>
@@ -36,66 +119,80 @@
             <thead class="thead-light">
               <tr>
                 <th>Order ID</th>
-                <th>Detail ID</th>
+                <th>Reg Date</th>
+                <th>Requested</th>
                 <th>Type</th>
-                <th>Status</th>
-                <th>Updated</th>
                 <th>Amount</th>
                 <th>Reason</th>
+                <th>Gateway</th>
+                <th>Reference #</th>
+                <th>Disbursement</th>
                 <th class="text-right actions">Actions</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><a href="/order-details/">30030111</a></td>
-                <td><a href="/course-details/">30030984</a></td>
-                <td>Line Item</td>
-                <td>Request Submitted</td>
-                <td>5/13/2020 1:49 PM	</td>
+                <td>5/13/2020 1:49 PM  </td>
+                <td>6/15/2020 3:00 PM  </td>
+                <td>Order Total</td>
                 <td>$49.95</td>
                 <td>Content Difficulty/Exam</td>
+                <td>Cybersource</td>
+                <td>4889233677756945803086</td>
+                <td>Credit</td>
                 <td class="text-right">
                   <div class="btn-group ml-auto">
                     <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
                     <div class="dropdown-menu dropdown-menu-right">
-                      <a class="dropdown-item" href="#refundConfirmation" data-toggle="modal">Reject Refund</a>
-                      <a class="dropdown-item" href="#refundConfirmation" data-toggle="modal">Approve Refund</a>
+                      <a class="dropdown-item" href="#refundNotes" data-toggle="modal">View Notes</a>
+                      <a class="dropdown-item" href="#refundReject" data-toggle="modal">Reject Refund</a>
+                      <a class="dropdown-item" href="#refundApprove" data-toggle="modal">Approve Refund</a>
+                      <a class="dropdown-item" href="#refundApprove" data-toggle="modal">Process Refund</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr>
                 <td><a href="/order-details/">30030222</a></td>
-                <td><a href="/course-details/">30030985</a></td>
+                <td>5/13/2020 1:49 PM  </td>
+                <td>7/15/2020 3:00 PM  </td>
                 <td>Line Item</td>
-                <td>Request Submitted</td>
-                <td>04/14/2020 15:24 PM</td>
-                <td>$19.95</td>
+                <td>$49.95</td>
                 <td>Expedite Problem</td>
+                <td>Cybersource</td>
+                <td>4889233677756945803123</td>
+                <td>Credit</td>
                 <td class="text-right">
                   <div class="btn-group ml-auto">
                     <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
                     <div class="dropdown-menu dropdown-menu-right">
-                      <a class="dropdown-item" href="#refundConfirmation" data-toggle="modal">Reject Refund</a>
-                      <a class="dropdown-item" href="#refundConfirmation" data-toggle="modal">Approve Refund</a>
+                      <a class="dropdown-item" href="#refundNotes" data-toggle="modal">View Notes</a>
+                      <a class="dropdown-item" href="#refundReject" data-toggle="modal">Reject Refund</a>
+                      <a class="dropdown-item" href="#refundApproveLocked" data-toggle="modal">Approve Refund</a>
+                      <a class="dropdown-item" href="#refundApproveLocked" data-toggle="modal">Process Refund</a>
                     </div>
                   </div>
                 </td>
               </tr>
               <tr>
                 <td><a href="/order-details/">30030333</a></td>
-                <td>-</td>
+                <td>5/13/2020 1:49 PM  </td>
+                <td>8/15/2020 10:00 AM  </td>
                 <td>Order Total</td>
-                <td>Request Submitted</td>
-                <td>04/24/2020 15:24 PM</td>
                 <td>$24.95</td>
                 <td>Pricing/Marketing</td>
+                <td>Cybersource</td>
+                <td>4889233677756945803321</td>
+                <td>Credit</td>
                 <td class="text-right">
                   <div class="btn-group ml-auto">
                     <button class="btn btn-sm dropdown-toggle action-btn" type="button" data-toggle="dropdown">Actions</button>
                     <div class="dropdown-menu dropdown-menu-right">
-                      <a class="dropdown-item" href="#refundConfirmation" data-toggle="modal">Reject Refund</a>
-                      <a class="dropdown-item" href="#refundConfirmation" data-toggle="modal">Approve Refund</a>
+                      <a class="dropdown-item" href="#refundNotes" data-toggle="modal">View Notes</a>
+                      <a class="dropdown-item" href="#refundReject" data-toggle="modal">Reject Refund</a>
+                      <a class="dropdown-item" href="#refundApprove" data-toggle="modal">Approve Refund</a>
+                      <a class="dropdown-item" href="#refundApprove" data-toggle="modal">Process Refund</a>
                     </div>
                   </div>
                 </td>
@@ -120,24 +217,245 @@
 {% endblock %}
 
 {% block FooterIncludes %}
-<!-- Modal for additional log messages -->
-<div class="modal fade" id="refundConfirmation" tabindex="-1" role="dialog" aria-labelledby="AddAuditLog" aria-hidden="true">
+<!-- Modal for notes refunds -->
+<div class="modal fade" id="refundNotes" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="AddAuditLog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Refund Notes</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-2 font-weight-bolder">Refund ID: <span class="text-danger">[display ID here]</span></p>
+        <div class="card order-card table-responsive-lg mb-2">
+          <table class="table table-hover table-sm mb-0 font-smaller">
+            <thead class="thead-light">
+              <tr>
+                <th>Author</th>
+                <th>Time</th>
+                <th>Notes for 30005964</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>alice.watkins</td>
+                <td>2/8/2018 12:12:35 PM</td>
+                <td>This order accessed by alice.watkins</span></td>
+              </tr>
+              <tr>
+                <td>System</td>
+                <td>2/8/2018 12:13:06 PM</td>
+                <td><strong>This is a test.</strong> by alice.watkins</td>
+              </tr>
+              <tr>
+                <td>alice.watkins</td>
+                <td>2/8/2018 12:13:06 PM</td>
+                <td>Refund Requested: $15.50</td>
+              </tr>
+              <tr>
+                <td>christian.castanares@amersc.com</td>
+                <td>6/4/2020 2:35:16 PM</td>
+                <td>Reason changed from 'Technical' to 'Technical'</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal for rejecting refunds -->
+<div class="modal fade" id="refundReject" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="AddAuditLog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Please Confirm</h5>
+        <h4 class="modal-title">Please Confirm</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
       </div>
       <form method="post" action="#">
         <div class="modal-body">
-          <p class="mb-0">Are you sure you want to approved/reject Refund ID: <span class="text-danger">[display ID here]</span>?</p>
+          <p class="mb-2 font-weight-bolder">Are you sure you want to reject Refund ID: <span class="text-danger">[display ID here]</span>?</p>
+          <label for="NoteMessage">Add Note</label>
+          <textarea class="form-control" id="NoteMessage" name="NoteMessage"></textarea>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-link text-secondary" data-dismiss="modal">Cancel</button>
-          <button type="submit" class="btn btn-primary">Yes</button>
+          <button type="submit" class="btn btn-primary">Confirm</button>
         </div>
       </form>
     </div>
   </div>
 </div>
+<!-- Modal for approving/processing refunds -->
+<div class="modal fade" id="refundApprove" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="AddAuditLog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Please Confirm</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+      <form method="post" action="#">
+        <div class="modal-body">
+          <p class="font-weight-bolder">Are you sure you want to approved/process Refund ID: <span class="text-danger">[display ID here]</span>?</p>
+          <div class="card order-card table-responsive-lg mb-3">
+            <table class="table table-hover table-sm mb-0 font-smaller">
+              <thead class="thead-light">
+                <tr>
+                  <th>Order ID</th>
+                  <th>Reg Date</th>
+                  <th>Requested</th>
+                  <th>Type</th>
+                  <th>Amount</th>
+                  <th class="text-right actions">Locked</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="/order-details/">30030111</a></td>
+                  <td>5/13/2020 1:49 PM</td>
+                  <td>6/15/2020 3:00 PM</td>
+                  <td>Order Total</td>
+                  <td>$49.95</td>
+                  <td class="text-right"><a href="#" class="text-success"><span class="material-icons">lock_open</span></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="form-group">
+            <label for="refundReason">Update Refund Reason</label>
+            <select class="custom-select" id="refundReason" name="refundReason">
+              <option value="Chose Classroom/Competitor Course">Chose Classroom/Competitor Course</option>
+              <option value="Content Difficulty/Exams">Content Difficulty/Exams</option>
+              <option value="Course Content">Course Content</option>
+              <option value="Duplicate">Duplicate</option>
+              <option value="Expedite Problem" selected="selected">Expedite Problem</option>
+              <option value="Identity Validation">Identity Validation</option>
+              <option value="Line Item Refund">Line Item Refund</option>
+              <option value="Manager Use Only">Manager Use Only</option>
+              <option value="Mistake/Changed Mind">Mistake/Changed Mind</option>
+              <option value="Pricing/Marketing">Pricing/Marketing</option>
+              <option value="Received Tax Exempt Certificate">Received Tax Exempt Certificate</option>
+              <option value="Regulatory">Regulatory</option>
+              <option value="Shipping/Deliverables">Shipping/Deliverables</option>
+              <option value="Student Ineligible">Student Ineligible</option>
+              <option value="Technical">Technical</option>
+              <option value="Timing">Timing</option>
+              <option value="Unknown/Other">Unknown/Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="NoteMessage">Add Note</label>
+            <textarea class="form-control" id="NoteMessage" name="NoteMessage"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-link text-secondary" data-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary">Confirm</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Modal for approving/processing refunds -->
+<div class="modal fade" id="refundApproveLocked" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="AddAuditLog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Please Confirm</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+      <form method="post" action="#">
+        <div class="modal-body">
+          <p class="font-weight-bolder">Are you sure you want to approved/process Refund ID: <span class="text-danger">[display ID here]</span>?</p>
+          <div class="card order-card table-responsive-lg mb-3">
+            <table class="table table-hover table-sm mb-0 font-smaller">
+              <thead class="thead-light">
+                <tr>
+                  <th>Order ID</th>
+                  <th>Reg Date</th>
+                  <th>Requested</th>
+                  <th>Type</th>
+                  <th>Amount</th>
+                  <th class="text-right actions">Locked</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="/order-details/">30030111</a></td>
+                  <td>5/13/2020 1:49 PM</td>
+                  <td>7/15/2020 3:00 PM</td>
+                  <td>Line Item</td>
+                  <td>$49.95</td>
+                  <td class="text-right"><a href="#" class="text-danger"><span class="material-icons">lock</span></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="form-group">
+            <label for="refundReason">Update Refund Reason</label>
+            <select class="custom-select" id="refundReason" name="refundReason">
+              <option value="Chose Classroom/Competitor Course">Chose Classroom/Competitor Course</option>
+              <option value="Content Difficulty/Exams">Content Difficulty/Exams</option>
+              <option value="Course Content">Course Content</option>
+              <option value="Duplicate">Duplicate</option>
+              <option value="Expedite Problem" selected="selected">Expedite Problem</option>
+              <option value="Identity Validation">Identity Validation</option>
+              <option value="Line Item Refund">Line Item Refund</option>
+              <option value="Manager Use Only">Manager Use Only</option>
+              <option value="Mistake/Changed Mind">Mistake/Changed Mind</option>
+              <option value="Pricing/Marketing">Pricing/Marketing</option>
+              <option value="Received Tax Exempt Certificate">Received Tax Exempt Certificate</option>
+              <option value="Regulatory">Regulatory</option>
+              <option value="Shipping/Deliverables">Shipping/Deliverables</option>
+              <option value="Student Ineligible">Student Ineligible</option>
+              <option value="Technical">Technical</option>
+              <option value="Timing">Timing</option>
+              <option value="Unknown/Other">Unknown/Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="NoteMessage">Add Note</label>
+            <textarea class="form-control" id="NoteMessage" name="NoteMessage"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-link text-secondary" data-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary">Confirm</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- scripts for filtering refunds -->
+<script>
+  $(document).on('click', '.allow-focus', function (e) {
+    e.stopPropagation();
+  });
+  // $(".dropdown-menu").on("change", "input[type='checkbox']", function() {
+  //   $(this).closest("li").toggleClass("active", this.checked);
+  // });
+
+  // need to map this to a multiple select element
+  $(".dropdown-menu").on("change", "input[type='checkbox']", function() {
+    if ($(this).val() === "-1") {
+      if ($(this).is(":checked")) {
+        $(".dropdown-menu .custom-control-input[type=checkbox]").each(function() {
+          $(this).prop('checked', true);
+        });
+      }
+      else {
+        $(".dropdown-menu .custom-control-input[type=checkbox]").each(function() {
+          $(this).prop('checked', false);
+        });
+      }
+    }
+    else {
+      $(".dropdown-menu .custom-control-input[value=-1]").prop('checked', false);
+    }
+  });
+</script>
 {% endblock %}
