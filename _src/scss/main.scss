@@ -301,17 +301,54 @@ p.course-name {
       color: $primary;
       padding: .2rem .6rem !important;
       &:hover {
-        border: 1px solid $primary;
+        border: 1px solid #cccccc;
         // padding: 3px 10px !important;
       }
     }
     &:checked + .quick-filter-btn {
-      background-color: $primary;
-      color: #ffffff;
+      // background-color: $primary;
+      border: 1px solid $primary;
+      // color: #ffffff;
     }
   }
 }
 .dropdown-checkboxes {
+  &.dropdown-toggle {
+    background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/8px 10px;
+    border-top-right-radius: .25rem !important;
+    border-bottom-right-radius: .25rem !important;
+    text-decoration: none;
+    color: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 1.75rem;
+    &::after {
+      display: none;
+    }
+  }
+  .dropdown-menu {
+    width: calc(100% - 160px);
+    .dropdown-item {
+      padding: 0;
+      white-space: normal;
+    }
+    .custom-checkbox {
+      padding-left: 0;
+      .custom-control-input {
+        left: .8rem;
+        top: .6rem
+      }
+      .custom-control-label {
+        padding: .35rem .8rem;
+        padding-left: 2.3rem;
+        &::before, &:after {
+          left: .8rem;
+          top: .6rem
+        }
+      }
+    }
+  }
   label {
     width: 100%;
   }

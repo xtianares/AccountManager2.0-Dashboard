@@ -20,15 +20,19 @@
         <p class="text-danger">Only users with high enough permission level will be able to access this page and will have the ability to approved/process a refund requests.</p>
         <h1 class="mb-3">Refunds Processing</h1>
         <div class="row">
-          <div class="col-8 col-lg-6 mb-3">
+          <div class="col-12 col-lg-6 mb-3">
             <form id="searchForm" method="post" action="/refund/filter">
-              <div class="input-group">
-                <div class="dropdown dropdown-checkboxes mr-2">
-                  <a class="btn btn-outline-secondary dropdown-checkboxes dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter By Pipeline</a>
+              <label>Available Filters</label>
+              <div class="form-group">
+                <div class="dropdown dropdown-checkboxes input-group am-input-group ">
+                  <div class="input-group-prepend">
+                    <label for="OrderInfoId" class="input-group-text">Pipeline</label>
+                  </div>
+                  <a class="dropdown-checkboxes dropdown-toggle form-control" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
                   <ul class="dropdown-menu allow-focus" aria-labelledby="dropdownMenuLink">
                     <li class="dropdown-item">
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="-1" checked>
+                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="-1">
                         <label class="custom-control-label" for="customCheck1">All</label>
                       </div>
                     </li>
@@ -88,6 +92,70 @@
                     </li>
                   </ul>
                 </div>
+              </div>
+              <div class="form-group">
+                <div class="dropdown dropdown-checkboxes input-group am-input-group ">
+                  <div class="input-group-prepend">
+                    <label for="OrderInfoId" class="input-group-text">Merchant Account</label>
+                  </div>
+                  <a class="dropdown-checkboxes dropdown-toggle form-control" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                  <ul class="dropdown-menu allow-focus" aria-labelledby="dropdownMenuLink">
+                    <li class="dropdown-item">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck11" value="-1">
+                        <label class="custom-control-label" for="customCheck11">All</label>
+                      </div>
+                    </li>
+                    <li class="dropdown-item">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck12" value="6222673">
+                        <label class="custom-control-label" for="customCheck12">ASC - wfgasc</label>
+                      </div>
+                    </li>
+                    <li class="dropdown-item">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck13" value="6292633">
+                        <label class="custom-control-label" for="customCheck13">ASC - wfgascca</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="dropdown dropdown-checkboxes input-group am-input-group ">
+                  <div class="input-group-prepend">
+                    <label for="OrderInfoId" class="input-group-text">Affiliate</label>
+                  </div>
+                  <a class="dropdown-checkboxes dropdown-toggle form-control" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                  <ul class="dropdown-menu allow-focus" aria-labelledby="dropdownMenuLink">
+                    <li class="dropdown-item">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck14" value="-1">
+                        <label class="custom-control-label" for="customCheck14">All</label>
+                      </div>
+                    </li>
+                    <li class="dropdown-item">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck15" value="1">
+                        <label class="custom-control-label" for="customCheck15">American Safety Council</label>
+                      </div>
+                    </li>
+                    <li class="dropdown-item">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck16" value="211">
+                        <label class="custom-control-label" for="customCheck16">GEICO</label>
+                      </div>
+                    </li>
+                    <li class="dropdown-item">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck17" value="4563">
+                        <label class="custom-control-label" for="customCheck17">Florida Medical Association</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="form-group">
                 <button class="btn btn-primary btn-sm" type="submit">Apply Filter</button>
               </div>
             </form>
@@ -97,7 +165,7 @@
           <div class="col-8 col-lg-6 mb-3">
             <form id="searchForm" method="post" action="/quick-filter">
               <div class="form-group form-inline mb-0">
-                <label class="mr-2">Quick Filter:</label>
+                <label class="mr-2 font-weight-bolder">Quick Filters:</label>
                 <div class="quick-filter mr-2">
                   <input type="checkbox" class="quick-filter-input" id="approvedRefunds">
                   <label class="quick-filter-btn btn btn-sm" for="approvedRefunds">Approved</label>
@@ -314,7 +382,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><a href="/order-details/">30030111</a></td>
+                  <td><a href="/order-details/" target="_blank">30030111</a></td>
                   <td>5/13/2020 1:49 PM</td>
                   <td>6/15/2020 3:00 PM</td>
                   <td>Order Total</td>
@@ -384,7 +452,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><a href="/order-details/">30030111</a></td>
+                  <td><a href="/order-details/" target="_blank">30030111</a></td>
                   <td>5/13/2020 1:49 PM</td>
                   <td>7/15/2020 3:00 PM</td>
                   <td>Line Item</td>
@@ -432,30 +500,43 @@
 
 <!-- scripts for filtering refunds -->
 <script>
-  $(document).on('click', '.allow-focus', function (e) {
-    e.stopPropagation();
-  });
-  // $(".dropdown-menu").on("change", "input[type='checkbox']", function() {
-  //   $(this).closest("li").toggleClass("active", this.checked);
-  // });
-
-  // need to map this to a multiple select element
-  $(".dropdown-menu").on("change", "input[type='checkbox']", function() {
-    if ($(this).val() === "-1") {
-      if ($(this).is(":checked")) {
-        $(".dropdown-menu .custom-control-input[type=checkbox]").each(function() {
-          $(this).prop('checked', true);
-        });
+  $(function() {
+    $(document).on('click', '.allow-focus', function (e) {
+      e.stopPropagation();
+    });
+    // $(".dropdown-menu").on("change", "input[type='checkbox']", function() {
+    //   $(this).closest("li").toggleClass("active", this.checked);
+    // });
+    $(".dropdown-menu").on("change", "input[type='checkbox']", function() {
+      if ($(this).val() === "-1") {
+        if ($(this).is(":checked")) {
+          $(this).closest('.dropdown-menu').find(".custom-control-input[type=checkbox]").each(function() {
+            $(this).prop('checked', true);
+          });
+        }
+        else {
+          $(this).closest('.dropdown-menu').find(".custom-control-input[type=checkbox]").each(function() {
+            $(this).prop('checked', false);
+          });
+        }
       }
       else {
-        $(".dropdown-menu .custom-control-input[type=checkbox]").each(function() {
-          $(this).prop('checked', false);
-        });
+        $(this).closest('.dropdown-menu').find(".custom-control-input[value=-1]").prop('checked', false);
       }
-    }
-    else {
-      $(".dropdown-menu .custom-control-input[value=-1]").prop('checked', false);
-    }
+      var selectedFilters = [];
+      $(this).closest('.dropdown-menu').find(".custom-control-input[type=checkbox]:checked + label").each(function() {
+         selectedFilters.push($(this).text())
+      });
+      if (selectedFilters.indexOf("All") > -1) {
+        $(this).closest('.dropdown-checkboxes').find(".dropdown-toggle").text("All");
+      }
+      else {
+        $(this).closest('.dropdown-checkboxes').find(".dropdown-toggle").text(selectedFilters.join(', '));
+      }
+    });
+    $(".custom-control-input[value=-1]").each(function() {
+      $(this).closest('.dropdown-menu').find(".custom-control-input[value=-1]").prop('checked', true).trigger("change");
+    })
   });
 </script>
 {% endblock %}
