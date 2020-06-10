@@ -1,0 +1,157 @@
+{% set PageTitle = "Account Manager 2.0" %}
+{% set PageDescription = "Live Mockups for Account Manager 2.0" %}
+{% set CanonicalPage = "" %}
+
+{% extends "MainTemplate.njk" %}
+
+{% block MainContent %}
+<section class="content-wrap wrap flex-shrink-0">
+  <div class="container-fluid but-fixed">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="mb-3">Promo Code Search</h1>
+        <form class="row">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="form-group">
+              <label for="promoCode">Promo Code</label>
+              <input type="text" class="form-control" id="promoCode" placeholder="Enter Promo Code...">
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="form-group">
+              <label for="select">Affiliate</label>
+              <select class="custom-select" id="select">
+                <option value="-1">Any</option>
+                <option value="1">American Safety Council</option>
+                <option value="8159"> Discount Glass & Mirror, Inc.</option>
+                <option value="6388">A Plus Driving School</option>
+                <option value="6285">A STREET SMART DRIVING ACADEMY 1</option>
+                <option value="5635">AAA Alabama (001)</option>
+                <option value="5637">AAA Allied Group, Inc. (007)</option>
+                <option value="6134">and so on...</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="form-group">
+              <label for="filter">Show</label>
+              <select class="custom-select" id="filter">
+                <option selected="selected" value="all">All</option>
+                <option value="active">Active Only</option>
+                <option value="redeemed">Redeemed Only</option>
+                <option value="expired">Expired Only</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-12 form-group">
+            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+            <button type="reset" class="btn btn-outline-primary">Reset</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-12">
+        <div class="card mt-3 mb-3 table-responsive-lg" id="searchResultsTable">
+          <table class="table table-hover mb-0 font-smaller">
+            <thead class="thead-light">
+              <tr>
+                <th>Promotion Code</th>
+                <th>Product</th>
+                <th>Affiliate & LGR</th>
+                <th>Expiration Date</th>
+                <th>Bulk OrderID</th>
+                <th>Redeemed Order</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>NYSC5OFF</td>
+                <td>813 - New York DMV Approved Defensive Driving Course</td>
+                <td>
+                  <strong>American Safety Council</strong><br>
+                  9319F1A5-59CE-4F97-AB9D-58BF3C09271F
+                </td>
+                <td></td>
+                <td></td>
+                <td>
+                  <a href="/order-details" target="_blank">30031326</a><br>
+                  Test Test
+                </td>
+              </tr>
+              <tr>
+                <td>NYSC5OFF</td>
+                <td>813 - New York DMV Approved Defensive Driving Course</td>
+                <td>
+                  <strong>American Safety Council</strong><br>
+                  9319F1A5-59CE-4F97-AB9D-58BF3C09271F
+                </td>
+                <td></td>
+                <td></td>
+                <td>
+                  <a href="/order-details" target="_blank">30031328</a><br>
+                  Douglas Test
+                </td>
+              </tr>
+              <tr>
+                <td>NYSC5OFF</td>
+                <td>813 - New York DMV Approved Defensive Driving Course</td>
+                <td>
+                  <strong>American Safety Council</strong><br>
+                  9319F1A5-59CE-4F97-AB9D-58BF3C09271F
+                </td>
+                <td></td>
+                <td></td>
+                <td>
+                  <a href="/order-details" target="_blank">30031323</a><br>
+                  Christian Castanares
+                </td>
+              </tr>
+              <tr>
+                <td>NYSC5OFF</td>
+                <td>813 - New York DMV Approved Defensive Driving Course</td>
+                <td>
+                  <strong>American Safety Council</strong><br>
+                  9319F1A5-59CE-4F97-AB9D-58BF3C09271F
+                </td>
+                <td></td>
+                <td></td>
+                <td>
+                  <a href="/order-details" target="_blank">30031328</a><br>
+                  Ty Test
+                </td>
+              </tr>
+              <tr>
+                <td>NYSC5OFF</td>
+                <td>813 - New York DMV Approved Defensive Driving Course</td>
+                <td>
+                  <strong>American Safety Council</strong><br>
+                  9319F1A5-59CE-4F97-AB9D-58BF3C09271F
+                </td>
+                <td></td>
+                <td></td>
+                <td>
+                  <a href="/order-details" target="_blank">30031330</a><br>
+                  Douglas Test
+                </td>
+              </tr>
+            <tbody>
+          </table>
+        </div>
+        <div class="pagination-wrap">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled" id="previous"><a class="page-link" id="previousLink" disabled="" href="#">&#8592;</a></li>
+            <li class="page-item active"><a class="page-link page" data-page="1" href="javascript:void(0)">1</a></li>
+            <li class="page-item"><a class="page-link page" data-page="2" href="javascript:void(0)">2</a></li>
+            <li class="page-item"><a class="page-link page" data-page="3" href="javascript:void(0)">3</a></li>
+            <li class="page-item" id="next"><a class="page-link" id="nextLink" href="javascript:void(0)">&#8594;</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block FooterIncludes %}
+{% endblock %}

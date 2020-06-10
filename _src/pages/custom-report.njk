@@ -1,0 +1,110 @@
+{% set PageTitle = "Account Manager 2.0" %}
+{% set PageDescription = "Live Mockups for Account Manager 2.0" %}
+{% set CanonicalPage = "" %}
+
+{% extends "MainTemplate.njk" %}
+
+{% block MainContent %}
+<section class="content-wrap wrap flex-shrink-0">
+  <div class="container-fluid but-fixed">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="mb-3">Custom Report</h1>
+        <p>Select a date range from the drop down list below or choose particular dates by using the calendars. Press the <strong>Generate Report</strong> button and the report will appear in a new window.  Please read the bottom of the page if you are using a <strong>pop-up blocker</strong>.</p>
+        <form class="row">
+          <div class="col-12 col-lg-8">
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="filterAffiliate">Filter Affiliate</label>
+                <input class="form-control" id="filterAffiliate" placeholder="Filter Affiliate Name" type="text">
+              </div>
+              <div class="col-md-8 mb-3">
+                <label for="affiliateName">Select Affiliate</label>
+                <select class="custom-select" id="affiliateName" name="affiliateName">
+                  <option value="0">Select Affiliate</option>
+                  <option value="1">American Safety Council</option>
+                  <option value="8159"> Discount Glass & Mirror, Inc.</option>
+                  <option value="6388">A Plus Driving School</option>
+                  <option value="6285">A STREET SMART DRIVING ACADEMY 1</option>
+                  <option value="5635">AAA Alabama (001)</option>
+                  <option value="5637">AAA Allied Group, Inc. (007)</option>
+                  <option value="6134">and so on...</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="form-group">
+              <label for="select">Affiliate</label>
+              <select class="custom-select" id="select">
+                <option value="-1">Any</option>
+                <option value="1">American Safety Council</option>
+                <option value="8159"> Discount Glass & Mirror, Inc.</option>
+                <option value="6388">A Plus Driving School</option>
+                <option value="6285">A STREET SMART DRIVING ACADEMY 1</option>
+                <option value="5635">AAA Alabama (001)</option>
+                <option value="5637">AAA Allied Group, Inc. (007)</option>
+                <option value="6134">and so on...</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="form-group">
+              <label for="filter">Show</label>
+              <select class="custom-select" id="filter">
+                <option selected="selected" value="all">All</option>
+                <option value="active">Active Only</option>
+                <option value="redeemed">Redeemed Only</option>
+                <option value="expired">Expired Only</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-12 form-group">
+            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+            <button type="reset" class="btn btn-outline-primary">Reset</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block FooterIncludes %}
+<script>
+  jQuery.fn.filterByText = function filterByText(textbox) {
+    return this.each(function() {
+      var select = this;
+      var options = [];
+      $(select).find('option').each(function() {
+        options.push({
+          value: $(this).val(),
+          text: $(this).text()
+        });
+      });
+      $(select).data('options', options);
+
+      $(textbox).bind('change keyup', function() {
+        var options = $(select).empty().data('options');
+        var search = $.trim($(this).val());
+        var regex = new RegExp(search, "gi");
+
+        $.each(options, function(i) {
+          var option = options[i];
+          if (option.text.match(regex) !== null) {
+            $(select).append(
+              $('<option>').text(option.text).val(option.value)
+            );
+          }
+        });
+      });
+    });
+  };
+  $(function() {
+    $('#affiliateName').filterByText($('#filterAffiliate'));
+  });
+</script>
+{% endblock %}
