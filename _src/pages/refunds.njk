@@ -19,148 +19,167 @@
       <div class="col-12">
         <p class="text-danger">Only users with high enough permission level will be able to access this page and will have the ability to approved/process a refund requests.</p>
         <h1 class="mb-3">Refunds Processing</h1>
-        <div class="row">
-          <div class="col-12 col-lg-6 mb-3">
-            <form id="searchForm" method="post" action="/refund/filter">
-              <label>Available Filters</label>
-              <div class="form-group">
-                <div class="dropdown dropdown-checkboxes input-group am-input-group ">
-                  <div class="input-group-prepend">
-                    <label for="OrderInfoId" class="input-group-text">Pipeline</label>
-                  </div>
-                  <a class="dropdown-checkboxes dropdown-toggle form-control" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                  <ul class="dropdown-menu allow-focus" aria-labelledby="dropdownMenuLink">
-                    <li class="dropdown-item">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1" value="-1">
-                        <label class="custom-control-label" for="customCheck1">All</label>
-                      </div>
-                    </li>
-                    <li class="dropdown-item">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck2" value="72">
-                        <label class="custom-control-label" for="customCheck2">American Safety Council - Texas Safe Motorist Course</label>
-                      </div>
-                    </li>
-                    <li class="dropdown-item">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck3" value="1">
-                        <label class="custom-control-label" for="customCheck3">BDI - 4 Hour Internet</label>
-                      </div>
-                    </li>
-                    <li class="dropdown-item">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck4" value="3">
-                        <label class="custom-control-label" for="customCheck4">First Time Driver Internet</label>
-                      </div>
-                    </li>
-                    <li class="dropdown-item">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck5" value="26">
-                        <label class="custom-control-label" for="customCheck5">Florida 40 Hour Pre-licensing</label>
-                      </div>
-                    </li>
-                    <li class="dropdown-item">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck6" value="106">
-                        <label class="custom-control-label" for="customCheck6">Learners Permit Exam</label>
-                      </div>
-                    </li>
-                    <li class="dropdown-item">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck7" value="69">
-                        <label class="custom-control-label" for="customCheck7">New York IPIRP</label>
-                      </div>
-                    </li>
-                    <li class="dropdown-item">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck8" value="58">
-                        <label class="custom-control-label" for="customCheck8">Occupational Safety and Health Standards Courses</label>
-                      </div>
-                    </li>
-                    <li class="dropdown-item">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck9" value="128">
-                        <label class="custom-control-label" for="customCheck9">Texas Driver Education</label>
-                      </div>
-                    </li>
-                    <li class="dropdown-item">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck10" value="125">
-                        <label class="custom-control-label" for="customCheck10">Texas Seller-Server Course</label>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
+        <h3 class="h4">Available Filters</h3>
+        <form class="row mb-3" id="searchForm" method="post" action="/refund/filter">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="form-group">
+              <label>By Pipeline</label>
+              <div class="dropdown dropdown-checkboxes">
+                <a class="dropdown-checkboxes dropdown-toggle form-control" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                <ul class="dropdown-menu allow-focus pipelines" aria-labelledby="dropdownMenuLink">
+                  <li class="dropdown-item">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck1" value="-1">
+                      <label class="custom-control-label" for="customCheck1">All</label>
+                    </div>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck2" value="72">
+                      <label class="custom-control-label" for="customCheck2">American Safety Council - Texas Safe Motorist Course</label>
+                    </div>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck3" value="1">
+                      <label class="custom-control-label" for="customCheck3">BDI - 4 Hour Internet</label>
+                    </div>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck4" value="3">
+                      <label class="custom-control-label" for="customCheck4">First Time Driver Internet</label>
+                    </div>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck5" value="26">
+                      <label class="custom-control-label" for="customCheck5">Florida 40 Hour Pre-licensing</label>
+                    </div>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck6" value="106">
+                      <label class="custom-control-label" for="customCheck6">Learners Permit Exam</label>
+                    </div>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck7" value="69">
+                      <label class="custom-control-label" for="customCheck7">New York IPIRP</label>
+                    </div>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck8" value="58">
+                      <label class="custom-control-label" for="customCheck8">Occupational Safety and Health Standards Courses</label>
+                    </div>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck9" value="128">
+                      <label class="custom-control-label" for="customCheck9">Texas Driver Education</label>
+                    </div>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck10" value="125">
+                      <label class="custom-control-label" for="customCheck10">Texas Seller-Server Course</label>
+                    </div>
+                  </li>
+                </ul>
               </div>
-              <div class="form-group">
-                <div class="dropdown dropdown-checkboxes input-group am-input-group ">
-                  <div class="input-group-prepend">
-                    <label for="OrderInfoId" class="input-group-text">Merchant Account</label>
-                  </div>
-                  <a class="dropdown-checkboxes dropdown-toggle form-control" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                  <ul class="dropdown-menu allow-focus" aria-labelledby="dropdownMenuLink">
-                    <li class="dropdown-item">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck11" value="-1">
-                        <label class="custom-control-label" for="customCheck11">All</label>
-                      </div>
-                    </li>
-                    <li class="dropdown-item">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck12" value="6222673">
-                        <label class="custom-control-label" for="customCheck12">ASC - wfgasc</label>
-                      </div>
-                    </li>
-                    <li class="dropdown-item">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck13" value="6292633">
-                        <label class="custom-control-label" for="customCheck13">ASC - wfgascca</label>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="dropdown dropdown-checkboxes input-group am-input-group ">
-                  <div class="input-group-prepend">
-                    <label for="OrderInfoId" class="input-group-text">Affiliate</label>
-                  </div>
-                  <a class="dropdown-checkboxes dropdown-toggle form-control" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                  <ul class="dropdown-menu allow-focus" aria-labelledby="dropdownMenuLink">
-                    <li class="dropdown-item">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck14" value="-1">
-                        <label class="custom-control-label" for="customCheck14">All</label>
-                      </div>
-                    </li>
-                    <li class="dropdown-item">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck15" value="1">
-                        <label class="custom-control-label" for="customCheck15">American Safety Council</label>
-                      </div>
-                    </li>
-                    <li class="dropdown-item">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck16" value="211">
-                        <label class="custom-control-label" for="customCheck16">GEICO</label>
-                      </div>
-                    </li>
-                    <li class="dropdown-item">
-                      <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck17" value="4563">
-                        <label class="custom-control-label" for="customCheck17">Florida Medical Association</label>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="form-group">
-                <button class="btn btn-primary btn-sm" type="submit">Apply Filter</button>
-              </div>
-            </form>
+            </div>
           </div>
-        </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="form-group">
+              <label>By Merchant Account</label>
+              <div class="dropdown dropdown-checkboxes">
+                <a class="dropdown-checkboxes dropdown-toggle form-control" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                <ul class="dropdown-menu allow-focus merchant-accounts" aria-labelledby="dropdownMenuLink">
+                  <li class="dropdown-item">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck11" value="-1">
+                      <label class="custom-control-label" for="customCheck11">All</label>
+                    </div>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck12" value="6222673">
+                      <label class="custom-control-label" for="customCheck12">ASC - wfgasc</label>
+                    </div>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck13" value="6292633">
+                      <label class="custom-control-label" for="customCheck13">ASC - wfgascca</label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="form-group">
+              <label>By Affiliate</label>
+              <div class="dropdown dropdown-checkboxes input-group am-input-group ">
+                <a class="dropdown-checkboxes dropdown-toggle form-control" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                <ul class="dropdown-menu allow-focus affiliates" aria-labelledby="dropdownMenuLink">
+                  <li class="dropdown-item">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck14" value="-1">
+                      <label class="custom-control-label" for="customCheck14">All</label>
+                    </div>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck15" value="1">
+                      <label class="custom-control-label" for="customCheck15">American Safety Council</label>
+                    </div>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck16" value="211">
+                      <label class="custom-control-label" for="customCheck16">GEICO</label>
+                    </div>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck17" value="4563">
+                      <label class="custom-control-label" for="customCheck17">Florida Medical Association</label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 form-group">
+            <button class="btn btn-primary btn-sm" type="submit">Apply Filters</button>
+          </div>
+          {# <select id="pipelineFilter" name="pipelineFilter" class="custom-select" multiple>
+            <option value="-1">(All)</option>
+            <option value="72">American Safety Council - Texas Safe Motorist Course</option>
+            <option value="1">BDI - 4 Hour Internet</option>
+            <option value="3">First Time Driver Internet</option>
+            <option value="26">Florida 40 Hour Pre-licensing</option>
+            <option value="106">Learners Permit Exam</option>
+            <option value="69">New York IPIRP</option>
+            <option value="58">Occupational Safety and Health Standards Courses</option>
+            <option value="128">Texas Driver Education</option>
+            <option value="125">Texas Seller-Server Course</option>
+          </select>
+          <select id="merchantAccountFilter" name="merchantAccountFilter" class="custom-select" multiple>
+            <option value="-1">(All)</option>
+          	<option value="6222673">ASC - wfgasc</option>
+          	<option value="6292633">ASC - wfgascca</option>
+          </select>
+          <select id="affiliateFilter" name="affiliateFilter" class="custom-select" multiple>
+            <option value="-1">(All)</option>
+            <option value="1">American Safety Council</option>
+            <option value="211">GEICO</option>
+            <option value="4563">Florida Medical Association</option>
+          </select> #}
+        </form>
         <div class="row">
           <div class="col-8 col-lg-6 mb-3">
             <form id="searchForm" method="post" action="/quick-filter">
@@ -182,7 +201,7 @@
             </form>
           </div>
         </div>
-        <div class="card order-card table-responsive-lg">
+        <div class="card order-card table-responsive">
           <table class="table table-hover mb-0 font-smaller">
             <thead class="thead-light">
               <tr>
@@ -368,7 +387,7 @@
       <form method="post" action="#">
         <div class="modal-body">
           <p class="font-weight-bolder">Are you sure you want to approved/process Refund ID: <span class="text-danger">[display ID here]</span>?</p>
-          <div class="card order-card table-responsive-lg mb-3">
+          <div class="card order-card table-responsive mb-3">
             <table class="table table-hover table-sm mb-0 font-smaller">
               <thead class="thead-light">
                 <tr>
@@ -533,7 +552,7 @@
       else {
         $(this).closest('.dropdown-checkboxes').find(".dropdown-toggle").text(selectedFilters.join(', '));
       }
-    });
+    })
     $(".custom-control-input[value=-1]").each(function() {
       $(this).closest('.dropdown-menu').find(".custom-control-input[value=-1]").prop('checked', true).trigger("change");
     })
