@@ -7,62 +7,212 @@
 {% block MainContent %}
 <section class="content-wrap wrap flex-shrink-0">
   <div class="container-fluid but-fixed">
-    <div class="row">
-      <div class="col-12">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10 col-xl-8">
         <h1 class="mb-3">Custom Report</h1>
-        <p>Select a date range from the drop down list below or choose particular dates by using the calendars. Press the <strong>Generate Report</strong> button and the report will appear in a new window.  Please read the bottom of the page if you are using a <strong>pop-up blocker</strong>.</p>
+        <p>Select a date range from the "Report Date" drop down list or choose particular dates by using the "Custom Date Range". Press the <strong>Generate Report</strong> button and the report will appear in a new window.</p>
         <form class="row">
-          <div class="col-12 col-lg-8">
-            <div class="form-row">
-              <div class="col-md-4 mb-3">
-                <label for="filterAffiliate">Filter Affiliate</label>
-                <input class="form-control" id="filterAffiliate" placeholder="Filter Affiliate Name" type="text">
+          <div class="col-12">
+            <div class="form-row align-items-end">
+              <div class="col-md-4 col-lg-4 mb-2 mb-md-3">
+                <h4 class="h5 text-dark font-weight-bolder">Affiliate Name</h4>
+                <input class="form-control" id="filterAffiliate" placeholder="Filter Affiliate by Name" type="text">
               </div>
-              <div class="col-md-8 mb-3">
-                <label for="affiliateName">Select Affiliate</label>
+              <div class="col-md-8 col-lg-8 mb-3">
                 <select class="custom-select" id="affiliateName" name="affiliateName">
-                  <option value="0">Select Affiliate</option>
-                  <option value="1">American Safety Council</option>
-                  <option value="8159"> Discount Glass & Mirror, Inc.</option>
-                  <option value="6388">A Plus Driving School</option>
-                  <option value="6285">A STREET SMART DRIVING ACADEMY 1</option>
-                  <option value="5635">AAA Alabama (001)</option>
-                  <option value="5637">AAA Allied Group, Inc. (007)</option>
+                  <option value="-1">Select Affiliate</option>
+                	<option value="1">American Safety Council</option>
+                	<option value="8159"> Discount Glass &amp; Mirror, Inc.</option>
+                	<option value="6388">A Plus Driving School</option>
+                	<option value="6285">A STREET SMART DRIVING ACADEMY 1</option>
+                	<option value="5635">AAA Alabama (001)</option>
+                	<option value="5637">AAA Allied Group, Inc. (007)</option>
+                	<option value="6134">AAA Arizona (2)</option>
+                	<option value="6139">AAA Auto Club Alliance (212)</option>
+                	<option value="281">AAA Auto Club South</option>
+                	<option value="6044">AAA CA Auto Club Enterprises (004)</option>
+                	<option value="6142">AAA Carolinas (111)</option>
+                	<option value="5683">AAA Central Penn (195)</option>
+                	<option value="6135">AAA Colorado (6)</option>
+                	<option value="6043">AAA Hoosier (023)</option>
+                	<option value="4071">AAA Michigan (Auto Club Services, Inc.) (47)</option>
+                	<option value="2786">AAA Mid-Atlantic</option>
+                	<option value="5639">AAA Missouri (65)</option>
+                	<option value="3625">Abatement Management, Inc.</option>
+                	<option value="7505">Abco Contracting Corp</option>
+                	<option value="6879">Affordable Solar</option>
+                	<option value="6335">All Phase Services-PrePaid</option>
+                	<option value="6370">American Driving Academy</option>
+                	<option value="6815">B2B Test Affiliate</option>
+                	<option value="6852">B2B Test Affiliate 10...</option>
+                	<option value="6853">B2B Test Affiliate 11...</option>
+                	<option value="6823">B2B Test Affiliate 3</option>
+                	<option value="6822">B2B TEST AFFILIATE 4</option>
+                	<option value="6850">B2B Test Affiliate 5</option>
+                	<option value="11713">Bossy Boss, Inc. (TEST)</option>
+                	<option value="10977">Campos Insurance Agency (2019)</option>
+                	<option value="8343">Cook Medical</option>
+                	<option value="5750">DEFENDERS-PrePaid</option>
+                	<option value="3710">Downriver Refrigeration Supply Co.</option>
+                	<option value="2357">First American</option>
+                	<option value="6390">Five Star Driver Education</option>
+                	<option value="222">Florida Drivers Association</option>
+                	<option value="5093">Florida Petroleum Marketers Association</option>
+                	<option value="594">Florida Retail Federation Services, Inc.</option>
+                	<option value="5942">Fortis Business Media LLC d/b/a BLR</option>
+                	<option value="6983">Hensel Phelps Construction Company</option>
                   <option value="6134">and so on...</option>
                 </select>
               </div>
             </div>
-
           </div>
-          <div class="col-12 col-md-6 col-lg-4">
+          <div class="col-12">
+            <div class="form-row align-items-end">
+              <div class="col-md-4 col-lg-4 mb-3">
+                <h4 class="h5 text-dark font-weight-bolder">Report Date</h4>
+                <select class="custom-select" id="reportDate" name="reportDate">
+                  <option selected="selected" value="">Date Range</option>
+                  <option value="today">Today</option>
+                  <option value="yesterday">Yesterday</option>
+                  <option value="week">This Week</option>
+                  <option value="weekend">Last Weekend</option>
+                  <option value="7days">Last 7 Days</option>
+                  <option value="month">This Month</option>
+                  <option value="previousmonth">Last Month</option>
+                  <option value="30days">Last 30 Days</option>
+                  <option value="3months">Last 3 Months</option>
+                  <option value="ytd">This Year to Date</option>
+                  <option value="12months">Last 12 Months</option>
+                </select>
+              </div>
+              <div class="col-md-8 col-lg-8 mb-3">
+                <label>Custom Date Range</label>
+                <div class="form-row">
+                  <div class="col-md-6 mb-2 mb-md-0">
+                    <div class="input-group date-input-group">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text" for="reportFromDate">From</label>
+                      </div>
+                      <input type="date" id="reportFromDate" class="form-control" name="reportFromDate" value="">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-group date-input-group">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text" for="reportToDate">To</label>
+                      </div>
+                      <input type="date" id="reportToDate" class="form-control" name="reportToDate" value="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h4 class="h5 col-12 mt-2 mb-3 text-dark font-weight-bolder">Select Additional Filters</h4>
+          <div class="col-12">
             <div class="form-group">
-              <label for="select">Affiliate</label>
-              <select class="custom-select" id="select">
-                <option value="-1">Any</option>
-                <option value="1">American Safety Council</option>
-                <option value="8159"> Discount Glass & Mirror, Inc.</option>
-                <option value="6388">A Plus Driving School</option>
-                <option value="6285">A STREET SMART DRIVING ACADEMY 1</option>
-                <option value="5635">AAA Alabama (001)</option>
-                <option value="5637">AAA Allied Group, Inc. (007)</option>
-                <option value="6134">and so on...</option>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="FiltersRadioButtonList1" name="FiltersRadioButtonList" class="custom-control-input" value="registration" checked>
+                <label class="custom-control-label" for="FiltersRadioButtonList1">Show Registrations</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="FiltersRadioButtonList2" name="FiltersRadioButtonList" class="custom-control-input" value="graduation">
+                <label class="custom-control-label" for="FiltersRadioButtonList2">Show Graduation</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" id="cash" name="cash" class="custom-control-input" checked>
+                <label class="custom-control-label" for="cash">Cash</label>
+              </div>
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" id="credit" name="credit" class="custom-control-input"checked>
+                <label class="custom-control-label" for="credit">Credit</label>
+              </div>
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" id="paymentDue" name="paymentDue" class="custom-control-input"checked>
+                <label class="custom-control-label" for="paymentDue">Payment Due</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" id="checkMoneyOrder" name="checkMoneyOrder" class="custom-control-input" checked>
+                <label class="custom-control-label" for="checkMoneyOrder">Check or Money Order</label>
+              </div>
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" id="googleCheckout" name="googleCheckout" class="custom-control-input"checked>
+                <label class="custom-control-label" for="googleCheckout">Google Checkout</label>
+              </div>
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" id="paypalCheckout" name="paypalCheckout" class="custom-control-input"checked>
+                <label class="custom-control-label" for="paypalCheckout">PayPal Checkout</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <h4 class="h5 mt-4 mb-3 text-dark font-weight-bolder">Select Report Columns</h4>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="reportColumns1" name="reportColumns" class="custom-control-input" value="basic" checked>
+                <label class="custom-control-label" for="reportColumns1">Show Basic Student Information</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="reportColumns2" name="reportColumns" class="custom-control-input" value="detailed">
+                <label class="custom-control-label" for="reportColumns2">Show Detailed Student Information</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mt-2">
+            <div class="form-row align-items-end">
+              <div class="col-md-4 col-lg-4 mb-2 mb-md-3">
+                <h4 class="h5 text-dark font-weight-bolder">Select Product</h4>
+                {# <label for="filterAffiliate">Select Product</label> #}
+                <input class="form-control" id="filterProduct" placeholder="Filter Products by Name" type="text">
+              </div>
+              <div class="col-md-8 col-lg-8 mb-3">
+                <select class="custom-select" id="productName" name="courseName">
+                  <option value="-1">Show All Products</option>
+                  <option value="178">AAA Admin Fee</option>
+                	<option value="190">AAA California StartSmart and How to Drive Courses</option>
+                	<option value="195">AAA ERS</option>
+                	<option value="191">AAA Field Management Certification</option>
+                	<option value="157">AAA How to Drive Course</option>
+                	<option value="169">AAA Online Driver Improvement Program Courses</option>
+                	<option value="167">AAA Online RoadWise Driver Courses</option>
+                	<option value="6">ADI - 12 Hour</option>
+                	<option value="189">Administrative Fees</option>
+                	<option value="38">Advanced Driver Improvement</option>
+                	<option value="45">Advanced Driver Improvement Re-Registration</option>
+                	<option value="116">AgriLife</option>
+                	<option value="72">American Safety Council - Texas Safe Motorist Course</option>
+                	<option value="177">Arizona Defensive Driving Course</option>
+                	<option value="86">Arizona Safe Motorist Defensive Driving Course</option>
+                	<option value="84">Audio Read Along - Stand Alone</option>
+                	<option value="133">barber continuing education</option>
+                	<option value="1">BDI - 4 Hour Internet</option>
+                	<option value="7">BDI - Live</option>
+                	<option value="11">BDI - Video</option>
+                	<option value="29">Boating Safety Course</option>
+                	<option value="154">Bulk Order Registration</option>
+                	<option value="60">California 30-Hour Driver Education</option>
+                	<option value="80">California 400-minute Mature Driver Course</option>
+                  <option value="6134">and so on...</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="form-group">
+              <h4 class="h5 text-dark font-weight-bolder">Select Report Type</h4>
+              <select class="custom-select" id="exportType">
+                <option selected="selected" value="html">HTML Report (Web Page - not recommended for large reports)</option>
+                <option value="excel">Microsoft Excel (Recommended)</option>
+                <option value="raw">Raw Data (Tab delimited)</option>
               </select>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="form-group">
-              <label for="filter">Show</label>
-              <select class="custom-select" id="filter">
-                <option selected="selected" value="all">All</option>
-                <option value="active">Active Only</option>
-                <option value="redeemed">Redeemed Only</option>
-                <option value="expired">Expired Only</option>
-              </select>
-            </div>
-          </div>
-          <div class="col-12 form-group">
-            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+          <div class="col-12 mt-2 mt-md-3 form-group">
+            <button type="submit" class="btn btn-primary mr-2">Generate Report</button>
             <button type="reset" class="btn btn-outline-primary">Reset</button>
+            <p class="mt-3"><strong>IMPORTANT</strong>: Pressing this button will open a new window. If you are using a <strong>pop-up blocker</strong>, you will need to disable it for this site.</p>
           </div>
         </form>
       </div>
@@ -86,25 +236,30 @@
         });
       });
       $(select).data('options', options);
-
       $(textbox).bind('change keyup', function() {
         var options = $(select).empty().data('options');
-        var search = $.trim($(this).val());
-        var regex = new RegExp(search, "gi");
-
+        var search = $.trim($(this).val()).toLowerCase();
         $.each(options, function(i) {
           var option = options[i];
-          if (option.text.match(regex) !== null) {
+          if (option.text.toLowerCase().includes(search)) {
             $(select).append(
               $('<option>').text(option.text).val(option.value)
             );
           }
         });
       });
+      $(select).closest('form').on('reset', function(event) {
+        $(select).empty();
+        $.each(options, function(i) {
+          var option = options[i];
+          $(select).append($('<option>').text(option.text).val(option.value));
+        });
+      });
     });
   };
   $(function() {
     $('#affiliateName').filterByText($('#filterAffiliate'));
+    $('#productName').filterByText($('#filterProduct'));
   });
 </script>
 {% endblock %}

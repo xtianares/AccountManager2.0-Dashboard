@@ -61,6 +61,7 @@ body {
 }
 .input-group {
   .input-group-text {
+    width: 100%;
     background-color: #f7f7f7;
     font-size: .9rem;
   }
@@ -70,10 +71,11 @@ body {
     width: 100%;
     max-width: 160px;
   }
-  .input-group-text {
+}
+.date-input-group {
+  .input-group-prepend {
     width: 100%;
-    background-color: #f7f7f7;
-    font-size: .9rem;
+    max-width: 62px;
   }
 }
 .nav-tabs {
