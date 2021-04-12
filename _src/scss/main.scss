@@ -344,6 +344,7 @@ p.course-name {
       .custom-control-label {
         padding: .35rem .8rem;
         padding-left: 2.3rem;
+        overflow-wrap: break-word;
         &::before, &:after {
           left: .8rem;
           top: .6rem
