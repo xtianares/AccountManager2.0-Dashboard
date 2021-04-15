@@ -25,6 +25,12 @@
           </div>
           <div class="col-12 col-md-4 col-lg-3">
             <div class="form-group">
+              <label for="issuaAsignee">Issue Assignee</label>
+              <input type="text" class="form-control" id="issuaAsignee" placeholder="Enter Issue Assginee...">
+            </div>
+          </div>
+          <div class="col-12 col-md-4 col-lg-3">
+            <div class="form-group">
               <label>Issue Type</label>
               <div class="dropdown dropdown-checkboxes">
                 <a class="dropdown-checkboxes dropdown-toggle form-control" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
@@ -47,13 +53,19 @@
                       <label class="custom-control-label" for="customCheck3">Isssue Type 2</label>
                     </div>
                   </li>
+                  <li class="dropdown-item">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck4" value="2">
+                      <label class="custom-control-label" for="customCheck4">Isssue Type 4</label>
+                    </div>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="col-12 col-md-4 col-lg-3">
             <div class="form-group">
-              <label>Issue Statuses</label>
+              <label>Issue Error Code</label>
               <div class="dropdown dropdown-checkboxes">
                 <a class="dropdown-checkboxes dropdown-toggle form-control" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
                 <ul class="dropdown-menu allow-focus merchant-accounts" aria-labelledby="dropdownMenuLink">
@@ -65,14 +77,26 @@
                   </li>
                   <li class="dropdown-item">
                     <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="customCheck5" value="1">
-                      <label class="custom-control-label" for="customCheck5">Issue Status 1</label>
+                      <input type="checkbox" class="custom-control-input" id="error1" value="1">
+                      <label class="custom-control-label" for="error1">Error Code 1</label>
                     </div>
                   </li>
                   <li class="dropdown-item">
                     <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="customCheck6" value="2">
-                      <label class="custom-control-label" for="customCheck6">Isssue Status 2</label>
+                      <input type="checkbox" class="custom-control-input" id="error2" value="2">
+                      <label class="custom-control-label" for="error2">Error Code 2</label>
+                    </div>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="error3" value="3">
+                      <label class="custom-control-label" for="error3">Error Code 3</label>
+                    </div>
+                  </li>
+                  <li class="dropdown-item">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="error4" value="4">
+                      <label class="custom-control-label" for="error4">Error Code 4</label>
                     </div>
                   </li>
                 </ul>
@@ -82,25 +106,53 @@
           <div class="col-12 col-md-4 col-lg-3">
             <div class="form-group">
               <label for="createdDate">Created Date</label>
-              <input type="text" class="form-control" id="createdDate" placeholder="Date Picker Goes here...">
+              <input type="text" class="form-control dates" id="createdDate" placeholder="Enter Date here...">
             </div>
           </div>
           <div class="col-12 col-md-4 col-lg-3">
             <div class="form-group">
               <label for="assignedDate">Assigned Date</label>
-              <input type="text" class="form-control" id="assignedDate" placeholder="Date Picker Goes here...">
+              <input type="text" class="form-control dates" id="assignedDate" placeholder="Enter Date here...">
             </div>
           </div>
           <div class="col-12 col-md-4 col-lg-3">
             <div class="form-group">
               <label for="resolvedDate">Resolved Date</label>
-              <input type="text" class="form-control" id="resolvedDate" placeholder="Date Picker Goes here...">
+              <input type="text" class="form-control dates" id="resolvedDate" placeholder="Enter Date here...">
             </div>
           </div>
           <div class="col-12 form-group">
             <button class="btn btn-primary btn-sm" type="submit">Apply Filters</button>
           </div>
         </form>
+        <div class="row d-flex">
+          <div class="col-md-8 mb-3">
+            <form id="searchForm" method="post" action="/quick-filter">
+              <div class="form-group form-inline mb-0">
+                <label class="mr-2 font-weight-bolder">Status Quick Filter:</label>
+                <div class="quick-filter mr-2">
+                  <input type="checkbox" class="quick-filter-input" id="newIssues">
+                  <label class="quick-filter-btn btn btn-sm" for="newIssues">New</label>
+                </div>
+                <div class="quick-filter mr-2">
+                  <input type="checkbox" class="quick-filter-input" id="resolvedIssues">
+                  <label class="quick-filter-btn btn btn-sm" for="resolvedIssues">Assigned</label>
+                </div>
+                <div class="quick-filter mr-2">
+                  <input type="checkbox" class="quick-filter-input" id="creditRefunds">
+                  <label class="quick-filter-btn btn btn-sm" for="creditRefunds">Resolved</label>
+                </div>
+                <div class="quick-filter mr-2">
+                  <input type="checkbox" class="quick-filter-input" id="wontWorkIssues">
+                  <label class="quick-filter-btn btn btn-sm" for="wontWorkIssues">Won't Work</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-4 mb-3 text-md-right">
+            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#batchUpdateIssues">Batch Update Issues</button>
+          </div>
+        </div>
       </div>
 
       <div class="col-12">
@@ -108,6 +160,12 @@
           <table class="table table-hover table-bordered mb-0 font-smaller">
             <thead class="thead-light">
               <tr>
+                <th>
+                  <div class="custom-control custom-checkbox text-center">
+                    <input class="custom-control-input" type="checkbox" id="allIssues" value="all">
+                    <label class="custom-control-label" for="allIssues"></label>
+                  </div>
+                </th>
                 <th>Order Info Id</th>
                 <th>Order Detail Id</th>
                 <th>Issue Type</th>
@@ -122,6 +180,12 @@
             </thead>
             <tbody>
               <tr>
+                <td>
+                  <div class="custom-control custom-checkbox text-center">
+                    <input class="custom-control-input" type="checkbox" id="id_1" value="1">
+                    <label class="custom-control-label" for="id_1"></label>
+                  </div>
+                </td>
                 <td><a href="/order-details/">30030111</a></td>
                 <td><a href="/course-details/">30030222</a></td>
                 <td>CompletionProcessingException</td>
@@ -132,10 +196,16 @@
                 <td>2/18/21, 3:58 PM</td>
                 <td>2/18/21, 3:58 PM</td>
                 <td>
-                  <a class="btn btn-outline-primary btn-sm" href="#issueDetails" data-toggle="modal">View/Edit</a>
+                  <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#issueDetails" data-toggle="modal">View/Edit</button>
                 </td>
               </tr>
               <tr>
+                <td>
+                  <div class="custom-control custom-checkbox text-center">
+                    <input class="custom-control-input" type="checkbox" id="id_2" value="2">
+                    <label class="custom-control-label" for="id_2"></label>
+                  </div>
+                </td>
                 <td><a href="/order-details/">30030111</a></td>
                 <td><a href="/course-details/">30030222</a></td>
                 <td>CompletionProcessingException</td>
@@ -146,10 +216,16 @@
                 <td></td>
                 <td></td>
                 <td>
-                  <a class="btn btn-outline-primary btn-sm" href="#issueDetails" data-toggle="modal">View/Edit</a>
+                   <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#issueDetails" data-toggle="modal">View/Edit</button>
                 </td>
               </tr>
               <tr>
+                <td>
+                  <div class="custom-control custom-checkbox text-center">
+                    <input class="custom-control-input" type="checkbox" id="id_3" value="3">
+                    <label class="custom-control-label" for="id_3"></label>
+                  </div>
+                </td>
                 <td><a href="/order-details/">30030111</a></td>
                 <td><a href="/course-details/">30030222</a></td>
                 <td>UserInformationSetupRequired</td>
@@ -160,13 +236,19 @@
                 <td>2/18/21, 3:58 PM</td>
                 <td>2/18/21, 3:58 PM</td>
                 <td>
-                  <a class="btn btn-outline-primary btn-sm" href="#issueDetails" data-toggle="modal">View/Edit</a>
+                   <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#issueDetails" data-toggle="modal">View/Edit</button>
                 </td>
               </tr>
               <tr class="spacer-row">
                 <td colspan="12" class="bg-light p-1"></td>
               </tr>
               <tr>
+                <td>
+                  <div class="custom-control custom-checkbox text-center">
+                    <input class="custom-control-input" type="checkbox" id="id_4" value="4">
+                    <label class="custom-control-label" for="id_4"></label>
+                  </div>
+                </td>
                 <td><a href="/order-details/">30030333</a></td>
                 <td><a href="/course-details/">30030444</a></td>
                 <td>UserInformationSetupRequired</td>
@@ -177,10 +259,16 @@
                 <td>2/18/21, 3:58 PM</td>
                 <td>2/18/21, 3:58 PM</td>
                 <td>
-                  <a class="btn btn-outline-primary btn-sm" href="#issueDetails" data-toggle="modal">View/Edit</a>
+                   <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#issueDetails" data-toggle="modal">View/Edit</button>
                 </td>
               </tr>
               <tr>
+                <td>
+                  <div class="custom-control custom-checkbox text-center">
+                    <input class="custom-control-input" type="checkbox" id="id_5" value="5">
+                    <label class="custom-control-label" for="id_5"></label>
+                  </div>
+                </td>
                 <td><a href="/order-details/">30030333</a></td>
                 <td><a href="/course-details/">30030444</a></td>
                 <td>SuccessfullyProcessed</td>
@@ -191,13 +279,19 @@
                 <td></td>
                 <td></td>
                 <td>
-                  <a class="btn btn-outline-primary btn-sm" href="#issueDetails" data-toggle="modal">View/Edit</a>
+                  <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#issueDetails" data-toggle="modal">View/Edit</button>
                 </td>
               </tr>
               <tr class="spacer-row">
                 <td colspan="12" class="bg-light p-1"></td>
               </tr>
               <tr>
+                <td>
+                  <div class="custom-control custom-checkbox text-center">
+                    <input class="custom-control-input" type="checkbox" id="id_6" value="6">
+                    <label class="custom-control-label" for="id_6"></label>
+                  </div>
+                </td>
                 <td><a href="/order-details/">30030555</a></td>
                 <td><a href="/course-details/">30030777</a></td>
                 <td>CompletionProcessingException</td>
@@ -208,10 +302,16 @@
                 <td>2/18/21, 3:58 PM</td>
                 <td>2/18/21, 3:58 PM</td>
                 <td>
-                  <a class="btn btn-outline-primary btn-sm" href="#issueDetails" data-toggle="modal">View/Edit</a>
+                  <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#issueDetails" data-toggle="modal">View/Edit</button>
                 </td>
               </tr>
               <tr>
+                <td>
+                  <div class="custom-control custom-checkbox text-center">
+                    <input class="custom-control-input" type="checkbox" id="id_7" value="7">
+                    <label class="custom-control-label" for="id_7"></label>
+                  </div>
+                </td>
                 <td><a href="/order-details/">30030555</a></td>
                 <td><a href="/course-details/">30030777</a></td>
                 <td>CompletionProcessingException</td>
@@ -222,10 +322,16 @@
                 <td></td>
                 <td></td>
                 <td>
-                  <a class="btn btn-outline-primary btn-sm" href="#issueDetails" data-toggle="modal">View/Edit</a>
+                  <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#issueDetails" data-toggle="modal">View/Edit</button>
                 </td>
               </tr>
               <tr>
+                <td>
+                  <div class="custom-control custom-checkbox text-center">
+                    <input class="custom-control-input" type="checkbox" id="id_8" value="8">
+                    <label class="custom-control-label" for="id_8"></label>
+                  </div>
+                </td>
                 <td><a href="/order-details/">30030555</a></td>
                 <td><a href="/course-details/">30030777</a></td>
                 <td>UserInformationSetupRequired</td>
@@ -236,21 +342,35 @@
                 <td>2/18/21, 3:58 PM</td>
                 <td>2/18/21, 3:58 PM</td>
                 <td>
-                  <a class="btn btn-outline-primary btn-sm" href="#issueDetails" data-toggle="modal">View/Edit</a>
+                  <button type="button" class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#issueDetails" data-toggle="modal">View/Edit</button>
                 </td>
               </tr>
             <tbody>
           </table>
         </div>
 
-        <div class="pagination-wrap">
-          <ul class="pagination justify-content-center">
-            <li class="page-item disabled" id="previous"><a class="page-link" id="previousLink" disabled="" href="#">&#8592;</a></li>
-            <li class="page-item active"><a class="page-link page" data-page="1" href="javascript:void(0)">1</a></li>
-            <li class="page-item"><a class="page-link page" data-page="2" href="javascript:void(0)">2</a></li>
-            <li class="page-item"><a class="page-link page" data-page="3" href="javascript:void(0)">3</a></li>
-            <li class="page-item" id="next"><a class="page-link" id="nextLink" href="javascript:void(0)">&#8594;</a></li>
-          </ul>
+        <div class="row pagination-wrap d-flex justify-content-center">
+          <div class="d-inline-block mb-2 mx-2">
+              <label class="d-inline-block align-middle mb-0 mr-2" for="showRows">Show Rows:</label>
+              <select class="custom-select d-inline-block align-middle w-auto" id="showRows">
+                <option value="10" selected>10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="250">250</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+              </select>
+          </div>
+          <div class="d-inline-block mb-2 mx-2">
+            <ul class="pagination">
+              <li class="page-item disabled" id="previous"><a class="page-link" id="previousLink" disabled="" href="#">&#8592;</a></li>
+              <li class="page-item active"><a class="page-link page" data-page="1" href="javascript:void(0)">1</a></li>
+              <li class="page-item"><a class="page-link page" data-page="2" href="javascript:void(0)">2</a></li>
+              <li class="page-item"><a class="page-link page" data-page="3" href="javascript:void(0)">3</a></li>
+              <li class="page-item" id="next"><a class="page-link" id="nextLink" href="javascript:void(0)">&#8594;</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -260,6 +380,95 @@
 {% endblock %}
 
 {% block FooterIncludes %}
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+<!-- Modal for more details and editing issues -->
+<div class="modal fade" id="batchUpdateIssues" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="AddAuditLog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Batch Update Issues</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="#">
+          <div class="table-responsive mb-4">
+            <table class="table table-bordered table-hover table-sm mb-0 font-smaller">
+              <thead class="thead-light">
+                <tr>
+                  <th>Order Info Id</th>
+                  <th>Order Detail Id</th>
+                  <th>Issue Type</th>
+                  <th>Error Code</th>
+                  <th>Created Date</th>
+                  <th>Assigned Date</th>
+                  <th>Resolved Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="/order-details/">30030111</a></td>
+                  <td><a href="/course-details/">30030222</a></td>
+                  <td>CompletionProcessingException</td>
+                  <td>ErrorCode</td>
+                  <td>2/18/21, 3:58 PM</td>
+                  <td>2/18/21, 3:58 PM</td>
+                  <td>2/18/21, 3:58 PM</td>
+                </tr>
+                <tr>
+                  <td><a href="/order-details/">30030111</a></td>
+                  <td><a href="/course-details/">30030333</a></td>
+                  <td>CompletionProcessingException</td>
+                  <td>ErrorCode</td>
+                  <td>2/18/21, 3:58 PM</td>
+                  <td>2/18/21, 3:58 PM</td>
+                  <td>2/18/21, 3:58 PM</td>
+                </tr>
+                <tr>
+                  <td><a href="/order-details/">30030111</a></td>
+                  <td><a href="/course-details/">30030444</a></td>
+                  <td>CompletionProcessingException</td>
+                  <td>ErrorCode</td>
+                  <td>2/18/21, 3:58 PM</td>
+                  <td>2/18/21, 3:58 PM</td>
+                  <td>2/18/21, 3:58 PM</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="issueStatus"><strong>Status</strong></label>
+              <select class="custom-select" id="issueStatus" name="issueStatus">
+                <option selected="selected" value="1">New</option>
+                <option value="2">Assigned</option>
+                <option value="3">Resolved</option>
+                <option value="4">Won't Work</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="assignedTo"><strong>Assigned To</strong></label>
+              <input class="form-control" id="assignedTo" name="assignedTo" type="text" value="Donna" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="NoteMessage"><strong>Add New Note</strong></label>
+            <textarea class="form-control" id="NoteMessage" name="NoteMessage"></textarea>
+          </div>
+          <div class="text-right mt-3">
+            <button type="submit" class="btn btn-outline-primary">Update Issues</button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Modal for more details and editing issues -->
 <div class="modal fade" id="issueDetails" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="AddAuditLog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
@@ -270,8 +479,8 @@
       </div>
       <div class="modal-body">
         <form method="post" action="#">
-          <div class="card issue-card table-responsive mb-3">
-            <table class="table table-hover table-sm mb-0 font-smaller">
+          <div class="table-responsive mb-3">
+            <table class="table table-bordered table-hover table-sm mb-0 font-smaller">
               <thead class="thead-light">
                 <tr>
                   <th>Order Info Id</th>
@@ -301,8 +510,8 @@
             <p class="mb-0">An error occurred during the completion request to generate the course certificate for OrderDetailId: 21039900 with message: Failed to report. If you do not see an additional message with a corrective action to complete, please contact technical support for further assistance.</p>
           </div>
           <h5>Notes</h5>
-          <div class="card issue-card table-responsive-lg mb-3">
-            <table class="table table-hover table-sm mb-0 font-smaller">
+          <div class="table-responsive-lg mb-4">
+            <table class="table table-bordered table-hover table-sm mb-0 font-smaller">
               <thead class="thead-light">
                 <tr>
                   <th>Author</th>
@@ -324,26 +533,28 @@
                 <tr>
                   <td>christian.castanares@amersc.com</td>
                   <td>6/4/2020 2:35:16 PM</td>
-                  <td>Reason changed from 'Technical' to 'Technical'</td>
+                  <td>This can be a long note with a lot of information on it so be ready for this modal to extend past the browser viewport in some instances.</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <div class="form-group">
-            <label for="issueStatus">Status</label>
-            <select class="custom-select" id="issueStatus" name="issueStatus">
-              <option selected="selected" value="1">New</option>
-              <option value="2">Assigned</option>
-              <option value="3">Resolved</option>
-              <option value="4">Won't Work</option>
-            </select>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="issueStatus"><strong>Status</strong></label>
+              <select class="custom-select" id="issueStatus" name="issueStatus">
+                <option selected="selected" value="1">New</option>
+                <option value="2">Assigned</option>
+                <option value="3">Resolved</option>
+                <option value="4">Won't Work</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="assignedTo"><strong>Assigned To</strong></label>
+              <input class="form-control" id="assignedTo" name="assignedTo" type="text" value="Donna" />
+            </div>
           </div>
           <div class="form-group">
-            <label for="assignedTo">Assigned To</label>
-            <input class="form-control" id="assignedTo" name="assignedTo" type="text" />
-          </div>
-          <div class="form-group">
-            <label for="NoteMessage">Add New Note</label>
+            <label for="NoteMessage"><strong>Add New Note</strong></label>
             <textarea class="form-control" id="NoteMessage" name="NoteMessage"></textarea>
           </div>
           <div class="text-right mt-3">
@@ -358,66 +569,24 @@
   </div>
 </div>
 
-<!-- Modal for viewing and adding issue notes -->
-<div class="modal fade" id="issueNotes" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="AddAuditLog" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">View/Add Notes: <span class="text-danger">[Issue ID here]</span></h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-      </div>
-      <div class="modal-body">
-        <div class="card issue-card table-responsive-lg mb-2">
-          <table class="table table-hover table-sm mb-0 font-smaller">
-            <thead class="thead-light">
-              <tr>
-                <th>Author</th>
-                <th>Time</th>
-                <th>Notes Details</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>alice.watkins</td>
-                <td>2/8/2018 12:12:35 PM</td>
-                <td>This order accessed by alice.watkins</span></td>
-              </tr>
-              <tr>
-                <td>System</td>
-                <td>2/8/2018 12:13:06 PM</td>
-                <td><strong>This is a test.</strong> by alice.watkins</td>
-              </tr>
-              <tr>
-                <td>alice.watkins</td>
-                <td>2/8/2018 12:13:06 PM</td>
-                <td>Refund Requested: $15.50</td>
-              </tr>
-              <tr>
-                <td>christian.castanares@amersc.com</td>
-                <td>6/4/2020 2:35:16 PM</td>
-                <td>Reason changed from 'Technical' to 'Technical'</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <form class="mt-3" method="post" action="#">
-          <label class="font-weight-bolder" for="NoteMessage">Add New Note</label>
-          <textarea class="form-control" id="NoteMessage" name="NoteMessage"></textarea>
-          <div class="text-right mt-3">
-            <button type="submit" class="btn btn-outline-primary">Add New Note</button>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- scripts for filtering refunds -->
 <script>
   $(function() {
+    // start date range picker
+    $('input.dates').daterangepicker({
+      autoUpdateInput: false,
+      locale: {
+          cancelLabel: 'Clear'
+      }
+    });
+    $('input.dates').on('apply.daterangepicker', function(ev, picker) {
+      $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+    });
+    $('input.dates').on('cancel.daterangepicker', function(ev, picker) {
+      $(this).val('');
+    });
+    // end date range picker
+
     $(document).on('click', '.allow-focus', function (e) {
       e.stopPropagation();
     });

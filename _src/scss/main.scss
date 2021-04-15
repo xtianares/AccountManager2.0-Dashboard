@@ -33,7 +33,7 @@ body {
   max-width: 1400px;
 }
 .content-wrap {
-  // background-color: #f8f9fc;
+  background-color: #f8f9fc;
 }
 .footer {
   padding-top: 15px;
@@ -344,6 +344,7 @@ p.course-name {
       .custom-control-label {
         padding: .35rem .8rem;
         padding-left: 2.3rem;
+        overflow-wrap: break-word;
         &::before, &:after {
           left: .8rem;
           top: .6rem
